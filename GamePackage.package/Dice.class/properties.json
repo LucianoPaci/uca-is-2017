@@ -1,0 +1,15 @@
+{
+	"commentStamp" : "<historical>",
+	"super" : "Object",
+	"category" : "GamePackage",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"amountOfFaces",
+		"value",
+		"diceValue"
+	],
+	"name" : "Dice",
+	"type" : "normal"
+}

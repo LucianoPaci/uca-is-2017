@@ -1,0 +1,9 @@
+{
+	"instance" : {
+		"testDiceCreationWithDefinedAmountOfFaces" : "Luciano 9/14/2017 17:18",
+		"assert:between:and:" : "Luciano 9/6/2017 22:03",
+		"testAmountOfFacesQuantityIsGreaterThanZero" : "Luciano 9/17/2017 15:43",
+		"testDiceWhenRolledValueIsValid" : "Luciano 9/19/2017 16:26"
+	},
+	"class" : { }
+}
