@@ -1,1 +1,1 @@
-(name 'GamePackage-Luciano.1' message '1st RELEASE' id 'c0cc3f56-0816-0d00-9147-a1f80e05ac98' date '20 September 2017' time '7:35:59.812728 pm' author 'Luciano' ancestors () stepChildren ())
+(name 'GamePackage-Luciano.2' message 'Correccion de Codigo ' id 'c8735347-0916-0d00-9149-cd960e05ac98' date '20 September 2017' time '8:43:24.406728 pm' author 'Luciano' ancestors ((name 'GamePackage-Luciano.1' message '1st RELEASE' id 'c0cc3f56-0816-0d00-9147-a1f80e05ac98' date '20 September 2017' time '7:35:59.812728 pm' author 'Luciano' ancestors () stepChildren ())) stepChildren ())
