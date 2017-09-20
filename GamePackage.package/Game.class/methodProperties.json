@@ -1,19 +1,22 @@
 {
 	"instance" : {
-		"moveForward:positions:intoABoard:" : "juanMaDiMartino 9/19/2017 14:08",
+		"moveForward:positions:" : "Luciano 9/20/2017 01:34",
 		"dice" : "Luciano 9/11/2017 18:07",
 		"winner" : "Luciano 9/18/2017 18:22",
 		"laps" : "Luciano 9/13/2017 16:20",
-		"initializedPlayer:initializedBoard:initializedDice:initializedAmountOfLaps:" : "juanMaDiMartino 9/19/2017 14:35",
-		"winnerOfGame:" : "Luciano 9/19/2017 20:39",
+		"nextTurnFor:" : "Luciano 9/20/2017 01:45",
+		"players" : "Luciano 9/20/2017 01:18",
 		"positionOf:" : "Luciano 9/18/2017 17:32",
-		"addPlayer:" : "Luciano 9/18/2017 16:06",
+		"initializedWithPlayers:initializedBoard:initializedWithDices:initializedAmountOfLaps:" : "Luciano 9/20/2017 01:18",
+		"winnerOfGame:" : "Luciano 9/19/2017 20:39",
+		"addPlayer:" : "Luciano 9/20/2017 01:31",
+		"dices" : "Luciano 9/20/2017 01:18",
 		"isOver" : "Luciano 9/19/2017 22:10",
 		"board" : "Luciano 9/11/2017 18:08"
 	},
 	"class" : {
 		"initializedPlayer:initializedBoard:initializedDice:initializedLaps:" : "Luciano 9/17/2017 17:14",
-		"startWith:definedBoard:definedDice:definedAmountOfLaps:" : "juanMaDiMartino 9/19/2017 14:40",
+		"startWith:definedBoard:definedDice:definedAmountOfLaps:" : "Luciano 9/20/2017 01:13",
 		"initializedPlayer:initializedBoard:initializedDice:" : "juanMaDiMartino 9/11/2017 19:45"
 	}
 }

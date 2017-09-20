@@ -17,7 +17,9 @@
 		"laps",
 		"moveForward",
 		"indexOfPlayer",
-		"winner"
+		"winner",
+		"players",
+		"dices"
 	],
 	"name" : "Game",
 	"type" : "normal"

@@ -1,4 +1,4 @@
 accessing
 addPlayer: aPlayer
 
-player add: aPlayer
+players add: aPlayer
