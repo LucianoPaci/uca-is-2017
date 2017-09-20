@@ -1,5 +1,5 @@
 intialization
 initializedNamed: aName
-	name:= aName.
-	position:=0.
-	laps:=0.
+	name := aName.
+	position := 0.
+	lapsTravelled  := 0

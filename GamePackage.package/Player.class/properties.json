@@ -8,7 +8,7 @@
 	"instvars" : [
 		"name",
 		"position",
-		"laps"
+		"lapsTravelled"
 	],
 	"name" : "Player",
 	"type" : "normal"

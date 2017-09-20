@@ -1,4 +1,3 @@
 accessing
 lapsTravelled
-	^ laps
-	
+	^ lapsTravelled

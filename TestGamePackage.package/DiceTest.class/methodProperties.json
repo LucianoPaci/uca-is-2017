@@ -2,7 +2,8 @@
 	"instance" : {
 		"testDiceCreationWithDefinedAmountOfFaces" : "Luciano 9/14/2017 17:18",
 		"assert:between:and:" : "Luciano 9/6/2017 22:03",
-		"testDiceWhenRolledValueIsValid" : "Luciano 9/19/2017 20:25"
+		"testDiceWhenRolledValueIsValid" : "Luciano 9/19/2017 20:25",
+		"testWhen2DicesOf6FacesAreRolledThenTheTotalAmountIsGreaterThanZero" : "Luciano 9/20/2017 17:23"
 	},
 	"class" : { }
 }

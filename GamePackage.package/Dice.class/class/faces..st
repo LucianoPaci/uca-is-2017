@@ -1,4 +1,3 @@
-instance creation
-faces: aNumberOfFaces
-	self assertFacesShouldBeGreaterThanZero: aNumberOfFaces.
-	^ self new intializeSized: aNumberOfFaces
+instance Creation
+faces: anInteger
+	^self faces: anInteger obtainingValuesFrom:Random new.

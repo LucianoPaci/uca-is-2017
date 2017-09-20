@@ -1,5 +1,4 @@
 behavior
 roll
-	| randomNumber |
-	randomNumber := Random new.
-	^ randomNumber nextInt: amountOfFaces
+
+	^ numberProvider  nextInt: amountOfFaces

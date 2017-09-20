@@ -1,3 +1,3 @@
 setter
 modifyLaps: aLap
-	laps := aLap
+	lapsTravelled := aLap

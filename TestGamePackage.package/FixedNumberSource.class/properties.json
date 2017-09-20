@@ -1,14 +1,13 @@
 {
 	"commentStamp" : "<historical>",
 	"super" : "Object",
-	"category" : "GamePackage",
+	"category" : "TestGamePackage",
 	"classinstvars" : [ ],
 	"pools" : [ ],
 	"classvars" : [ ],
 	"instvars" : [
-		"amountOfFaces",
-		"numberProvider"
+		"numberSequence"
 	],
-	"name" : "Dice",
+	"name" : "FixedNumberSource",
 	"type" : "normal"
 }

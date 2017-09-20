@@ -11,12 +11,10 @@
 	"pools" : [ ],
 	"classvars" : [ ],
 	"instvars" : [
-		"player",
 		"board",
-		"dice",
 		"laps",
 		"moveForward",
-		"indexOfPlayer",
+		"previosTurnPlayer",
 		"winner",
 		"players",
 		"dices"

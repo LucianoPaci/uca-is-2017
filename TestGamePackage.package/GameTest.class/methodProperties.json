@@ -1,9 +1,9 @@
 {
 	"instance" : {
-		"testSuccessfulGameCreationWithSeveralDicesAndPlayers" : "Luciano 9/20/2017 01:36",
-		"testWhenPlayerCompletesALapThenLapsAreCorrectlyUpdated" : "Luciano 9/20/2017 01:49",
-		"testWhenPlayerMovesForwardWithoutDice" : "Luciano 9/20/2017 01:35",
-		"testGameIsPlayedUntilAWinnerIsDeclared" : "Luciano 9/19/2017 20:23"
+		"testSuccessfulGameCreationWithSeveralDicesAndPlayers" : "juanMaDiMartino 9/20/2017 09:46",
+		"testWhenPlayerCompletesALapThenLapsAreCorrectlyUpdated" : "juanMaDiMartino 9/20/2017 09:53",
+		"testWhenPlayerMovesForwardWithoutDice" : "juanMaDiMartino 9/20/2017 09:53",
+		"testGameIsPlayedUntilAWinnerIsDeclared" : "Luciano 9/20/2017 19:35"
 	},
 	"class" : { }
 }
