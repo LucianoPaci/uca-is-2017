@@ -4,12 +4,16 @@ testGameWhenIsCreatedHasOnePlayerOneBoardOneDiceandOneLap
 	player := Player named: 'jorge'.
 	board := Board squares: 30.
 	dice := Dice faces: 6.
-	laps:= 1.
-	game := Game startWith: player definedBoard: board definedDice: dice definedAmountOfLaps: laps.
+	laps := 1.
+	game := Game
+		startWith: player
+		definedBoard: board
+		definedDice: dice
+		definedAmountOfLaps: laps.
 	self
-		assert: player  equals: player;
+		assert: player equals: player;
 		assert: player position equals: 0;
 		assert: player lapsTravelled equals: 0;
-		assert: dice equals:dice;
-		assert: board equals: board;
-		assert: game laps equals: laps.
+		assert: game dice equals: dice;
+		assert: game board equals: board;
+		assert: game laps equals: laps

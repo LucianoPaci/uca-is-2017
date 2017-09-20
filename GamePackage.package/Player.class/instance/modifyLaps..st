@@ -1,4 +1,3 @@
 setter
 modifyLaps: aLap
-	laps :=aLap
-	
+	laps := aLap

@@ -1,6 +1,5 @@
 behavior
 roll
-
-|randomNumber|
-randomNumber := Random new.
-^ randomNumber nextInt: 6
+	| randomNumber |
+	randomNumber := Random new.
+	^ randomNumber nextInt: amountOfFaces

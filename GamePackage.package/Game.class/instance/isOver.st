@@ -1,3 +1,3 @@
 testing
 isOver
-	self assert:  laps < player lapsTravelled
+	^laps < player lapsTravelled
