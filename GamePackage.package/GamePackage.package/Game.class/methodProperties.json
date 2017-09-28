@@ -1,0 +1,24 @@
+{
+	"instance" : {
+		"wrongTurnFor:" : "Luciano 9/20/2017 21:20",
+		"moveForward:positions:" : "juanMaDiMartino 9/25/2017 17:08",
+		"moveToBeginning:" : "juanMaDiMartino 9/25/2017 13:45",
+		"previousTurnPlayer" : "Luciano 9/20/2017 21:20",
+		"winner" : "Luciano 9/18/2017 18:22",
+		"nextTurnFor:" : "LucianoPaci 9/27/2017 20:29",
+		"laps" : "Luciano 9/13/2017 16:20",
+		"numberOfPlayers" : "juanMaDiMartino 9/20/2017 09:10",
+		"players" : "Luciano 9/20/2017 01:18",
+		"move:positions:" : "juanMaDiMartino 9/25/2017 14:58",
+		"initializedWithPlayers:initializedBoard:initializedWithDices:initializedAmountOfLaps:" : "juanMaDiMartino 9/25/2017 16:06",
+		"positionOf:" : "Luciano 9/18/2017 17:32",
+		"winnerOfGame:" : "juanMaDiMartino 9/20/2017 16:38",
+		"numberOfDices" : "juanMaDiMartino 9/20/2017 09:10",
+		"dices" : "Luciano 9/20/2017 01:18",
+		"changePreviousTurnPlayer:" : "Luciano 9/20/2017 21:20",
+		"board" : "Luciano 9/11/2017 18:08"
+	},
+	"class" : {
+		"playedBy:on:throwing:winningWhenCompleting:" : "LucianoPaci 9/27/2017 20:40"
+	}
+}
