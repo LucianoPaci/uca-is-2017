@@ -1,5 +1,5 @@
 as yet unclassified
-provokesAnEffectIntoAGame: aGame with: anObject
+provokesAnEffectInto: aGame with: anObject
 	| aPlayer |
 	aPlayer := aGame previousTurnPlayer.
 	(aGame previousTurnPlayer) changePosition: aPlayer previousPosition

@@ -1,3 +1,3 @@
 as yet unclassified
-provokesAnEffectIntoAGame: aGame with: anObject
+provokesAnEffectInto: aGame with: aPlayer
 	^self subclassResponsibility

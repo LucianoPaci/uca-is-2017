@@ -6,7 +6,7 @@ nextTurnFor: aPlayer
 			self moveForward: aPlayer positions: movesToBeMade.
 			
 			actualSquare:= board squareAtPosition: aPlayer position.
-			actualSquare provokesAnEffectIntoAGame: self with: aPlayer.
+			actualSquare provokesAnEffectInto: self with: aPlayer.
 			
 			self winnerOfGame: aPlayer.
 			self changePreviousTurnPlayer: aPlayer ]
