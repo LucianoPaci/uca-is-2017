@@ -1,9 +1,14 @@
 tests
 testSuccessfulGameCreationWithSeveralDicesAndPlayers
-	| player1 player2 board dice1 dice2 game laps players dices |
+	| player1 player2 board dice1 dice2 game laps players dices squareAtomicBomb squareWornHole squares |
 	player1 := Player named: 'Scorpion'.
 	player2 := Player named: 'Raiden'.
-	board := Board squares: 20.
+	squareAtomicBomb:= SquareAtomicBomb initialize.
+	squareWornHole:= SquareWormHole initialize.
+	squares:= OrderedCollection new.
+	squares add: squareWornHole.
+	squares add: squareAtomicBomb.
+	board:= Board definedSquares: squares.
 	dice1 := Dice faces: 6.
 	dice2 := Dice faces: 9.
 	laps := 1.
@@ -15,12 +20,13 @@ testSuccessfulGameCreationWithSeveralDicesAndPlayers
 		add: dice1;
 		add: dice2.
 	game := Game
-		definedPlayers: players
-		definedBoard: board
-		definedDices: dices
-		definedAmountOfLaps: laps.
+		playedBy: players
+		on: board
+		throwing: dices
+		winningWhenCompleting: laps.
 	self
 		assert: game numberOfPlayers  equals: 2;
 		assert: game numberOfDices  equals: 2;
+		assert: game board amountOfSquares equals: 2;
 		assert: game board equals: board;
 		assert: game laps equals: laps

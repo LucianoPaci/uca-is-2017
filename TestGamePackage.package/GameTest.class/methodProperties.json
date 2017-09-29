@@ -1,9 +1,11 @@
 {
 	"instance" : {
-		"testSuccessfulGameCreationWithSeveralDicesAndPlayers" : "juanMaDiMartino 9/20/2017 09:46",
-		"testWhenPlayerCompletesALapThenLapsAreCorrectlyUpdated" : "juanMaDiMartino 9/20/2017 09:53",
-		"testWhenPlayerMovesForwardWithoutDice" : "juanMaDiMartino 9/20/2017 09:53",
-		"testGameIsPlayedUntilAWinnerIsDeclared" : "Luciano 9/20/2017 19:35"
+		"testWhenPlayerMovesForwardWithoutDice" : "LucianoPaci 9/27/2017 20:38",
+		"testWhenPlayerFallsInNoEffectSquareThenPlayerDoesntMoveAfterwards" : "LucianoPaci 9/27/2017 20:38",
+		"testWhenPlayerFallsInSpeedUpEffectSquareThenPlayerMovesFourPositionsForward" : "LucianoPaci 9/27/2017 20:54",
+		"testGameIsPlayedUntilAWinnerIsDeclared" : "LucianoPaci 9/27/2017 21:09",
+		"testSuccessfulGameCreationWithSeveralDicesAndPlayers" : "LucianoPaci 9/27/2017 20:38",
+		"testWhenPlayerCompletesALapThenLapsAreCorrectlyUpdated" : "LucianoPaci 9/27/2017 20:38"
 	},
 	"class" : { }
 }

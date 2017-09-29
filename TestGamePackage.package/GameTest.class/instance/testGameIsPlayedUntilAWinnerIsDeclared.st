@@ -1,9 +1,15 @@
 tests
 testGameIsPlayedUntilAWinnerIsDeclared
-	| playerScorpion playerRaiden diceSixFaces diceEightFaces game collectionOfDices board laps collectionOfplayers |
-	board := Board squares: 12.
-	diceEightFaces := Dice faces: 8 obtainingValuesFrom: (FixedNumberSource providing: #(1 2 3 4 5 6 7 8)).
-	diceSixFaces := Dice faces: 6 obtainingValuesFrom: (FixedNumberSource providing: #(1 2 3 4 5 6)).
+	| playerScorpion playerRaiden diceSixFaces diceEightFaces game collectionOfDices board laps collectionOfplayers squares |
+	
+	squares :=  (1 to: 12) collect: [:a | SquareNonEffect new].
+	board := Board definedSquares: squares.
+	diceEightFaces := Dice
+		faces: 8
+		obtainingValuesFrom: (FixedNumberSource providing: #(1 2 3 4 5 6 7 8)).
+	diceSixFaces := Dice
+		faces: 6
+		obtainingValuesFrom: (FixedNumberSource providing: #(1 2 3 4 5 6)).
 	collectionOfDices := OrderedCollection new.
 	collectionOfDices
 		add: diceSixFaces;
@@ -15,10 +21,10 @@ testGameIsPlayedUntilAWinnerIsDeclared
 	collectionOfplayers add: playerScorpion.
 	collectionOfplayers add: playerRaiden.
 	game := Game
-		definedPlayers: collectionOfplayers
-		definedBoard: board
-		definedDices: collectionOfDices
-		definedAmountOfLaps: laps.
+		playedBy: collectionOfplayers
+		on: board
+		throwing: collectionOfDices
+		winningWhenCompleting: laps.
 	self
 		assert: collectionOfplayers size equals: 2;
 		assert: playerScorpion position equals: 0;
