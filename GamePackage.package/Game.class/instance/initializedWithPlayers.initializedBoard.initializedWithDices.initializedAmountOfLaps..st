@@ -1,5 +1,5 @@
 initialize
-initializedWithPlayers: aCollectionOfPlayers initializedBoard: aBoard initializedWithDices: aCollectionOfDices initializedAmountOfLaps: anAmountOfLaps
+initializedWithPlayers: aCollectionOfPlayers initializedBoard: aBoard initializedWithDices: aCollectionOfDices initializedAmountOfLaps: anAmountOfLaps 
 	players:= aCollectionOfPlayers.
 	board := aBoard.
 	dices := aCollectionOfDices.

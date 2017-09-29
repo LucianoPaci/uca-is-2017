@@ -1,3 +1,3 @@
 as yet unclassified
 wrongTurnFor: aPlayer
-^(aPlayer = previosTurnPlayer).
+^(aPlayer = previousTurnPlayer).

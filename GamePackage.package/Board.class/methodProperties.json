@@ -1,9 +1,10 @@
 {
 	"instance" : {
-		"amountOfSquares" : "Luciano 9/14/2017 16:33",
-		"intializeBoardSize:" : "juanMaDiMartino 9/19/2017 10:05"
+		"amountOfSquares" : "juanMaDiMartino 9/25/2017 16:18",
+		"initializeSquares:" : "juanMaDiMartino 9/25/2017 16:19",
+		"squareAtPosition:" : "LucianoPaci 9/27/2017 22:24"
 	},
 	"class" : {
-		"squares:" : "Luciano 9/18/2017 21:32"
+		"definedSquares:" : "juanMaDiMartino 9/25/2017 16:19"
 	}
 }

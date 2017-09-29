@@ -13,11 +13,10 @@
 	"instvars" : [
 		"board",
 		"laps",
-		"moveForward",
-		"previosTurnPlayer",
 		"winner",
 		"players",
-		"dices"
+		"dices",
+		"previousTurnPlayer"
 	],
 	"name" : "Game",
 	"type" : "normal"
