@@ -1,11 +1,12 @@
 {
 	"instance" : {
-		"testWhenPlayerMovesForwardWithoutDice" : "LucianoPaci 9/27/2017 20:38",
-		"testWhenPlayerFallsInNoEffectSquareThenPlayerDoesntMoveAfterwards" : "LucianoPaci 9/27/2017 20:38",
-		"testWhenPlayerFallsInSpeedUpEffectSquareThenPlayerMovesFourPositionsForward" : "LucianoPaci 9/27/2017 20:54",
-		"testGameIsPlayedUntilAWinnerIsDeclared" : "LucianoPaci 9/27/2017 21:09",
+		"testWhenPlayerFallsInSquareWithoutEffectThenPlayerDoesntMoveAfterwards" : "Luciano 9/30/2017 15:14",
+		"testWhenAPlayerFallsInAtomicBombSquareThenAllPlayersReturnToTheBeginningOfTheBoard" : "Luciano 9/30/2017 15:47",
+		"testWhenPlayerMovesForwardWithoutDice" : "Luciano 9/30/2017 17:06",
+		"testWhenPlayerFallsInSpeedUpEffectSquareThenPlayerMovesFourPositionsForward" : "Luciano 9/30/2017 15:07",
+		"testGameIsPlayedUntilAWinnerIsDeclared" : "Luciano 9/30/2017 15:07",
 		"testSuccessfulGameCreationWithSeveralDicesAndPlayers" : "LucianoPaci 9/27/2017 20:38",
-		"testWhenPlayerCompletesALapThenLapsAreCorrectlyUpdated" : "LucianoPaci 9/27/2017 20:38"
+		"testWhenPlayerCompletesALapThenLapsAreCorrectlyUpdated" : "Luciano 9/30/2017 17:06"
 	},
 	"class" : { }
 }

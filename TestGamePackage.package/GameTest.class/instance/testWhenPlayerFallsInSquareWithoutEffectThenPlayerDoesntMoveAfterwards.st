@@ -1,12 +1,11 @@
 tests
-testWhenPlayerFallsInSpeedUpEffectSquareThenPlayerMovesFourPositionsForward
-	| player game dice board squareSpeedUp squareNonEffect squares |
-	player := Player named: 'Nahuel'.
+testWhenPlayerFallsInSquareWithoutEffectThenPlayerDoesntMoveAfterwards
+| player game dice board squareNonEffect squares |
+	player := Player named: 'JaimeLannister'.
 	
-	squareNonEffect := SquareWithoutEffect  new.
-	squareSpeedUp := SquareSpeedUp new.
+	squareNonEffect := SquareWithoutEffect new.
 	squares := OrderedCollection new
-		add: squareSpeedUp;
+		add: squareNonEffect;
 		add: squareNonEffect;
 		add: squareNonEffect;
 		add: squareNonEffect;
@@ -22,4 +21,4 @@ testWhenPlayerFallsInSpeedUpEffectSquareThenPlayerMovesFourPositionsForward
 		winningWhenCompleting: 1.
 	self assert: player position equals: 0.
 	game nextTurnFor: player.
-	self assert: player position equals: 5
+	self assert: player position equals: 1

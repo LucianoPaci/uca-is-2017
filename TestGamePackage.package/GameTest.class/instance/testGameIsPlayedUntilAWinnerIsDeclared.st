@@ -2,7 +2,7 @@ tests
 testGameIsPlayedUntilAWinnerIsDeclared
 	| playerScorpion playerRaiden diceSixFaces diceEightFaces game collectionOfDices board laps collectionOfplayers squares |
 	
-	squares :=  (1 to: 12) collect: [:a | SquareNonEffect new].
+	squares :=  (1 to: 12) collect: [:a | SquareWithoutEffect new].
 	board := Board definedSquares: squares.
 	diceEightFaces := Dice
 		faces: 8
