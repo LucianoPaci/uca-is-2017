@@ -1,22 +1,24 @@
 tests
 testWhenPlayerCompletesALapThenLapsAreCorrectlyUpdated
-	| player board dice game squareAtomicBomb squareWornHole squares |
+	| player board dice game squareWithoutEffect squares |
 	player := Player named: 'jorge'.
-	squareAtomicBomb:= SquareAtomicBomb initialize.
-	squareWornHole:= SquareWormHole initialize.
+	squareWithoutEffect := SquareWithoutEffect new.
 	squares:= OrderedCollection new.
-	squares add: squareWornHole.
-	squares add: squareAtomicBomb.
+	8 timesRepeat: [ squares add: squareWithoutEffect ].
 	board:= Board definedSquares: squares.
 	dice := Dice faces: 6.
 	game := Game
-		playedBy: player
+		playedBy: (OrderedCollection with:player)
 		on: board
-		throwing: dice
+		throwing: (OrderedCollection with:dice)
 		winningWhenCompleting: 1.
-	self assert: player position equals: 0.
-	game move: player positions: 5.
-	self assert: player position equals: 5.
-	game move: player positions: 7.
-	self assert: player position equals: 2.
-	self assert: player lapsTravelled equals: 1
+	self assert: (game players at:1) position equals: 0.
+	self assert: (game players at:1) lapsTravelled equals: 0.
+	
+	game move: (game players at:1)positions: 5.
+	self assert: (game players at:1) lapsTravelled equals: 0.
+	self assert: (game players at:1) position equals: 5.
+	
+	game move: (game players at:1) positions: 4.
+	self assert: (game players at:1)position equals: 1.
+	self assert: (game players at:1) lapsTravelled equals: 1.

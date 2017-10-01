@@ -1,0 +1,24 @@
+{
+	"commentStamp" : "<historical>",
+	"super" : "Object",
+	"category" : "GamePackage",
+	"classinstvars" : [
+		"player",
+		"board",
+		"dice",
+		"laps"
+	],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"board",
+		"laps",
+		"winner",
+		"players",
+		"dices",
+		"previousTurnPlayer",
+		"indexOfExpectedPlayer"
+	],
+	"name" : "Game",
+	"type" : "normal"
+}
