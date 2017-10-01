@@ -1,0 +1,18 @@
+SmalltalkCISpec {
+  #loading : [
+    SCIMetacelloLoadSpec {
+      baseline : 'uca-is-2017',
+      #directory : 'repository',
+      #load : [ 'Development' ],
+      #platforms : [ #pharo ]
+    } 
+  ], 
+  #testing : {
+    #coverage : {
+      #packages : [ 'GamePackage' ]
+    },
+    #include : {  
+      #packages : [ 'GamePackage', 'TestGamePackage' ]
+    }    
+  }
+}
