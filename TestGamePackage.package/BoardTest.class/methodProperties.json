@@ -1,6 +1,7 @@
 {
 	"instance" : {
-		"testBoardCreationWithDefinedAmountOfSquares" : "LucianoPaci 9/26/2017 16:57"
+		"testBoardCreationWithDefinedAmountOfSquares" : "LucianoPaci 9/26/2017 16:57",
+		"testRandomlyGeneratedBoardWithAmountOfSquares" : "LucianoPaci 10/3/2017 21:30"
 	},
 	"class" : { }
 }
