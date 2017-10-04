@@ -3,16 +3,9 @@ testWhenPlayerFallsInSpeedUpEffectSquareThenPlayerMovesFourPositionsForward
 	| player game dice board squareSpeedUp squareNonEffect squares |
 	player := Player named: 'Nahuel'.
 	
-	squareNonEffect := SquareWithoutEffect  new.
-	squareSpeedUp := SquareSpeedUp new.
-	squares := OrderedCollection new
-		add: squareSpeedUp;
-		add: squareNonEffect;
-		add: squareNonEffect;
-		add: squareNonEffect;
-		add: squareNonEffect;
-		add: squareNonEffect;
-		yourself.
+	squares:= (1 to: 6) collect: [:n | SquareWithoutEffect onPosition: n ].
+	squares at: 1 put: (SquareSpeedUp onPosition:1).
+	
 	board := Board definedSquares: squares.
 	dice := Dice faces: 6 obtainingValuesFrom: (FixedNumberSource providing: #(1 2 3 4 5 6)).
 	game := Game

@@ -1,18 +1,20 @@
 tests
 testGameIsPlayedUntilAWinnerIsDeclared
-	| playerScorpion playerRaiden diceSixFaces diceEightFaces game collectionOfDices board laps collectionOfplayers  squares squareWithoutEffect |
-	
+	| playerScorpion playerRaiden game collectionOfDices board laps collectionOfplayers squares squareWithoutEffect |
 	squareWithoutEffect := SquareWithoutEffect new.
 	squares := OrderedCollection new.
 	8 timesRepeat: [ squares add: squareWithoutEffect ].
 	board := Board definedSquares: squares.
-	
-	diceEightFaces := Dice faces: 8 obtainingValuesFrom: (FixedNumberSource providing: #(1 2 3 4 5 6 7 8)).
-	diceSixFaces := Dice faces: 6 obtainingValuesFrom: (FixedNumberSource providing: #(1 2 3 4 5 6)).
 	collectionOfDices := OrderedCollection new.
 	collectionOfDices
-		add: diceSixFaces;
-		add: diceEightFaces.
+		add:
+			(Dice
+				faces: 6
+				obtainingValuesFrom: (FixedNumberSource providing: #(1 2 3 4 5 6)));
+		add:
+			(Dice
+				faces: 8
+				obtainingValuesFrom: (FixedNumberSource providing: #(1 2 3 4 5 6 7 8))).
 	collectionOfplayers := OrderedCollection new.
 	playerScorpion := Player named: 'Scorpion'.
 	playerRaiden := Player named: 'Raiden'.

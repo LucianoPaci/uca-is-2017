@@ -1,9 +1,7 @@
 tests
 testWhenPlayingAGameInOrder
 	| squares board diceEightFaces diceSixFaces collectionOfDices collectionOfplayers playerScorpion playerJuanMa laps game playerRaiden squareWithoutEffect |
-	squareWithoutEffect := SquareWithoutEffect new.
-	squares := OrderedCollection new.
-	8 timesRepeat: [ squares add: squareWithoutEffect ].
+	squares:= (1 to: 8) collect: [:n | SquareWithoutEffect onPosition: n ].
 	board := Board definedSquares: squares.
 	diceEightFaces := Dice
 		faces: 8

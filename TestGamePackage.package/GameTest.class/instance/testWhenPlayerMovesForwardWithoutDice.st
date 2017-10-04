@@ -2,9 +2,7 @@ tests
 testWhenPlayerMovesForwardWithoutDice
 	| player board dice game squareWithoutEffect squares |
 	player := Player named: 'jorge'.
-	squareWithoutEffect := SquareWithoutEffect new.
-	squares:= OrderedCollection new.
-	8 timesRepeat: [ squares add: squareWithoutEffect ].
+	squares:= (1 to: 8) collect: [:n | SquareWithoutEffect onPosition: n ].
 	
 	board:= Board definedSquares: squares.
 	dice := Dice faces: 6.

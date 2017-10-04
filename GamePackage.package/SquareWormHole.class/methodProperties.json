@@ -2,6 +2,7 @@
 	"instance" : {
 		"initialize" : "LucianoPaci 9/27/2017 20:49",
 		"effect" : "juanMaDiMartino 9/25/2017 12:12",
+		"initializedPosition:" : "LucianoPaci 10/4/2017 20:19",
 		"provokesAnEffectInto:with:" : "LucianoPaci 9/28/2017 01:13"
 	},
 	"class" : { }

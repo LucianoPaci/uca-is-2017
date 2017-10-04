@@ -1,21 +1,10 @@
 tests
 testWhenPlayerFallsInWormHoleEffectSquareThenPlayerMovesFourPositionsBackwards
-	| player1  game dice board timeMachineSquare squareNonEffect squares |
+	| player1  game dice board  squares |
 	player1 := Player named: 'Frodo'.
-	squareNonEffect := SquareWithoutEffect  new.
-	timeMachineSquare  := SquareWormHole new.
-	squares := OrderedCollection new
-		add: squareNonEffect;
-		add: squareNonEffect;
-		add: squareNonEffect;
-		add: squareNonEffect;
-		add: squareNonEffect;
-		add: squareNonEffect;
-		add: timeMachineSquare;
-		add: squareNonEffect;
-		add: squareNonEffect;
-		add: squareNonEffect;
-		yourself.
+	squares:= (1 to: 10) collect: [:n | SquareWithoutEffect onPosition: n ].
+	squares at: 7 put: (SquareWormHole onPosition:7).
+
 	board := Board definedSquares: squares.
 	dice := Dice faces: 2 obtainingValuesFrom: (FixedNumberSource providing: #(1 6 6)).
 	game := Game

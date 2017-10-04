@@ -3,20 +3,10 @@ testWhenPlayerFallsInMoonWalkEffectSquareThenTheRemainingPlayersMoveNPositionsBa
 	| player1 player2 game dice board moonwalkSquare squareNonEffect squares |
 	player1 := Player named: 'Lucho'.
 	player2 :=Player named: 'Juanma'.
-	squareNonEffect := SquareWithoutEffect  new.
-	moonwalkSquare  := SquareMoonWalk new.
-	squares := OrderedCollection new
-		add: squareNonEffect;
-		add: squareNonEffect;
-		add: squareNonEffect;
-		add: squareNonEffect;
-		add: squareNonEffect;
-		add: squareNonEffect;
-		add: moonwalkSquare;
-		add: squareNonEffect;
-		add: squareNonEffect;
-		add: squareNonEffect;
-		yourself.
+	
+	squares:= (1 to: 10) collect: [:n | SquareWithoutEffect onPosition: n ].
+	
+	squares at: 7 put: (SquareMoonWalk onPosition:7).
 	board := Board definedSquares: squares.
 	dice := Dice faces: 2 obtainingValuesFrom: (FixedNumberSource providing: #(1 6 6)).
 	game := Game

@@ -1,5 +1,5 @@
 tests
-testRandomlyGeneratedBoardWithAmountOfSquares
+testRandomlyGeneratedBoardWithDefinedAmountOfSquares
 	| board allSquaresCollection squares randomIndex|
 	
 	allSquaresCollection:=OrderedCollection new.

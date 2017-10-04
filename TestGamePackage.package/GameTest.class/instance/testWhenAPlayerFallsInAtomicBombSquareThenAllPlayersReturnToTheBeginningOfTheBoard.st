@@ -4,17 +4,9 @@ testWhenAPlayerFallsInAtomicBombSquareThenAllPlayersReturnToTheBeginningOfTheBoa
 	player1 := Player named: 'JaimeLannister'.
 	player2 := Player named: 'NedStark'.
 	player3 := Player named: 'Jon Snow'.
-	squareNonEffect := SquareWithoutEffect new.
-	squareAtomicBomb := SquareAtomicBomb new.
-	squares := OrderedCollection new
-		add: squareNonEffect;
-		add: squareNonEffect;
-		add: squareNonEffect;
-		add: squareNonEffect;
-		add: squareAtomicBomb;
-		add: squareNonEffect;
-		add: squareNonEffect;
-		yourself.
+	squares:= (1 to: 8) collect: [:n | SquareWithoutEffect onPosition: n ].
+	squares at: 5 put: (SquareAtomicBomb  onPosition:5).
+	
 	board := Board definedSquares: squares.
 	dice := Dice faces: 6 obtainingValuesFrom: (FixedNumberSource providing: #(1 2 3 4 5 6)).
 	game := Game
