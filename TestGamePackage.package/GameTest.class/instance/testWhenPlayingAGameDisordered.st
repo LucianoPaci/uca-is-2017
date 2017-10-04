@@ -29,11 +29,11 @@ testWhenPlayingAGameDisordered
 		definedBoard: board
 		definedDices: collectionOfDices
 		definedAmountOfLaps: laps.
-	self assert: game indexOfExpectedPlayer equals: 1.
+	self assert: game expectedPlayer  equals: playerScorpion.
 	game nextTurnFor: playerScorpion.
-	self assert: game indexOfExpectedPlayer equals: 2.
+	self assert: game expectedPlayer equals: playerRaiden.
 	game nextTurnFor: playerRaiden.
-	self assert: game indexOfExpectedPlayer equals: 3.
+	self assert: game expectedPlayer equals: playerJuanMa.
 	game nextTurnFor: playerRaiden.
 	self assert: game indexOfExpectedPlayer equals: 3.
 	game nextTurnFor: playerJuanMa.
