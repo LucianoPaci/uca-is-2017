@@ -8,7 +8,7 @@ SmalltalkCISpec {
   ], 
   #testing : {
     #coverage : {
-      #packages : [ 'GamePackage''TestGamePackage']
+      #packages : [ 'GamePackage','TestGamePackage']
     },
     #include : {  
       #packages : [ 'TestGamePackage' ]
