@@ -1,7 +1,7 @@
 SmalltalkCISpec {
   #loading : [
     SCIMetacelloLoadSpec {
-      baseline : 'Cardiologos',
+      #baseline : 'Cardiologos',
       #load : [ 'Development' ],
       #platforms : [ #pharo ]
     } 
