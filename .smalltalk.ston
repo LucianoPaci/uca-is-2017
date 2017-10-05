@@ -1,7 +1,7 @@
 SmalltalkCISpec {
   #loading : [
     SCIMetacelloLoadSpec {
-      baseline : 'uca-is-2017',
+      baseline : 'Cardiologos',
       #directory : 'repository',
       #load : [ 'Development' ],
       #platforms : [ #pharo ]
@@ -9,10 +9,10 @@ SmalltalkCISpec {
   ], 
   #testing : {
     #coverage : {
-      #packages : [ 'GamePackage' ]
+      #packages : [ 'GamePackage''TestGamePackage']
     },
     #include : {  
-      #packages : [ 'GamePackage', 'TestGamePackage' ]
+      #packages : [ 'TestGamePackage' ]
     }    
   }
 }
