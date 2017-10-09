@@ -1,18 +1,18 @@
 {
 	"instance" : {
-		"testWhenAPlayerFallsInAtomicBombSquareThenAllPlayersReturnToTheBeginningOfTheBoard" : "LucianoPaci 10/4/2017 20:43",
-		"testWhenPlayerFallsInTimeMachineEffectSquareThenPlayerMovesBackToPRevoiusPosition" : "LucianoPaci 10/4/2017 20:44",
-		"testWhenPlayingAGameDisordered" : "LucianoPaci 10/4/2017 20:43",
-		"testWhenAPlayerPlaysTwiceConsecutiveTimes" : "LucianoPaci 10/4/2017 20:42",
-		"testWhenPlayingAGameInOrder" : "LucianoPaci 10/4/2017 20:43",
-		"testWhenPlayerFallsInWormHoleEffectSquareThenPlayerMovesFourPositionsBackwards" : "LucianoPaci 10/4/2017 20:34",
-		"testWhenPlayerCompletesALapThenLapsAreCorrectlyUpdated" : "Luciano 10/1/2017 18:51",
-		"testWhenPlayerFallsInSpeedUpEffectSquareThenPlayerMovesFourPositionsForward" : "LucianoPaci 10/4/2017 20:37",
-		"testGameIsPlayedUntilAWinnerIsDeclared" : "LucianoPaci 10/4/2017 19:32",
-		"testWhenPlayerMovesForwardWithoutDice" : "LucianoPaci 10/4/2017 19:57",
-		"testWhenPlayerFallsInSquareWithoutEffectThenPlayerDoesntMoveAfterwards" : "LucianoPaci 10/4/2017 20:35",
+		"testWhenAPlayerFallsInAtomicBombSquareThenAllPlayersReturnToTheBeginningOfTheBoard" : "LucianoPcai 10/8/2017 21:42",
+		"testWhenPlayerFallsInTimeMachineEffectSquareThenPlayerMovesBackToPRevoiusPosition" : "LucianoPcai 10/6/2017 17:56",
+		"testWhenPlayingAGameDisordered" : "juanMaDiMartino 10/4/2017 22:07",
+		"testWhenAPlayerPlaysTwiceConsecutiveTimes" : "juanMaDiMartino 10/4/2017 22:10",
+		"testWhenPlayingAGameInOrder" : "juanMaDiMartino 10/4/2017 22:02",
+		"testWhenPlayerFallsInWormHoleEffectSquareThenPlayerMovesFourPositionsBackwards" : "LucianoPcai 10/6/2017 17:52",
+		"testWhenPlayerCompletesALapThenLapsAreCorrectlyUpdated" : "LucianoPcai 10/8/2017 21:44",
+		"testWhenPlayerFallsInSpeedUpEffectSquareThenPlayerMovesFourPositionsForward" : "LucianoPcai 10/6/2017 18:09",
+		"testGameIsPlayedUntilAWinnerIsDeclared" : "LucianoPcai 10/8/2017 21:41",
+		"testWhenPlayerMovesForwardWithoutDice" : "LucianoPcai 10/6/2017 17:12",
+		"testWhenPlayerFallsInSquareWithoutEffectThenPlayerDoesntMoveAfterwards" : "LucianoPcai 10/6/2017 18:01",
 		"testSuccessfulGameCreationWithSeveralDicesAndPlayers" : "LucianoPaci 9/27/2017 20:38",
-		"testWhenPlayerFallsInMoonWalkEffectSquareThenTheRemainingPlayersMoveNPositionsBackwards" : "LucianoPaci 10/4/2017 20:40"
+		"testWhenPlayerFallsInMoonWalkEffectSquareThenTheRemainingPlayersMoveNPositionsBackwards" : "LucianoPcai 10/8/2017 21:47"
 	},
 	"class" : { }
 }

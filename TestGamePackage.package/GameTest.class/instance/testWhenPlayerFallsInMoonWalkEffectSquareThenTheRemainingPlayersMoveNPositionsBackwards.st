@@ -1,25 +1,23 @@
 tests
 testWhenPlayerFallsInMoonWalkEffectSquareThenTheRemainingPlayersMoveNPositionsBackwards
-	| player1 player2 game dice board moonwalkSquare squareNonEffect squares |
+	| player1 player2 game dice board squares |
 	player1 := Player named: 'Lucho'.
-	player2 :=Player named: 'Juanma'.
-	
-	squares:= (1 to: 10) collect: [:n | SquareWithoutEffect onPosition: n ].
-	
-	squares at: 7 put: (SquareMoonWalk onPosition:7).
+	player2 := Player named: 'Juanma'.
+	squares := (1 to: 10) collect: [ :n | SquareWithoutEffect onPosition: n ].
+	squares at: 7 put: (SquareMoonWalk onPosition: 7).
 	board := Board definedSquares: squares.
-	dice := Dice faces: 2 obtainingValuesFrom: (FixedNumberSource providing: #(1 6 6)).
+	dice := Dice faces: 3 obtainingValuesFrom: (FixedNumberSource providing: #(1 7 5)).
 	game := Game
-		playedBy: (OrderedCollection with: player1 with:player2)
+		playedBy: (OrderedCollection with: player1 with: player2)
 		on: board
 		throwing: (OrderedCollection with: dice)
 		winningWhenCompleting: 1.
-	self assert: player1 position equals: 0.
-	self assert: player2 position equals: 0.
-	game nextTurnFor: player1.
 	self assert: player1 position equals: 1.
+	self assert: player2 position equals: 1.
+	game nextTurnFor: player1.
+	self assert: player1 position equals: 2.
 	game nextTurnFor: player2.
-	self assert: player2 position equals: 6.
+	self assert: player2 position equals: 8.
 	game nextTurnFor: player1.
 	self assert: player1 position equals: 7.
-	self assert: player2 position equals: 0.
+	self assert: player2 position equals: 2

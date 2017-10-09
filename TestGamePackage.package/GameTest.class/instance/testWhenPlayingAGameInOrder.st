@@ -1,6 +1,6 @@
 tests
 testWhenPlayingAGameInOrder
-	| squares board diceEightFaces diceSixFaces collectionOfDices collectionOfplayers playerScorpion playerJuanMa laps game playerRaiden squareWithoutEffect |
+	| squares board diceEightFaces diceSixFaces collectionOfDices collectionOfplayers playerScorpion playerJuanMa laps game playerRaiden  |
 	squares:= (1 to: 8) collect: [:n | SquareWithoutEffect onPosition: n ].
 	board := Board definedSquares: squares.
 	diceEightFaces := Dice

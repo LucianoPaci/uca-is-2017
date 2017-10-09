@@ -1,8 +1,10 @@
 as yet unclassified
 move: aPlayer positions: anAmountOfPositions
 	anAmountOfPositions ~~ 0
-		ifTrue: [ anAmountOfPositions > 0
-				ifTrue: [ self moveForward: aPlayer positions: anAmountOfPositions ]
-				ifFalse: [ self moveBackwards: aPlayer positions: anAmountOfPositions ] ]
+		ifTrue: [
+			anAmountOfPositions > 0
 			
-		ifFalse: [ aPlayer changePosition: 1 ]
+			ifTrue:[	 self moveForward: aPlayer positions: anAmountOfPositions 	]
+			ifFalse: [ self moveBackwards: aPlayer positions: anAmountOfPositions ]
+		]
+		
