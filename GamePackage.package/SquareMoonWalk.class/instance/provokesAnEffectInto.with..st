@@ -1,4 +1,4 @@
-as yet unclassified
+affecting
 provokesAnEffectInto: aGame with: aPlayer
 
 |aPlayerAtPosition |
