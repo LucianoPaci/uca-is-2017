@@ -1,0 +1,5 @@
+as yet unclassified
+changeIndexOfExpectedPlayer
+self expectedIndexOfPlayerGreaterThanPlayersCollectionSize
+ifTrue:[ self moveIndexOfExpectedPlayerToBeginning]
+ifFalse:[ self increaseByOneIndexOfExpectedPlayer]

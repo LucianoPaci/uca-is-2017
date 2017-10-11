@@ -1,0 +1,17 @@
+SmalltalkCISpec {
+  #loading : [
+    SCIMetacelloLoadSpec {
+      #baseline : 'Cardiologos',
+      #load : [ 'Development' ],
+      #platforms : [ #pharo ]
+    } 
+  ], 
+  #testing : {
+    #coverage : {
+      #packages : [ 'GamePackage','TestGamePackage']
+    },
+    #include : {  
+      #packages : [ 'TestGamePackage' ]
+    }    
+  }
+}
