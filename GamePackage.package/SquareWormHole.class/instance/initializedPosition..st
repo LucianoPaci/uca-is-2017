@@ -1,4 +1,4 @@
-as yet unclassified
+initialization
 initializedPosition: aPosition
 	name:= 'Worm Hole'.
 	position:= aPosition.
