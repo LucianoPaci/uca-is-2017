@@ -1,4 +1,4 @@
-as yet unclassified
+movement
 moveToBeginning: aPlayer
 aPlayer changePosition: 0.
 

@@ -1,4 +1,4 @@
-initialization
+as yet unclassified
 initializedPosition: aPosition
 	name:= 'SpeedUp'.
 	position:= aPosition.

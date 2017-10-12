@@ -1,3 +1,3 @@
-as yet unclassified
+movement
 changePreviousTurnPlayer: aPlayer
 previousTurnPlayer := aPlayer.

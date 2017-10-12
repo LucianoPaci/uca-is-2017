@@ -1,3 +1,3 @@
-as yet unclassified
+behavior
 numberOfPlayers
 	^players size.

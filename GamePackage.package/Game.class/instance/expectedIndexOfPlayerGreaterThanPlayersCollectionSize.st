@@ -1,3 +1,3 @@
-as yet unclassified
+movement
 expectedIndexOfPlayerGreaterThanPlayersCollectionSize
 ^indexOfExpectedPlayer >= self numberOfPlayers 
