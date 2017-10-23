@@ -9,7 +9,8 @@
 		"name",
 		"position",
 		"lapsTravelled",
-		"previousPosition"
+		"previousPosition",
+		"cards"
 	],
 	"name" : "Player",
 	"type" : "normal"

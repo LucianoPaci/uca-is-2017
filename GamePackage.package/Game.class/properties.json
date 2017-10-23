@@ -16,7 +16,6 @@
 		"winner",
 		"players",
 		"dices",
-		"previousTurnPlayer",
 		"indexOfExpectedPlayer"
 	],
 	"name" : "Game",
