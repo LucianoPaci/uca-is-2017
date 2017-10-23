@@ -1,0 +1,3 @@
+accessing
+numberOfCards
+	^cards size.

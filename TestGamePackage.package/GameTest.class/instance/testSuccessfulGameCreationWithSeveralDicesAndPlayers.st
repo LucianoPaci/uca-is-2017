@@ -1,8 +1,8 @@
 tests
 testSuccessfulGameCreationWithSeveralDicesAndPlayers
 	| player1 player2 board dice1 dice2 game laps players dices squareAtomicBomb squareWornHole squares |
-	player1 := Player named: 'Scorpion'.
-	player2 := Player named: 'Raiden'.
+	player1 := Player named: 'Scorpion' withACardDeck: self aCollectionOfCards.
+	player2 := Player named: 'Raiden' withACardDeck: self aCollectionOfCards.
 	squareAtomicBomb:= SquareAtomicBomb initialize.
 	squareWornHole:= SquareWormHole initialize.
 	squares:= OrderedCollection new.

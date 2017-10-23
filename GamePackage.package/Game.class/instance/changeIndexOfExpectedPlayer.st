@@ -1,4 +1,4 @@
-movement
+as yet unclassified
 changeIndexOfExpectedPlayer
 self expectedIndexOfPlayerGreaterThanPlayersCollectionSize
 ifTrue:[ self moveIndexOfExpectedPlayerToBeginning]

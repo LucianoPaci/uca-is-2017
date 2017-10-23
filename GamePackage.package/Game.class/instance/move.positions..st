@@ -1,4 +1,4 @@
-movement
+as yet unclassified
 move: aPlayer positions: anAmountOfPositions
 	anAmountOfPositions ~~ 0
 		ifTrue: [

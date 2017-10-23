@@ -1,8 +1,8 @@
 tests
 testWhenPlayerFallsInMoonWalkEffectSquareThenTheRemainingPlayersMoveNPositionsBackwards
 	| player1 player2 game dice board squares |
-	player1 := Player named: 'Lucho'.
-	player2 := Player named: 'Juanma'.
+	player1 := Player named: 'Lucho' withACardDeck: self aCollectionOfCards.
+	player2 := Player named: 'Juanma' withACardDeck: self aCollectionOfCards.
 	squares := (1 to: 10) collect: [ :n | SquareWithoutEffect onPosition: n ].
 	squares at: 7 put: (SquareMoonWalk onPosition: 7).
 	board := Board definedSquares: squares.

@@ -8,16 +8,13 @@ testGameIsPlayedUntilAWinnerIsDeclared
 		add: (Dice faces: 6 obtainingValuesFrom: (FixedNumberSource providing: #(1 2 3 4 5 6)));
 		add: (Dice faces: 8 obtainingValuesFrom: (FixedNumberSource providing: #(1 2 3 4 5 6 7 8))).
 	collectionOfplayers := OrderedCollection new.
-	playerScorpion := Player named: 'Scorpion'.
-	playerRaiden := Player named: 'Raiden'.
+	playerScorpion := Player named: 'Scorpion' withACardDeck: self aCollectionOfCards.
+	playerRaiden := Player named: 'Raiden' withACardDeck: self aCollectionOfCards.
 	laps := 1.
 	collectionOfplayers add: playerScorpion.
 	collectionOfplayers add: playerRaiden.
 	game := Game
-		definedPlayers: collectionOfplayers
-		definedBoard: board
-		definedDices: collectionOfDices
-		definedAmountOfLaps: laps.
+		playedBy: collectionOfplayers on: board  throwing: collectionOfDices winningWhenCompleting: laps.
 	self
 		assert: collectionOfplayers size equals: 2;
 		assert: playerScorpion position equals: 1;

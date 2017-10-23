@@ -7,6 +7,6 @@ nextTurnFor: aPlayer
 			
 			actualSquare:= board squareAtPosition: aPlayer position.
 			actualSquare provokesAnEffectInto: self with: aPlayer.
-			
+			actualSquare addToAPlayerCardDeck: aPlayer from: self.
 			self winnerOfGame: aPlayer.
 			self changeIndexOfExpectedPlayer  ]

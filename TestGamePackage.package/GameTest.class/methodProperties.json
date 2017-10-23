@@ -1,18 +1,20 @@
 {
 	"instance" : {
-		"testWhenAPlayerFallsInAtomicBombSquareThenAllPlayersReturnToTheBeginningOfTheBoard" : "LucianoPcai 10/8/2017 21:42",
-		"testWhenPlayerFallsInTimeMachineEffectSquareThenPlayerMovesBackToPRevoiusPosition" : "LucianoPcai 10/6/2017 17:56",
-		"testWhenPlayingAGameDisordered" : "juanMaDiMartino 10/4/2017 22:07",
-		"testWhenAPlayerPlaysTwiceConsecutiveTimes" : "juanMaDiMartino 10/4/2017 22:10",
-		"testWhenPlayingAGameInOrder" : "juanMaDiMartino 10/4/2017 22:02",
-		"testWhenPlayerFallsInWormHoleEffectSquareThenPlayerMovesFourPositionsBackwards" : "LucianoPcai 10/6/2017 17:52",
-		"testWhenPlayerCompletesALapThenLapsAreCorrectlyUpdated" : "LucianoPcai 10/8/2017 21:44",
-		"testWhenPlayerFallsInSpeedUpEffectSquareThenPlayerMovesFourPositionsForward" : "LucianoPcai 10/6/2017 18:09",
-		"testGameIsPlayedUntilAWinnerIsDeclared" : "LucianoPcai 10/8/2017 21:41",
-		"testWhenPlayerMovesForwardWithoutDice" : "LucianoPcai 10/6/2017 17:12",
-		"testWhenPlayerFallsInSquareWithoutEffectThenPlayerDoesntMoveAfterwards" : "LucianoPcai 10/6/2017 18:01",
-		"testSuccessfulGameCreationWithSeveralDicesAndPlayers" : "LucianoPaci 9/27/2017 20:38",
-		"testWhenPlayerFallsInMoonWalkEffectSquareThenTheRemainingPlayersMoveNPositionsBackwards" : "LucianoPcai 10/8/2017 21:47"
+		"testWhenAPlayerFallsInAtomicBombSquareThenAllPlayersReturnToTheBeginningOfTheBoard" : "juanMartinDiMartino 10/22/2017 19:56",
+		"testWhenPlayerFallsInTimeMachineEffectSquareThenPlayerMovesBackToPeviousPosition" : "juanMartinDiMartino 10/22/2017 19:21",
+		"testWhenPlayingAGameDisordered" : "juanMartinDiMartino 10/22/2017 21:29",
+		"testWhenAPlayerPlaysTwiceConsecutiveTimes" : "juanMartinDiMartino 10/22/2017 21:28",
+		"testWhenPlayingAGameInOrder" : "juanMartinDiMartino 10/22/2017 21:30",
+		"testWhenPlayerCompletesALapThenLapsAreCorrectlyUpdated" : "juanMartinDiMartino 10/22/2017 15:01",
+		"testWhenPlayerFallsInWormHoleEffectSquareThenPlayerMovesFourPositionsBackwards" : "juanMartinDiMartino 10/22/2017 15:03",
+		"testWhenPlayerFallsInSpeedUpEffectSquareThenPlayerMovesFourPositionsForward" : "juanMartinDiMartino 10/22/2017 15:03",
+		"testGameIsPlayedUntilAWinnerIsDeclared" : "juanMartinDiMartino 10/22/2017 21:27",
+		"aCollectionOfCards" : "juanMartinDiMartino 10/22/2017 19:18",
+		"testWhenPlayerFallsInSquareWithoutEffectThenPlayerDoesntMoveAfterwards" : "juanMartinDiMartino 10/22/2017 15:03",
+		"testWhenAPlayerFallsInASpecialSquareANewCardMustBeAddedToThisPlayerCardDeck" : "juanMartinDiMartino 10/23/2017 08:59",
+		"testSuccessfulGameCreationWithSeveralDicesAndPlayers" : "juanMartinDiMartino 10/22/2017 15:00",
+		"testWhenPlayerMovesForwardWithoutDice" : "juanMartinDiMartino 10/22/2017 15:04",
+		"testWhenPlayerFallsInMoonWalkEffectSquareThenTheRemainingPlayersMoveNPositionsBackwards" : "juanMartinDiMartino 10/22/2017 15:02"
 	},
 	"class" : { }
 }
