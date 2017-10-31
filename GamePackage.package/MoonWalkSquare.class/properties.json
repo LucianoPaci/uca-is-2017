@@ -1,0 +1,15 @@
+{
+	"commentStamp" : "<historical>",
+	"super" : "Square",
+	"category" : "GamePackage",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"effect",
+		"name",
+		"position"
+	],
+	"name" : "MoonWalkSquare",
+	"type" : "normal"
+}
