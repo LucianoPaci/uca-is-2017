@@ -5,10 +5,7 @@
 	"classinstvars" : [ ],
 	"pools" : [ ],
 	"classvars" : [ ],
-	"instvars" : [
-		"name",
-		"position"
-	],
+	"instvars" : [ ],
 	"name" : "Square",
 	"type" : "normal"
 }

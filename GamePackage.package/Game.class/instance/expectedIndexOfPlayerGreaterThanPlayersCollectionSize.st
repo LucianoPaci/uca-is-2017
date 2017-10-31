@@ -1,3 +1,0 @@
-movement
-expectedIndexOfPlayerGreaterThanPlayersCollectionSize
-^indexOfExpectedPlayer >= self numberOfPlayers 

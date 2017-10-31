@@ -1,3 +1,3 @@
-as yet unclassified
+initialization
 initializedPosition: aPosition
-	position:= aPosition.
+	self subclassResponsibility

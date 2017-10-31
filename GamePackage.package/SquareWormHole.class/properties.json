@@ -6,7 +6,8 @@
 	"pools" : [ ],
 	"classvars" : [ ],
 	"instvars" : [
-		"effect"
+		"name",
+		"position"
 	],
 	"name" : "SquareWormHole",
 	"type" : "normal"

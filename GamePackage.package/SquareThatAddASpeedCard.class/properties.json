@@ -1,0 +1,14 @@
+{
+	"commentStamp" : "<historical>",
+	"super" : "Square",
+	"category" : "GamePackage",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"name",
+		"position"
+	],
+	"name" : "SquareThatAddASpeedCard",
+	"type" : "normal"
+}

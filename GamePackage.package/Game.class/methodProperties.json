@@ -1,31 +1,21 @@
 {
 	"instance" : {
-		"positionOf:" : "Luciano 9/18/2017 17:32",
-		"expectedPlayer" : "LucianoPaci 10/4/2017 14:37",
-		"players" : "Luciano 9/20/2017 01:18",
-		"dices" : "Luciano 9/20/2017 01:18",
-		"winnerOfGame:" : "juanMaDiMartino 9/20/2017 16:38",
-		"previousTurnPlayer" : "Luciano 9/20/2017 21:20",
-		"move:positions:" : "juanMaDiMartino 10/5/2017 08:39",
-		"initializedWithPlayers:initializedBoard:initializedWithDices:initializedAmountOfLaps:" : "Luciano 10/1/2017 17:00",
-		"numberOfDices" : "juanMaDiMartino 9/20/2017 09:10",
-		"moveIndexOfExpectedPlayerToBeginning" : "Luciano 10/1/2017 16:50",
-		"moveToBeginning:" : "juanMaDiMartino 9/25/2017 13:45",
-		"nextTurnFor:" : "Luciano 10/1/2017 16:52",
-		"increaseByOneIndexOfExpectedPlayer" : "Luciano 10/1/2017 16:50",
+		"addACard:toAPlayer:" : "juanMartinDiMartino 10/22/2017 21:36",
+		"wrongTurnFor:" : "juanMartinDiMartino 10/29/2017 21:10",
+		"CheckIsAWinnerOfGame:" : "juanMartinDiMartino 10/31/2017 08:39",
+		"expectedPlayer" : "juanMartinDiMartino 10/29/2017 21:16",
 		"winner" : "Luciano 9/18/2017 18:22",
-		"expectedIndexOfPlayerGreaterThanPlayersCollectionSize" : "Luciano 10/1/2017 16:47",
-		"board" : "Luciano 9/11/2017 18:08",
-		"moveForward:positions:" : "LucianoPcai 10/6/2017 17:11",
-		"numberOfPlayers" : "juanMaDiMartino 9/20/2017 09:10",
+		"nextTurnFor:" : "juanMartinDiMartino 10/31/2017 08:39",
 		"laps" : "Luciano 9/13/2017 16:20",
-		"wrongTurnFor:" : "Luciano 10/1/2017 16:51",
-		"moveBackwards:positions:" : "LucianoPcai 10/6/2017 16:58",
-		"indexOfExpectedPlayer" : "Luciano 10/1/2017 16:49",
-		"changeIndexOfExpectedPlayer" : "Luciano 10/1/2017 16:46"
+		"playerCollectionOutOfBound" : "juanMartinDiMartino 10/29/2017 20:44",
+		"players" : "Luciano 9/20/2017 01:18",
+		"move:positions:" : "juanMartinDiMartino 10/31/2017 10:28",
+		"initializedWithPlayers:initializedBoard:initializedWithDices:initializedAmountOfLaps:" : "Luciano 10/1/2017 17:00",
+		"changeIndexOfExpectedPlayer" : "juanMartinDiMartino 10/29/2017 21:14",
+		"dices" : "juanMartinDiMartino 10/29/2017 20:51",
+		"board" : "Luciano 9/11/2017 18:08"
 	},
 	"class" : {
-		"playedBy:on:throwing:winningWhenCompleting:" : "LucianoPaci 9/27/2017 20:40",
-		"definedPlayers:definedBoard:definedDices:definedAmountOfLaps:" : "LucianoPaci 9/28/2017 01:19:36"
+		"playedBy:on:throwing:winningWhenCompleting:" : "LucianoPaci 9/27/2017 20:40"
 	}
 }

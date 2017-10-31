@@ -1,3 +1,0 @@
-behavior
-numberOfPlayers
-	^players size.

@@ -1,7 +1,7 @@
 tests
 testWhenPlayerFallsInSpeedUpEffectSquareThenPlayerMovesFourPositionsForward
 	| player game dice board squares |
-	player := Player named: 'Nahuel'.
+	player := Player named: 'Nahuel' withACardDeck: self aCollectionOfCards.
 	squares := (1 to: 9) collect: [ :n | SquareWithoutEffect onPosition: n ].
 	squares at: 2 put: (SquareSpeedUp onPosition: 2).
 	board := Board definedSquares: squares.

@@ -1,3 +1,0 @@
-behavior
-numberOfDices
-^dices size.
