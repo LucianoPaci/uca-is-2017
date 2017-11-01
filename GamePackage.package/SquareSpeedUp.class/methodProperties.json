@@ -1,10 +1,9 @@
 {
 	"instance" : {
-		"position" : "juanMartinDiMartino 10/29/2017 15:51",
-		"effect" : "juanMaDiMartino 9/25/2017 12:12",
-		"provokesAnEffectInto:with:" : "juanMartinDiMartino 10/30/2017 09:19",
 		"addToAPlayerCardDeck:from:" : "juanMartinDiMartino 10/22/2017 21:01",
-		"initializedPosition:" : "juanMartinDiMartino 10/29/2017 16:34"
+		"initializedPosition:" : "juanMartinDiMartino 10/29/2017 16:34",
+		"position" : "juanMartinDiMartino 10/29/2017 15:51",
+		"provokesAnEffectInto:with:" : "juanMartinDiMartino 10/30/2017 09:19"
 	},
 	"class" : { }
 }

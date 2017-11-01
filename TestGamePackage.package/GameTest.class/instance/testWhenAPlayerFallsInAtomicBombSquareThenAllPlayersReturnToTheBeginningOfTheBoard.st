@@ -24,9 +24,9 @@ testWhenAPlayerFallsInAtomicBombSquareThenAllPlayersReturnToTheBeginningOfTheBoa
 	self assert: player3 position equals: 4.
 	game nextTurnFor: player1.
 	self
-		assert: player1 position equals: 0;
+		assert: player1 position equals: 1;
 		assert: player1 lapsTravelled equals: 0;
-		assert: player2 position equals: 0;
+		assert: player2 position equals: 1;
 		assert: player2 lapsTravelled equals: 0;
-		assert: player3 position equals: 0;
+		assert: player3 position equals: 1;
 		assert: player3 lapsTravelled equals: 0
