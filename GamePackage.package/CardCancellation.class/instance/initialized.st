@@ -1,3 +1,3 @@
 initialization
 initialized
-	name := 'Cancellation'.
+	name := 'Cancellation'. 

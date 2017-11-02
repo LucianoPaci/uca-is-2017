@@ -1,2 +1,0 @@
-signalling
-signal: aString
