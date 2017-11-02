@@ -1,2 +1,2 @@
 affecting
-provokesAnEffectInto: aGame with: aPlayer
+provokesAnEffectInto: aGame with: aPlayer  

@@ -10,4 +10,4 @@ nextTurnFor: aPlayer
 			actualSquare addToAPlayerCardDeck: aPlayer from: self.
 			self CheckIsAWinnerOfGame: aPlayer.
 			self changeIndexOfExpectedPlayer  ]
-		ifTrue: [ WrongTurnPlayerException signal: 'Al jugador no le corresponde jugar en este turno']
+		ifTrue: [ WrongTurnPlayerError signal: 'Al jugador no le corresponde jugar en este turno ']

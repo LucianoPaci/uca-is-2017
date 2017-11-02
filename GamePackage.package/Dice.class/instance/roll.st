@@ -1,4 +1,4 @@
 behavior
 roll
 
-	^ numberProvider  nextInt: amountOfFaces
+	^ numberProvider  nextInt: amountOfFaces 

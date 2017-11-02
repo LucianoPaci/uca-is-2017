@@ -1,9 +1,0 @@
-{
-	"instance" : {
-		"testDiceCreationWithDefinedAmountOfFaces" : "Luciano 9/14/2017 17:18",
-		"assert:between:and:" : "Luciano 9/6/2017 22:03",
-		"testDiceWhenRolledValueIsValid" : "Luciano 9/19/2017 20:25",
-		"testWhenUsingAFixedNumberSourceDiceMustReturnInOrderValues" : "juanMartinDiMartino 10/30/2017 21:42"
-	},
-	"class" : { }
-}

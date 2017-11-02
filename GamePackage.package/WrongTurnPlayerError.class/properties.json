@@ -1,11 +1,11 @@
 {
 	"commentStamp" : "<historical>",
-	"super" : "TestCase",
-	"category" : "TestGamePackage",
+	"super" : "Error",
+	"category" : "GamePackage",
 	"classinstvars" : [ ],
 	"pools" : [ ],
 	"classvars" : [ ],
 	"instvars" : [ ],
-	"name" : "PlayerTest",
+	"name" : "WrongTurnPlayerError",
 	"type" : "normal"
 }
