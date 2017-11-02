@@ -21,5 +21,5 @@ testWhenAPlayerPlaysTwiceConsecutiveTimes
 	self assert: game expectedPlayer equals: playerScorpion .
 	game nextTurnFor: playerScorpion.
 	self assert: game expectedPlayer equals: playerRaiden .
-	game nextTurnFor: playerScorpion.
+	self should: [game nextTurnFor: playerScorpion.] raise: WrongTurnPlayerError.
 	self assert: game expectedPlayer equals: playerRaiden
