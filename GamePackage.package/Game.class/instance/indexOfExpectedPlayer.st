@@ -1,3 +1,0 @@
-accessing
-indexOfExpectedPlayer
-^indexOfExpectedPlayer

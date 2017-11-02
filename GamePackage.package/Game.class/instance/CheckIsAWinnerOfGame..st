@@ -1,3 +1,3 @@
 accessing
-winnerOfGame: aPlayer
+CheckIsAWinnerOfGame: aPlayer
 	(aPlayer lapsTravelled  >= laps) ifTrue: [winner:=aPlayer ].

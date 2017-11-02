@@ -1,3 +1,3 @@
 accessing
 dices
-	^ dices
+^dices.

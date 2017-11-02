@@ -5,7 +5,10 @@
 	"classinstvars" : [ ],
 	"pools" : [ ],
 	"classvars" : [ ],
-	"instvars" : [ ],
+	"instvars" : [
+		"name",
+		"position"
+	],
 	"name" : "SquareThatAddAPotentiationCard",
 	"type" : "normal"
 }

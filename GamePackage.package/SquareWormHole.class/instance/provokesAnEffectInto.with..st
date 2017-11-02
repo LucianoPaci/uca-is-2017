@@ -1,3 +1,3 @@
 affecting
 provokesAnEffectInto: aGame with: aPlayer
-	aGame move: aPlayer positions: self effect
+	aGame move: aPlayer positions: -4

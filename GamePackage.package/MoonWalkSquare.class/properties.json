@@ -5,7 +5,11 @@
 	"classinstvars" : [ ],
 	"pools" : [ ],
 	"classvars" : [ ],
-	"instvars" : [ ],
-	"name" : "SquareAtomicBomb",
+	"instvars" : [
+		"effect",
+		"name",
+		"position"
+	],
+	"name" : "MoonWalkSquare",
 	"type" : "normal"
 }

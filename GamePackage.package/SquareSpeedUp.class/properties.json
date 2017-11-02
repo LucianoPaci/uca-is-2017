@@ -6,7 +6,8 @@
 	"pools" : [ ],
 	"classvars" : [ ],
 	"instvars" : [
-		"effect"
+		"name",
+		"position"
 	],
 	"name" : "SquareSpeedUp",
 	"type" : "normal"

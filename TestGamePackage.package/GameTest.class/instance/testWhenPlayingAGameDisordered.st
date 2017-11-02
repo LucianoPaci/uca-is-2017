@@ -31,6 +31,6 @@ testWhenPlayingAGameDisordered
 	game nextTurnFor: playerRaiden.
 	self assert: game expectedPlayer equals: playerJuanMa.
 	game nextTurnFor: playerRaiden.
-	self assert: game indexOfExpectedPlayer equals: 3.
+	self assert: game expectedPlayer  equals: playerJuanMa.
 	game nextTurnFor: playerJuanMa.
-	self assert: game indexOfExpectedPlayer equals: 1
+	self assert: game expectedPlayer equals: playerScorpion

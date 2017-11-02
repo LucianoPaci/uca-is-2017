@@ -6,8 +6,9 @@
 	"pools" : [ ],
 	"classvars" : [ ],
 	"instvars" : [
-		"effect"
+		"name",
+		"position"
 	],
-	"name" : "SquareMoonWalk",
+	"name" : "AtomicBombSquare",
 	"type" : "normal"
 }

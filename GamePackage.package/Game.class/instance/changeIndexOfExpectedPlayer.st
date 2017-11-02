@@ -1,5 +1,5 @@
 as yet unclassified
 changeIndexOfExpectedPlayer
-self expectedIndexOfPlayerGreaterThanPlayersCollectionSize
-ifTrue:[ self moveIndexOfExpectedPlayerToBeginning]
-ifFalse:[ self increaseByOneIndexOfExpectedPlayer]
+self playerCollectionOutOfBound
+ifTrue:[ indexOfExpectedPlayer := 1]
+ifFalse:[  indexOfExpectedPlayer := indexOfExpectedPlayer +1]

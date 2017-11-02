@@ -1,3 +1,0 @@
-accessing
-increaseByOneIndexOfExpectedPlayer
- indexOfExpectedPlayer := indexOfExpectedPlayer +1
