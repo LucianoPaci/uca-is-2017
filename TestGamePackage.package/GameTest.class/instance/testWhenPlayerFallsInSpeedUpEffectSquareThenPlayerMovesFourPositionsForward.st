@@ -1,4 +1,4 @@
-tests
+Movement
 testWhenPlayerFallsInSpeedUpEffectSquareThenPlayerMovesFourPositionsForward
 	| player game dice board squares |
 	player := Player named: 'Nahuel'.

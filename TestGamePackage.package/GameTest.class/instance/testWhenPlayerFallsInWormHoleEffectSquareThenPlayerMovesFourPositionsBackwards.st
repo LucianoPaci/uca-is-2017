@@ -1,4 +1,4 @@
-tests
+Movement
 testWhenPlayerFallsInWormHoleEffectSquareThenPlayerMovesFourPositionsBackwards
 	| player1 game dice board squares |
 	player1 := Player named: 'Frodo'.

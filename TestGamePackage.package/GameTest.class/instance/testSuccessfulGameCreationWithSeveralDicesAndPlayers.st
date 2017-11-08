@@ -1,4 +1,4 @@
-tests
+Creation
 testSuccessfulGameCreationWithSeveralDicesAndPlayers
 	| player1 player2 board dice1 dice2 game laps players dices squareAtomicBomb squareWornHole squares |
 	player1 := Player named: 'Scorpion'. 

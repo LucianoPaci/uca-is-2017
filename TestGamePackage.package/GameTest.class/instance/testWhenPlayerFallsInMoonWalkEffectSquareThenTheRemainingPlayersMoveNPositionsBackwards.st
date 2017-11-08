@@ -1,4 +1,4 @@
-tests
+Movement
 testWhenPlayerFallsInMoonWalkEffectSquareThenTheRemainingPlayersMoveNPositionsBackwards
 	| player1 player2 game dice board squares |
 	player1 := Player named: 'Lucho'.

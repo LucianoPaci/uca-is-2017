@@ -1,4 +1,4 @@
-tests
+Movement
 testWhenPlayerFallsInSquareWithoutEffectThenPlayerDoesntMoveAfterwards
 	| player game dice board squares |
 	player := Player named: 'JaimeLannister'.

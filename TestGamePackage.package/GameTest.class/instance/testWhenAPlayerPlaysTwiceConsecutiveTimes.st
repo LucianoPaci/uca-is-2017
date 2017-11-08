@@ -1,4 +1,4 @@
-tests
+Movement
 testWhenAPlayerPlaysTwiceConsecutiveTimes
 	| squares board diceEightFaces diceSixFaces collectionOfDices collectionOfplayers playerScorpion playerRaiden laps game |
 	
