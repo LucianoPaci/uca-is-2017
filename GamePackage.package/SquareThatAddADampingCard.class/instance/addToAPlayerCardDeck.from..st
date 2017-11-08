@@ -1,3 +1,5 @@
 adding
 addToAPlayerCardDeck: aPlayer from: aGame
-aGame addACard: CardDamping initializate toAPlayer: aPlayer
+| aCard |
+aCard := aGame removeACardFromDeck: CardDamping.
+aPlayer cards add: aCard.

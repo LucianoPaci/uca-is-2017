@@ -11,7 +11,9 @@
 		"lapsTravelled",
 		"previousPosition",
 		"cards",
-		"previousLap"
+		"previousLap",
+		"permanentCardsToBePlayed",
+		"permanentCardsToBePlayedAddedByAnotherPlayer"
 	],
 	"name" : "Player",
 	"type" : "normal"

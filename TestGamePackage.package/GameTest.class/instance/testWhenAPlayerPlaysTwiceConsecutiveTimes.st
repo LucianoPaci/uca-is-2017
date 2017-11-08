@@ -11,13 +11,13 @@ testWhenAPlayerPlaysTwiceConsecutiveTimes
 		add: diceSixFaces;
 		add: diceEightFaces.
 	collectionOfplayers := OrderedCollection new.
-	playerScorpion := Player named: 'Scorpion' withACardDeck: self aCollectionOfCards.
-	playerRaiden := Player named: 'Raiden' withACardDeck: self aCollectionOfCards.
+	playerScorpion := Player named: 'Scorpion'.
+	playerRaiden := Player named: 'Raiden'.
 	laps := 1.
 	collectionOfplayers add: playerScorpion.
 	collectionOfplayers add: playerRaiden.
 	game := Game
-		playedBy: collectionOfplayers on: board throwing: collectionOfDices winningWhenCompleting: laps.
+		playedBy: collectionOfplayers on: board throwing: collectionOfDices winningWhenCompleting: laps 		withACardDeck: self aCollectionOfGameCards.
 	self assert: game expectedPlayer equals: playerScorpion .
 	game nextTurnFor: playerScorpion.
 	self assert: game expectedPlayer equals: playerRaiden .

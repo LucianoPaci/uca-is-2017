@@ -1,12 +1,16 @@
 testing
 nextTurnFor: aPlayer
-	| movesToBeMade actualSquare|
+	| movesToBeMade actualSquare  cardEffect  |
+	cardEffect :=1.
 	(self wrongTurnFor: aPlayer)
-		ifFalse: [ movesToBeMade := dices sumNumbers: [ :dice | dice roll ].
-			self move: aPlayer positions: movesToBeMade.
+		ifFalse: [ 
 			
+			movesToBeMade := dices sumNumbers: [ :dice | dice roll ].
+			movesToBeMade := movesToBeMade + (aPlayer throwsCardsProducingAnEffectOnADiceRoll).
+			self move: aPlayer positions: movesToBeMade.
 			actualSquare:= board squareAtPosition: aPlayer position.
-			actualSquare provokesAnEffectInto: self with: aPlayer.
+			cardEffect := aPlayer throwsCardsAddingAnEffectOnASquareEffect.
+			actualSquare provokesAnEffectInto: self with: aPlayer addingEffect: cardEffect.
 			actualSquare addToAPlayerCardDeck: aPlayer from: self.
 			self CheckIsAWinnerOfGame: aPlayer.
 			self changeIndexOfExpectedPlayer  ]

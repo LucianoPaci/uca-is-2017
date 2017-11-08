@@ -16,15 +16,15 @@ testWhenPlayingAGameDisordered
 		add: diceSixFaces;
 		add: diceEightFaces.
 	collectionOfplayers := OrderedCollection new.
-	playerScorpion := Player named: 'Scorpion' withACardDeck: self aCollectionOfCards.
-	playerRaiden := Player named: 'Raiden' withACardDeck: self aCollectionOfCards.
-	playerJuanMa := Player named: 'JuanMa' withACardDeck: self aCollectionOfCards.
+	playerScorpion := Player named: 'Scorpion'.
+	playerRaiden := Player named: 'Raiden'.
+	playerJuanMa := Player named: 'JuanMa'.
 	laps := 1.
 	collectionOfplayers add: playerScorpion.
 	collectionOfplayers add: playerRaiden.
 	collectionOfplayers add: playerJuanMa.
 	game := Game
-		playedBy: collectionOfplayers on: board throwing: collectionOfDices  winningWhenCompleting: laps.
+		playedBy: collectionOfplayers on: board throwing: collectionOfDices  winningWhenCompleting: laps 		withACardDeck: self aCollectionOfGameCards.
 	self assert: game expectedPlayer  equals: playerScorpion.
 	game nextTurnFor: playerScorpion.
 	self assert: game expectedPlayer equals: playerRaiden.

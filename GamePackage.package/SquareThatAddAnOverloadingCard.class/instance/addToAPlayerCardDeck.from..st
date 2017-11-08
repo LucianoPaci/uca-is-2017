@@ -1,3 +1,5 @@
 adding
 addToAPlayerCardDeck: aPlayer from: aGame
-aGame addACard: CardOverloading initializate toAPlayer: aPlayer
+| aCard |
+aCard := aGame removeACardFromDeck: CardOverloading.
+aPlayer cards add: aCard.

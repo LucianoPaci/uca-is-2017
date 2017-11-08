@@ -1,0 +1,3 @@
+playing
+addAnEffectOnADiceRoll
+self subclassResponsibility

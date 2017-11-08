@@ -1,22 +1,29 @@
 {
 	"instance" : {
-		"changePreviousLap:" : "juanMartinDiMartino 10/29/2017 17:37",
-		"name" : "juanMaDiMartino 9/19/2017 14:17",
-		"previousPosition" : "juanMaDiMartino 9/25/2017 15:04",
 		"previousLap" : "juanMartinDiMartino 10/29/2017 17:37",
+		"moveToBeginning" : "JuanMaDiMartino 11/1/2017 20:46",
+		"permanentCardsToBePlayed" : "juanMaDiMartino 11/3/2017 20:21",
+		"name" : "juanMaDiMartino 9/19/2017 14:17",
+		"throwsCardsAddingAnEffectOnASquareEffect" : "juanMaDiMartino 11/8/2017 15:23",
+		"cards" : "juanMartinDiMartino 11/7/2017 09:23",
 		"modifyLaps:" : "Luciano 9/20/2017 19:20",
-		"lapsTravelled" : "Luciano 9/20/2017 19:20",
-		"changePreviousPosition:" : "juanMaDiMartino 9/25/2017 14:56",
-		"initializedNamed:initializedWithACardDeck:" : "juanMartinDiMartino 10/22/2017 14:51",
-		"cards" : "juanMartinDiMartino 11/2/2017 12:28",
-		"position" : "Luciano 9/7/2017 20:49",
-		"addACardToDeck:" : "juanMartinDiMartino 10/22/2017 21:08",
-		"numberOfCards" : "juanMartinDiMartino 10/22/2017 14:31",
 		"changePosition:" : "juanMaDiMartino 9/19/2017 12:16",
-		"moveToBeginning" : "JuanMaDiMartino 11/1/2017 20:46"
+		"initializedNamed:" : "juanMaDiMartino 11/8/2017 15:15",
+		"affectAnotherPlayer:withACard:" : "juanMaDiMartino 11/8/2017 15:14",
+		"position" : "Luciano 9/7/2017 20:49",
+		"permanentCardsToBePlayedAddedByAnotherPlayer" : "juanMaDiMartino 11/8/2017 15:14",
+		"changePreviousPosition:" : "juanMaDiMartino 9/25/2017 14:56",
+		"aCard:isEqualsTo:" : "juanMaDiMartino 11/3/2017 20:40",
+		"lapsTravelled" : "Luciano 9/20/2017 19:20",
+		"addAPermanentCardToBePlayed:" : "juanMartinDiMartino 11/4/2017 12:06",
+		"throwsCardsProducingAnEffectOnADiceRoll" : "juanMaDiMartino 11/8/2017 15:19",
+		"changePreviousLap:" : "juanMartinDiMartino 10/29/2017 17:37",
+		"removePlayedCards" : "juanMaDiMartino 11/8/2017 11:25",
+		"previousPosition" : "juanMaDiMartino 9/25/2017 15:04"
 	},
 	"class" : {
+		"named:withCards:" : "juanMartinDiMartino 11/4/2017 08:59",
 		"assertShouldNotBeEmpty:" : "Luciano 9/17/2017 16:12",
-		"named:withACardDeck:" : "juanMartinDiMartino 10/22/2017 14:51"
+		"named:" : "juanMartinDiMartino 11/7/2017 09:10"
 	}
 }

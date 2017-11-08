@@ -1,9 +1,9 @@
 {
 	"instance" : {
-		"addToAPlayerCardDeck:from:" : "juanMartinDiMartino 10/23/2017 08:42",
+		"addToAPlayerCardDeck:from:" : "juanMaDiMartino 11/8/2017 10:30",
 		"initializedPosition:" : "juanMartinDiMartino 10/22/2017 19:12",
 		"position" : "juanMartinDiMartino 10/29/2017 15:52",
-		"provokesAnEffectInto:with:" : "juanMartinDiMartino 10/22/2017 19:29"
+		"provokesAnEffectInto:with:addingEffect:" : "juanMaDiMartino 11/8/2017 15:32"
 	},
 	"class" : { }
 }

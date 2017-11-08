@@ -1,6 +1,9 @@
 {
 	"instance" : {
-		"initialized" : "juanMartinDiMartino 10/22/2017 18:50"
+		"addAnEffectOnADiceRoll" : "juanMaDiMartino 11/8/2017 15:08",
+		"addAnEffectOverASquare" : "juanMaDiMartino 11/8/2017 15:22",
+		"initializedWithAName:" : "juanMaDiMartino 11/3/2017 20:18",
+		"name" : "juanMaDiMartino 11/3/2017 23:28"
 	},
 	"class" : { }
 }

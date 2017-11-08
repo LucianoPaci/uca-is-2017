@@ -1,3 +1,5 @@
 adding
 addToAPlayerCardDeck: aPlayer from: aGame
-aGame addACard: CardPotentiation initializate toAPlayer: aPlayer
+| aCard |
+aCard := aGame removeACardFromDeck: CardPotentiation.
+aPlayer cards add: aCard.

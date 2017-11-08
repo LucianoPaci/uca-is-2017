@@ -1,3 +1,3 @@
-as yet unclassified
+error
 playerCollectionOutOfBound
 ^indexOfExpectedPlayer >= self players size 
