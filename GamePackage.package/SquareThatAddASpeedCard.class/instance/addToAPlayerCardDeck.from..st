@@ -1,3 +1,5 @@
 adding
 addToAPlayerCardDeck: aPlayer from: aGame
-aGame addACard: CardSpeed initializate toAPlayer: aPlayer
+| aCard |
+aCard := aGame removeACardFromDeck: CardSpeed.
+aPlayer cards add: aCard.

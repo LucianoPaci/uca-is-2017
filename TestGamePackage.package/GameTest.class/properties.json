@@ -1,0 +1,14 @@
+{
+	"commentStamp" : "<historical>",
+	"super" : "TestCase",
+	"category" : "TestGamePackage",
+	"classinstvars" : [
+		"player",
+		"dice"
+	],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "GameTest",
+	"type" : "normal"
+}

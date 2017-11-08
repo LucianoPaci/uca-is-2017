@@ -1,0 +1,3 @@
+playing
+addAnEffectOnADiceRoll
+^1.

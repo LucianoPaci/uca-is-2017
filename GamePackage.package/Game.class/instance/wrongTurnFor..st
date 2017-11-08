@@ -1,3 +1,3 @@
-as yet unclassified
+playing
 wrongTurnFor: aPlayer
 ^ aPlayer ~= self expectedPlayer

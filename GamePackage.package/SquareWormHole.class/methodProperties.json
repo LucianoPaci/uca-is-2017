@@ -3,7 +3,7 @@
 		"addToAPlayerCardDeck:from:" : "juanMartinDiMartino 10/22/2017 21:18",
 		"initializedPosition:" : "juanMartinDiMartino 10/29/2017 16:36",
 		"position" : "juanMartinDiMartino 10/29/2017 15:52",
-		"provokesAnEffectInto:with:" : "juanMartinDiMartino 10/30/2017 09:19"
+		"provokesAnEffectInto:with:addingEffect:" : "juanMaDiMartino 11/8/2017 16:34"
 	},
 	"class" : { }
 }

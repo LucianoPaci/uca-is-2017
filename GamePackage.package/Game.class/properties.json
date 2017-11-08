@@ -16,7 +16,8 @@
 		"winner",
 		"players",
 		"dices",
-		"indexOfExpectedPlayer"
+		"indexOfExpectedPlayer",
+		"cardsDeck"
 	],
 	"name" : "Game",
 	"type" : "normal"

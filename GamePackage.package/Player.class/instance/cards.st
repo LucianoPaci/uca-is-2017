@@ -1,3 +1,3 @@
 accessing
 cards
-^cards.
+	^cards

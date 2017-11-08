@@ -1,0 +1,3 @@
+playing
+addAnEffectOverASquare
+self subclassResponsibility

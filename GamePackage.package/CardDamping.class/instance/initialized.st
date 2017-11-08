@@ -1,3 +1,0 @@
-initialization
-initialized
-	name := 'Damping'
