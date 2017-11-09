@@ -1,23 +1,24 @@
 {
 	"instance" : {
-		"testWhenAPlayerFallsInAtomicBombSquareThenAllPlayersReturnToTheBeginningOfTheBoard" : "juanMartinDiMartino 11/7/2017 09:30",
-		"testWhenPlayerFallsInTimeMachineEffectSquareThenPlayerMovesBackToPeviousPosition" : "juanMartinDiMartino 11/7/2017 09:30",
-		"testWhenPlayingAGameDisordered" : "juanMartinDiMartino 11/7/2017 09:29",
-		"testWhenAPlayerPlaysTwiceConsecutiveTimes" : "juanMartinDiMartino 11/7/2017 09:31",
-		"testWhenPlayingAGameInOrder" : "juanMartinDiMartino 11/7/2017 09:28",
-		"testWhenPlayerCompletesALapThenLapsAreCorrectlyUpdated" : "juanMartinDiMartino 11/7/2017 09:31",
-		"testWhenPlayerFallsInWormHoleEffectSquareThenPlayerMovesFourPositionsBackwards" : "juanMartinDiMartino 11/7/2017 09:30",
-		"testWhenPlayerFallsInSpeedUpEffectSquareThenPlayerMovesFourPositionsForward" : "juanMartinDiMartino 11/7/2017 09:31",
-		"aCollectionOfGameCards" : "juanMartinDiMartino 11/4/2017 08:44",
-		"testWhenAPlayerChooseAPermanentCardThatIsNotInCardDeckAnErrorMessageIsThrown" : "juanMartinDiMartino 11/7/2017 09:26",
-		"testWhenPlayerFallsInTimeMachineEffectSquareAfterCompletingALapThenPlayerMovesBackToPeviousPosition" : "juanMartinDiMartino 11/7/2017 09:30",
 		"testGameIsPlayedUntilAWinnerIsDeclared" : "juanMartinDiMartino 11/7/2017 09:17",
-		"testWhenGameCardDeckDoesntHaveACardOfAParticularKind" : "juanMartinDiMartino 11/7/2017 09:34",
 		"testWhenPlayerFallsInSquareWithoutEffectThenPlayerDoesntMoveAfterwards" : "juanMartinDiMartino 11/7/2017 09:32",
+		"testWhenAPlayerPlaysTwiceConsecutiveTimes" : "juanMartinDiMartino 11/7/2017 09:31",
+		"testWhenAPlayerChooseAPermanentCardThatIsNotInCardDeckAnErrorMessageIsThrown" : "juanMartinDiMartino 11/7/2017 09:26",
 		"testWhenAPlayerFallsInASpecialSquareANewCardMustBeAddedToThisPlayerCardDeck" : "juanMaDiMartino 11/7/2017 23:42",
+		"testWhenPlayerCompletesALapThenLapsAreCorrectlyUpdated" : "juanMartinDiMartino 11/7/2017 09:31",
+		"testWhenGameCardDeckDoesntHaveACardOfAParticularKind" : "juanMartinDiMartino 11/7/2017 09:34",
+		"testWhenPlayerUsesInstaCardInHisTurnForHisBehalf" : "LucianoPaci 11/8/2017 22:06",
+		"testWhenPlayingAGameInOrder" : "juanMartinDiMartino 11/7/2017 09:28",
+		"testWhenPlayerFallsInWormHoleEffectSquareThenPlayerMovesFourPositionsBackwards" : "juanMartinDiMartino 11/7/2017 09:30",
 		"testSuccessfulGameCreationWithSeveralDicesAndPlayers" : "juanMartinDiMartino 11/7/2017 09:17",
+		"testWhenAPlayerFallsInAtomicBombSquareThenAllPlayersReturnToTheBeginningOfTheBoard" : "juanMartinDiMartino 11/7/2017 09:30",
+		"testWhenPlayerFallsInSpeedUpEffectSquareThenPlayerMovesFourPositionsForward" : "juanMartinDiMartino 11/7/2017 09:31",
+		"testWhenPlayerFallsInMoonWalkEffectSquareThenTheRemainingPlayersMoveNPositionsBackwards" : "juanMartinDiMartino 11/7/2017 09:31",
+		"testWhenPlayerFallsInTimeMachineEffectSquareThenPlayerMovesBackToPeviousPosition" : "juanMartinDiMartino 11/7/2017 09:30",
+		"testWhenPlayerFallsInTimeMachineEffectSquareAfterCompletingALapThenPlayerMovesBackToPeviousPosition" : "juanMartinDiMartino 11/7/2017 09:30",
+		"testWhenPlayingAGameDisordered" : "juanMartinDiMartino 11/7/2017 09:29",
 		"testWhenPlayerMovesForwardWithoutDice" : "juanMartinDiMartino 11/7/2017 09:29",
-		"testWhenPlayerFallsInMoonWalkEffectSquareThenTheRemainingPlayersMoveNPositionsBackwards" : "juanMartinDiMartino 11/7/2017 09:31"
+		"aCollectionOfGameCards" : "juanMartinDiMartino 11/4/2017 08:44"
 	},
 	"class" : { }
 }
