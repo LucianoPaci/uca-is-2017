@@ -2,7 +2,8 @@
 	"instance" : {
 		"addAnEffectOnADiceRoll" : "juanMaDiMartino 11/7/2017 23:48",
 		"addAnEffectOverASquare" : "juanMaDiMartino 11/8/2017 15:22",
-		"initializedWithAName:" : "juanMaDiMartino 11/3/2017 20:16"
+		"initializedWithAName:" : "juanMaDiMartino 11/3/2017 20:16",
+		"addToAPlayer:fromAGame:" : "juanMaDiMartino 11/9/2017 22:43"
 	},
 	"class" : {
 		"named:" : "juanMaDiMartino 11/3/2017 20:14"

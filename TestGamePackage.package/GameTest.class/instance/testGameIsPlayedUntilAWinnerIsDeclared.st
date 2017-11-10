@@ -8,8 +8,8 @@ testGameIsPlayedUntilAWinnerIsDeclared
 		add: (Dice faces: 6 obtainingValuesFrom: (FixedNumberSource providing: #(1 2 3 4 5 6)));
 		add: (Dice faces: 8 obtainingValuesFrom: (FixedNumberSource providing: #(1 2 3 4 5 6 7 8))).
 	collectionOfplayers := OrderedCollection new.
-	playerScorpion := Player named: 'Scorpion'.
-	playerRaiden := Player named: 'Raiden'.
+	playerScorpion := Player named: 'Scorpion' withCards: (self aCollectionOfGameCards )removeFirst.
+	playerRaiden := Player named: 'Raiden' withCards: (self aCollectionOfGameCards )removeFirst.
 	laps := 1.
 	collectionOfplayers add: playerScorpion.
 	collectionOfplayers add: playerRaiden.

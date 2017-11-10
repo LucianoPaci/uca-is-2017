@@ -1,7 +1,7 @@
 Movement
 testWhenPlayerFallsInTimeMachineEffectSquareThenPlayerMovesBackToPeviousPosition
 	| player1 game dice board squares |
-	player1 := Player named: 'Lucho'.
+	player1 := Player named: 'Lucho' withCards: (self aCollectionOfGameCards )removeFirst.
 	squares := (1 to: 10) collect: [ :n | SquareWithoutEffect onPosition: n ].
 	squares at: 7 put: (SquareTimeMachine onPosition: 7).
 	board := Board definedSquares: squares.
