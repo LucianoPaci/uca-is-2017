@@ -1,8 +1,9 @@
 tests
 testWhenAPlayerFallsInASpecialSquareANewCardMustBeAddedToThisPlayerCardDeck
-| player game dice board squares  |
-
-	player := Player named: 'Johny Maidana'.
+| player game dice board squares  collectionOfPlayerCards |
+	collectionOfPlayerCards:= OrderedCollection new.
+	collectionOfPlayerCards add: (self aCollectionOfGameCards )removeFirst ; add: (self aCollectionOfGameCards )removeFirst.
+	player := Player named: 'Johny Maidana' withCards: collectionOfPlayerCards.
 	squares := (1 to: 3) collect: [ :n | SquareWithoutEffect onPosition: n ].
 	squares at: 1 put: (SquareThatAddADampingCard  onPosition: 1).
 	squares at: 3 put: (SquareThatAddADampingCard  onPosition: 3).
@@ -15,8 +16,6 @@ testWhenAPlayerFallsInASpecialSquareANewCardMustBeAddedToThisPlayerCardDeck
 		winningWhenCompleting: 1
 		withACardDeck: self aCollectionOfGameCards.
 		
-	player cards  add: (game removeACardFromDeck: CardUndo);
-					  add:(game removeACardFromDeck: CardUndo).
 	self assert: player cards size equals:2.
 	game nextTurnFor: player.
 	self assert: player cards size equals:2.

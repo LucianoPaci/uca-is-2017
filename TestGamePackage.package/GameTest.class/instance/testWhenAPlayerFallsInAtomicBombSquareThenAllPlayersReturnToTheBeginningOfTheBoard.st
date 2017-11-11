@@ -1,9 +1,9 @@
 tests
 testWhenAPlayerFallsInAtomicBombSquareThenAllPlayersReturnToTheBeginningOfTheBoard
 	| player1 player2 player3 game dice board squares |
-	player1 := Player named: 'JaimeLannister'.
-	player2 := Player named: 'NedStark'.
-	player3 := Player named: 'Jon Snow'.
+	player1 := Player named: 'JaimeLannister' withCards: (self aCollectionOfGameCards )removeFirst.
+	player2 := Player named: 'NedStark' withCards: (self aCollectionOfGameCards )removeFirst.
+	player3 := Player named: 'Jon Snow' withCards: (self aCollectionOfGameCards )removeFirst.
 	squares := (1 to: 8) collect: [ :n | SquareWithoutEffect onPosition: n ]. 
 	squares at: 6 put: (AtomicBombSquare onPosition: 6).
 	board := Board definedSquares: squares.

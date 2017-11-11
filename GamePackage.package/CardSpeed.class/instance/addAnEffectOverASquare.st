@@ -1,3 +1,3 @@
 playing
 addAnEffectOverASquare
-	^ self shouldBeImplemented
+	^1
