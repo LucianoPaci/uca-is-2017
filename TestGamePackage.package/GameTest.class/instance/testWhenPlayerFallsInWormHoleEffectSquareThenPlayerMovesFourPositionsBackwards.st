@@ -1,7 +1,7 @@
 Movement
 testWhenPlayerFallsInWormHoleEffectSquareThenPlayerMovesFourPositionsBackwards
 	| player1 game dice board squares |
-	player1 := Player named: 'Frodo'.
+	player1 := Player named: 'Frodo' withCards: (self aCollectionOfGameCards )removeFirst.
 	squares := (1 to: 10) collect: [ :n | SquareWithoutEffect onPosition: n ].
 	squares at: 7 put: (SquareWormHole onPosition: 7).
 	board := Board definedSquares: squares.

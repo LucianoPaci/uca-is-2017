@@ -1,7 +1,7 @@
 Movement
 testWhenPlayerFallsInSquareWithoutEffectThenPlayerDoesntMoveAfterwards
 	| player game dice board squares |
-	player := Player named: 'JaimeLannister'.
+	player := Player named: 'JaimeLannister' withCards: (self aCollectionOfGameCards )removeFirst.
 	squares := (1 to: 6) collect: [ :n | SquareWithoutEffect onPosition: n ].
 	board := Board definedSquares: squares.
 	dice := Dice faces: 6 obtainingValuesFrom: (FixedNumberSource providing: #(1 2 3 4 5 6)).

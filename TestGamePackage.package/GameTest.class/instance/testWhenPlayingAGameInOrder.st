@@ -1,4 +1,4 @@
-as yet unclassified
+tests
 testWhenPlayingAGameInOrder
 	| squares board diceEightFaces diceSixFaces collectionOfDices collectionOfplayers playerScorpion playerJuanMa laps game playerRaiden  |
 	squares:= (1 to: 8) collect: [:n | SquareWithoutEffect onPosition: n ].
@@ -14,15 +14,15 @@ testWhenPlayingAGameInOrder
 		add: diceSixFaces;
 		add: diceEightFaces.
 	collectionOfplayers := OrderedCollection new.
-	playerScorpion := Player named: 'Scorpion'. 
-	playerRaiden := Player named: 'Raiden'.
-	playerJuanMa := Player named: 'JuanMa'.
+	playerScorpion := Player named: 'Scorpion' withCards: (self aCollectionOfGameCards )removeFirst. 
+	playerRaiden := Player named: 'Raiden' withCards: (self aCollectionOfGameCards )removeFirst.
+	playerJuanMa := Player named: 'JuanMa' withCards: (self aCollectionOfGameCards )removeFirst.
 	laps := 1.
 	collectionOfplayers add: playerScorpion.
 	collectionOfplayers add: playerRaiden.
 	collectionOfplayers add: playerJuanMa.
 	game := Game
-		playedBy: collectionOfplayers on: board throwing: collectionOfDices winningWhenCompleting: laps 		withACardDeck: self aCollectionOfGameCards.
+		playedBy: collectionOfplayers on: board throwing: collectionOfDices winningWhenCompleting: laps 	withACardDeck: self aCollectionOfGameCards.
 	self assert: game expectedPlayer equals: playerScorpion.
 	game nextTurnFor: playerScorpion.
 	self assert: game expectedPlayer equals: playerRaiden.

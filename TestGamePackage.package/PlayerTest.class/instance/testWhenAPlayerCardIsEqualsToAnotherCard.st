@@ -1,8 +1,10 @@
 tests
 testWhenAPlayerCardIsEqualsToAnotherCard
-| aPlayer aPlayerCard anotherCard |
+| aPlayer aPlayerCard anotherCard aCollectionOfCards |
 anotherCard := CardUndo named: 'CardUndo1'.
 aPlayerCard := CardUndo named: 'CardUndo1'.
-aPlayer := Player named: 'Scorpion'.
+aCollectionOfCards:= OrderedCollection new.
+aCollectionOfCards add: anotherCard; add: aPlayerCard.
+aPlayer := Player named: 'Scorpion' withCards: aCollectionOfCards.
 
 self assert: (aPlayer aCard: aPlayerCard  isEqualsTo: anotherCard) equals: true.

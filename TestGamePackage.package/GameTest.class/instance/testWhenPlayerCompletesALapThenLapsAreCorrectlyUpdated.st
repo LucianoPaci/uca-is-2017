@@ -1,7 +1,7 @@
 tests
 testWhenPlayerCompletesALapThenLapsAreCorrectlyUpdated
 	| player board dice game squares |
-	player := Player named: 'jorge'.
+	player := Player named: 'jorge' withCards: (self aCollectionOfGameCards )removeFirst.
 	squares := (1 to: 8) collect: [ :n | SquareWithoutEffect onPosition: n ].
 	board := Board definedSquares: squares.
 	dice := Dice faces: 6.
