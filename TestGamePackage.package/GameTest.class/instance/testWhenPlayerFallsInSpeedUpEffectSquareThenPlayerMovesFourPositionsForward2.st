@@ -2,7 +2,7 @@ squares tests
 testWhenPlayerFallsInSpeedUpEffectSquareThenPlayerMovesFourPositionsForward2
 	| player game dice board squares playerHistory |
 	playerHistory := OrderedCollection new.
-	playerHistory add: (PlayerHistory at: 1 withLaps: 0).
+	playerHistory add: (PlayerPosition at: 1 withLaps: 0).
 	player := Player named: 'Nahuel' withCards: self aCollectionOfGameCards removeFirst andPositionHistory: playerHistory.
 	squares := (1 to: 9) collect: [ :n | SquareWithoutEffect onPosition: n ].
 	squares at: 2 put: (SquareSpeedUp onPosition: 2).

@@ -17,7 +17,7 @@
 		"testWhenAPlayerThrowsUndoCarToAnotherPlayerThenLastSquareEffectIsUndone" : "LucianoPaci 11/11/2017 17:52",
 		"testWhenPlayerFallsInMoonWalkEffectSquareThenTheRemainingPlayersMoveNPositionsBackwards" : "juanMaDiMartino 11/10/2017 09:29",
 		"testWhenPlayerFallsInTimeMachineEffectSquareThenPlayerMovesBackToPeviousPosition" : "juanMaDiMartino 11/10/2017 09:28",
-		"testWhenPlayerFallsInSpeedUpEffectSquareThenPlayerMovesFourPositionsForward2" : "LucianoPaci 11/12/2017 15:26",
+		"testWhenPlayerFallsInSpeedUpEffectSquareThenPlayerMovesFourPositionsForward2" : "LucianoPaci 11/12/2017 18:39",
 		"testWhenPlayerFallsInTimeMachineEffectSquareAfterCompletingALapThenPlayerMovesBackToPeviousPosition" : "juanMaDiMartino 11/10/2017 09:28",
 		"testWhenAPlayerAffectsAnotherPlayerWithACardTheCardIsARemovedFromFirstPlayerCardDeck" : "juanMaDiMartino 11/11/2017 13:42",
 		"testWhenPlayingAGameDisordered" : "juanMaDiMartino 11/10/2017 09:27",

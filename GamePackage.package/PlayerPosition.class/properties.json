@@ -10,6 +10,6 @@
 		"playerLaps",
 		"size"
 	],
-	"name" : "PlayerHistory",
+	"name" : "PlayerPosition",
 	"type" : "normal"
 }
