@@ -1,0 +1,15 @@
+{
+	"commentStamp" : "<historical>",
+	"super" : "Object",
+	"category" : "GamePackage",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"playerPosition",
+		"playerLaps",
+		"size"
+	],
+	"name" : "PlayerHistory",
+	"type" : "normal"
+}

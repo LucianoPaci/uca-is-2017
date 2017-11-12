@@ -1,3 +1,3 @@
 as yet unclassified
-throwsCardsProducingAnEffectOnADiceRoll
+throwsPermamentCardsProducingAnEffectOnADiceRoll
 ^((permanentCardsToBePlayed)inject: 0 into: [ :sum :each | sum + (each addAnEffectOnADiceRoll  )]).

@@ -1,4 +1,4 @@
-tests
+cards tests
 testWhenPlayerAffectsWithACardAnotherPlayerNotOnHisTurnAnErrorMessageIsThrown
 | squares board diceEightFaces diceSixFaces collectionOfDices collectionOfplayers playerScorpion playerRaiden playerJuanMa laps game cardsToAffectPlayer cardsPlayerScorpion cardsPlayerRaiden cardsPlayerJuanMa |
 	squares:= (1 to: 8) collect: [:n | SquareWithoutEffect onPosition: n ].

@@ -1,4 +1,4 @@
-Movement
+squares tests
 testWhenPlayerFallsInSquareWithoutEffectThenPlayerDoesntMoveAfterwards
 	| player game dice board squares |
 	player := Player named: 'JaimeLannister' withCards: (self aCollectionOfGameCards )removeFirst.

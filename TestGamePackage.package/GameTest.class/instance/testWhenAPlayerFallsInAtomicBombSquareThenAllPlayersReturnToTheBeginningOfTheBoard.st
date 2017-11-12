@@ -1,4 +1,4 @@
-tests
+squares tests
 testWhenAPlayerFallsInAtomicBombSquareThenAllPlayersReturnToTheBeginningOfTheBoard
 	| player1 player2 player3 game dice board squares |
 	player1 := Player named: 'JaimeLannister' withCards: (self aCollectionOfGameCards )removeFirst.

@@ -1,4 +1,4 @@
-Movement
+squares tests
 testWhenPlayerFallsInTimeMachineEffectSquareThenPlayerMovesBackToPeviousPosition
 	| player1 game dice board squares |
 	player1 := Player named: 'Lucho' withCards: (self aCollectionOfGameCards )removeFirst.

@@ -1,4 +1,4 @@
-Movement
+squares tests
 testWhenPlayerFallsInMoonWalkEffectSquareThenTheRemainingPlayersMoveNPositionsBackwards
 	| player1 player2 game dice board squares |
 	player1 := Player named: 'Lucho' withCards: (self aCollectionOfGameCards )removeFirst.

@@ -1,4 +1,4 @@
-as yet unclassified
+tests
 aCollectionOfGameCards
 | aCollectionOfGameDeckCards |
 aCollectionOfGameDeckCards := OrderedCollection new.

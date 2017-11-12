@@ -12,7 +12,10 @@
 		"previousPosition",
 		"cards",
 		"previousLap",
-		"permanentCardsToBePlayed"
+		"permanentCardsToBePlayed",
+		"instantCardsToBePlayed",
+		"positionHistory",
+		"playerHistory"
 	],
 	"name" : "Player",
 	"type" : "normal"

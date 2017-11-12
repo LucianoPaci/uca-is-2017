@@ -1,4 +1,4 @@
-tests
+cards tests
 testWhenAPlayerFallsInASpecialSquareANewCardMustBeAddedToThisPlayerCardDeck
 | player game dice board squares  collectionOfPlayerCards |
 	collectionOfPlayerCards:= OrderedCollection new.

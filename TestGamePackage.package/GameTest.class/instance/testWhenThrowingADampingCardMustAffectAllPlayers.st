@@ -1,4 +1,4 @@
-tests
+cards tests
 testWhenThrowingADampingCardMustAffectAllPlayers
 | squares board diceEightFaces diceSixFaces collectionOfDices collectionOfplayers playerScorpion playerRaiden  laps game cardsToAffectPlayer cardsPlayerScorpion cardsPlayerRaiden gameDeckCard cardsPlayerJuanMa playerJuanMa |
 	squares:= (1 to: 8) collect: [:n | SquareWithoutEffect onPosition: n ].

@@ -1,4 +1,4 @@
-tests
+cards tests
 testWhenAPlayerAffectsAnotherPlayerWithACardTheCardIsARemovedFromFirstPlayerCardDeck
 | squares board diceEightFaces diceSixFaces collectionOfDices collectionOfplayers playerScorpion playerRaiden  laps game cardsToAffectPlayer cardsPlayerScorpion cardsPlayerRaiden gameDeckCard |
 	squares:= (1 to: 8) collect: [:n | SquareWithoutEffect onPosition: n ].

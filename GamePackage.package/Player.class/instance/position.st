@@ -1,3 +1,3 @@
 accessing
 position
-	^ position
+	^ playerHistory playerPosition at: (playerHistory size)

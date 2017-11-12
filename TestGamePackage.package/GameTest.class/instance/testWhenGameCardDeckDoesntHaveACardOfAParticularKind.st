@@ -1,4 +1,4 @@
-tests
+cards tests
 testWhenGameCardDeckDoesntHaveACardOfAParticularKind
 |  board   game player squares dice aGameDeckCards collectionOfPlayerCards |
 	aGameDeckCards := OrderedCollection new.

@@ -1,3 +1,3 @@
 adding elements
-aCard:aCard isEqualsTo:  anotherCard
+aCard:aCard isEqualTo:  anotherCard
 ^(aCard name = anotherCard name)
