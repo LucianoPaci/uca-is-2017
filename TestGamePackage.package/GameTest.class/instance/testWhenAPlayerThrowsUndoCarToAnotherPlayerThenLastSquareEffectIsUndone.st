@@ -1,6 +1,12 @@
-cards tests
+tests
 testWhenAPlayerThrowsUndoCarToAnotherPlayerThenLastSquareEffectIsUndone
-	| squares board diceSixFaces collectionOfDices collectionOfplayers playerScorpion playerRaiden laps game cardsPlayerScorpion cardsPlayerRaiden gameDeckCard cardsToAffectPlayer |
+	| squares board diceSixFaces collectionOfDices collectionOfplayers playerScorpion playerRaiden laps game cardsPlayerScorpion cardsPlayerRaiden gameDeckCard cardsToAffectPlayer playerScorpionHistory playerRaidenHistory  |
+	playerScorpionHistory := OrderedCollection new.
+	playerScorpionHistory add: (PlayerPosition at: 1 withLaps: 0).
+	playerRaidenHistory := OrderedCollection new.
+	playerRaidenHistory add: (PlayerPosition at: 1 withLaps: 0).
+	
+	
 	squares := (1 to: 8) collect: [ :n | SquareWithoutEffect onPosition: n ].
 	squares at: 3 put: (SquareSpeedUp onPosition: 3).
 	board := Board definedSquares: squares.
@@ -20,8 +26,8 @@ testWhenAPlayerThrowsUndoCarToAnotherPlayerThenLastSquareEffectIsUndone
 		add: (CardPotentiation  named: 'CardPotentiation1');
 		add: (CardPotentiation  named: 'CardPotentiation2').
 
-	playerScorpion := Player named: 'Scorpion' withCards: cardsPlayerScorpion.
-	playerRaiden := Player named: 'Raiden' withCards: cardsPlayerRaiden.
+	playerScorpion := Player named: 'Scorpion' withCards: cardsPlayerScorpion andPositionHistory: playerScorpionHistory .
+	playerRaiden := Player named: 'Raiden' withCards: cardsPlayerRaiden andPositionHistory: playerRaidenHistory .
 	laps := 1.
 	collectionOfplayers add: playerScorpion.
 	collectionOfplayers add: playerRaiden.
@@ -35,11 +41,11 @@ testWhenAPlayerThrowsUndoCarToAnotherPlayerThenLastSquareEffectIsUndone
 		throwing: collectionOfDices
 		winningWhenCompleting: laps
 		withACardDeck: gameDeckCard.
-	self assert: playerScorpion position equals: 1.
+	self assert: playerScorpion currentPosition equals: 1.
 	game nextTurnFor: playerScorpion.
-	self assert: playerScorpion position equals: 2.
+	self assert: playerScorpion currentPosition equals: 2.
 	game nextTurnFor: playerRaiden.
-	self assert: playerRaiden position equals: 7.
+	self assert: playerRaiden currentPosition equals: 7.
 	playerScorpion affectAPlayer: playerRaiden withAnInstantCard: cardsToAffectPlayer into: game.
 	"self assert: playerScorpion instantCardsToBePlayed size equals: 2."
-	self assert: playerRaiden position equals: 3.
+	self assert: playerRaiden currentPosition equals: 3.

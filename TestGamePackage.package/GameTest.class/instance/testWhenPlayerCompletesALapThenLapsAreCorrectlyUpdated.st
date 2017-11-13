@@ -1,7 +1,9 @@
 tests
 testWhenPlayerCompletesALapThenLapsAreCorrectlyUpdated
-	| player board dice game squares |
-	player := Player named: 'jorge' withCards: (self aCollectionOfGameCards )removeFirst.
+	| player board dice game squares playerHistory |
+	playerHistory := OrderedCollection new.
+	playerHistory add: (PlayerPosition at: 1 withLaps: 0).
+	player := Player named: 'jorge' withCards: (self aCollectionOfGameCards )removeFirst andPositionHistory: playerHistory.
 	squares := (1 to: 8) collect: [ :n | SquareWithoutEffect onPosition: n ].
 	board := Board definedSquares: squares.
 	dice := Dice faces: 6.
@@ -11,11 +13,11 @@ testWhenPlayerCompletesALapThenLapsAreCorrectlyUpdated
 		throwing: (OrderedCollection with: dice)
 		winningWhenCompleting: 1
 		withACardDeck: self aCollectionOfGameCards.
-	self assert: (game players at: 1) position equals: 1.
+	self assert: (game players at: 1) currentPosition equals: 1.
 	self assert: (game players at: 1) lapsTravelled equals: 0.
 	game move: (game players at: 1) positions: 5.
 	self assert: (game players at: 1) lapsTravelled equals: 0.
-	self assert: (game players at: 1) position equals: 6.
+	self assert: (game players at: 1) currentPosition equals: 6.
 	game move: (game players at: 1) positions: 4.
-	self assert: (game players at: 1) position equals: 2.
+	self assert: (game players at: 1) currentPosition equals: 2.
 	self assert: (game players at: 1) lapsTravelled equals: 1

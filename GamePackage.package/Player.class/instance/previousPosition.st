@@ -1,3 +1,3 @@
 accessing
 previousPosition
-^previousPosition.
+	^ (position at: position size - 1) playerPosition

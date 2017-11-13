@@ -1,6 +1,8 @@
 cards tests
 testWhenAPlayerThrowsADampingCardASpeedCardAndAnOverloadingCardSevenPositionsMustBeMovedFromOrigin
-	| squares board diceOneFace collectionOfDices collectionOfplayers playerRaiden cardsPlayerRaiden laps gameDeckCard game firstCardToAffectPlayer secondCardToAffectPlayer thirdCardToAffectPlayer |
+	| squares board diceOneFace collectionOfDices collectionOfplayers playerRaiden cardsPlayerRaiden playerRaidenHistory laps gameDeckCard game firstCardToAffectPlayer secondCardToAffectPlayer thirdCardToAffectPlayer |
+	playerRaidenHistory := OrderedCollection new.
+	playerRaidenHistory add:(PlayerPosition at: 1 withLaps: 0).
 	squares := (1 to: 10) collect: [ :n | SquareWithoutEffect onPosition: n ].
 	squares at: 4 put: (SquareSpeedUp onPosition: 4).
 	board := Board definedSquares: squares.
@@ -18,7 +20,7 @@ testWhenAPlayerThrowsADampingCardASpeedCardAndAnOverloadingCardSevenPositionsMus
 		add: firstCardToAffectPlayer;
 		add: secondCardToAffectPlayer;
 		add: thirdCardToAffectPlayer.
-	playerRaiden := Player named: 'Raiden' withCards: cardsPlayerRaiden.
+	playerRaiden := Player named: 'Raiden' withCards: cardsPlayerRaiden andPositionHistory: playerRaidenHistory .
 	collectionOfplayers add: playerRaiden.
 	laps := 1.
 	gameDeckCard := OrderedCollection new.
@@ -37,4 +39,4 @@ testWhenAPlayerThrowsADampingCardASpeedCardAndAnOverloadingCardSevenPositionsMus
 	self assert: playerRaiden permanentCardsToBePlayed size equals: 3.
 	game nextTurnFor: playerRaiden.
 	self assert: playerRaiden previousPosition equals: 4.
-	self assert: playerRaiden position equals: 6
+	self assert: playerRaiden currentPosition equals: 6

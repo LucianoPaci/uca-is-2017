@@ -1,8 +1,12 @@
-Creation
+tests
 testSuccessfulGameCreationWithSeveralDicesAndPlayers
-	| player1 player2 board dice1 dice2 game laps players dices squareAtomicBomb squareWornHole squares |
-	player1 := Player named: 'Scorpion' withCards: (self aCollectionOfGameCards )removeFirst. 
-	player2 := Player named: 'Raiden' withCards: (self aCollectionOfGameCards )removeFirst.
+	| player1 player2 board dice1 dice2 game laps players dices squareAtomicBomb squareWornHole squares  player1History  player2History |
+	player1History := OrderedCollection new.
+	player1History add: (PlayerPosition at: 1 withLaps: 0).
+	player2History := OrderedCollection new.
+	player2History add: (PlayerPosition at: 1 withLaps: 0).
+	player1 := Player named: 'Scorpion' withCards: (self aCollectionOfGameCards )removeFirst andPositionHistory: player1History.  
+	player2 := Player named: 'Raiden' withCards: (self aCollectionOfGameCards )removeFirst andPositionHistory: player2History.
 	squareAtomicBomb := AtomicBombSquare initialize.
 	squareWornHole := SquareWormHole initialize.
 	squares := OrderedCollection new.

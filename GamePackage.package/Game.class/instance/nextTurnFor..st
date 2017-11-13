@@ -6,7 +6,7 @@ nextTurnFor: aPlayer
 		ifFalse: [ movesToBeMade := dices sumNumbers: [ :dice | dice roll ].
 			movesToBeMade := movesToBeMade + aPlayer throwsPermamentCardsProducingAnEffectOnADiceRoll.
 			self move: aPlayer positions: movesToBeMade.
-			actualSquare := board squareAtPosition: aPlayer position.
+			actualSquare := board squareAtPosition: aPlayer currentPosition.
 			cardEffect := aPlayer throwsPermanentCardsAddingAnEffectOnASquareEffect.
 			actualSquare provokesAnEffectInto: self with: aPlayer addingEffect: cardEffect.
 			actualSquare addToAPlayerCardDeck: aPlayer from: self.
