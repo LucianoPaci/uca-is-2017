@@ -1,3 +1,3 @@
 accessing
 lapsTravelled
-	^ position last playerLaps 
+	^ positions last playerLaps 

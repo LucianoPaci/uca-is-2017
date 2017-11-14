@@ -1,4 +1,4 @@
-tests
+playing
 testWhenPlayingAGameDisordered
 	| squares board diceEightFaces diceSixFaces collectionOfDices collectionOfplayers playerScorpion playerJuanMa laps game playerRaiden playerScorpionHistory playerRaidenHistory playerJuanMaHistory |
 	playerScorpionHistory := OrderedCollection new.

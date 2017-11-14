@@ -1,4 +1,4 @@
-tests
+playing
 testSuccessfulGameCreationWithSeveralDicesAndPlayers
 	| player1 player2 board dice1 dice2 game laps players dices squareAtomicBomb squareWornHole squares  player1History  player2History |
 	player1History := OrderedCollection new.

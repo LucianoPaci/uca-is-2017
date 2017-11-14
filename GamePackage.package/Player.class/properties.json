@@ -6,15 +6,11 @@
 	"pools" : [ ],
 	"classvars" : [ ],
 	"instvars" : [
+		"positions",
 		"name",
-		"position",
-		"lapsTravelled",
-		"previousPosition",
 		"cards",
-		"previousLap",
 		"permanentCardsToBePlayed",
-		"instantCardsToBePlayed",
-		"playerHistory"
+		"instantCardsToBePlayed"
 	],
 	"name" : "Player",
 	"type" : "normal"

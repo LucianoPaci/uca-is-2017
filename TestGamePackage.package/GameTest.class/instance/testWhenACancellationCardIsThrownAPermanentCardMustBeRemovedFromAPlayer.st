@@ -1,7 +1,7 @@
-tests
-testWhenAPlayerAffectsAnotherPlayerWithACardTheCardIsARemovedFromFirstPlayerCardDeck
-| squares board diceEightFaces diceSixFaces collectionOfDices collectionOfplayers playerScorpion playerRaiden  laps game cardsToAffectPlayer cardsPlayerScorpion cardsPlayerRaiden gameDeckCard playerScorpionHistory playerRaidenHistory |
-
+cards tests
+testWhenACancellationCardIsThrownAPermanentCardMustBeRemovedFromAPlayer
+	
+	| playerScorpionHistory playerRaidenHistory squares board diceEightFaces diceSixFaces collectionOfDices collectionOfplayers cardsPlayerScorpion cardsPlayerRaiden cardsToAffectPlayer playerScorpion playerRaiden laps gameDeckCard game cancellationCard |
 	playerScorpionHistory := OrderedCollection new.
 	playerScorpionHistory add: (PlayerPosition at: 1 withLaps: 0).
 	playerRaidenHistory := OrderedCollection new.
@@ -37,4 +37,18 @@ testWhenAPlayerAffectsAnotherPlayerWithACardTheCardIsARemovedFromFirstPlayerCard
 	game nextTurnFor: playerScorpion.
 	self assert: playerRaiden  cards size equals:2.
 	playerRaiden affectAPlayer: playerScorpion withAPermanentCard: cardsToAffectPlayer   into: game. 
-		self assert: playerRaiden cards size equals: 1.
+	self assert: playerRaiden cards size equals: 1.
+	cancellationCard := CardCancellation named: 'CardCancellation1'.
+	playerRaiden cards add: cancellationCard.
+	self assert: playerRaiden cards size equals: 2.
+	self assert: playerScorpion cards size equals: 2.
+	self assert: playerScorpion permanentCardsToBePlayed size equals: 1.
+	playerRaiden affectACard: cardsToAffectPlayer ofAPlayer: playerScorpion withACancellationCard: cancellationCard into: game.
+	self assert: playerScorpion instantCardsToBePlayed size equals:1.
+	self assert: playerRaiden cards size equals: 1.
+	self assert: playerScorpion cards size equals: 2.
+	self assert: playerScorpion permanentCardsToBePlayed size equals:1.
+	game nextTurnFor: playerRaiden.
+	game nextTurnFor: playerScorpion.
+	self assert: playerScorpion permanentCardsToBePlayed size equals:0.
+	self assert: playerScorpion instantCardsToBePlayed size equals: 0.

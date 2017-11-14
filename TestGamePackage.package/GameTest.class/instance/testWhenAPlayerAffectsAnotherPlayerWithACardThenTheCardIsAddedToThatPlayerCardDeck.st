@@ -1,4 +1,4 @@
-tests
+cards tests
 testWhenAPlayerAffectsAnotherPlayerWithACardThenTheCardIsAddedToThatPlayerCardDeck
 	| squares board diceEightFaces diceSixFaces collectionOfDices collectionOfplayers playerScorpion playerRaiden laps game cardsToAffectPlayer cardsPlayerScorpion cardsPlayerRaiden gameDeckCard playerScorpionHistory playerRaidenHistory |
 	

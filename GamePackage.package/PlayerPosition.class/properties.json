@@ -7,8 +7,7 @@
 	"classvars" : [ ],
 	"instvars" : [
 		"playerPosition",
-		"playerLaps",
-		"size"
+		"playerLaps"
 	],
 	"name" : "PlayerPosition",
 	"type" : "normal"

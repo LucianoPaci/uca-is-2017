@@ -1,4 +1,4 @@
-tests
+cards tests
 testWhenPlayerAffectsWithACardAnotherPlayerNotOnHisTurnAnErrorMessageIsThrown
 | squares board diceEightFaces diceSixFaces collectionOfDices collectionOfplayers playerScorpion playerRaiden playerJuanMa laps game cardsToAffectPlayer cardsPlayerScorpion cardsPlayerRaiden cardsPlayerJuanMa playerScorpionHistory playerRaidenHistory playerJuanMaHistory |
 

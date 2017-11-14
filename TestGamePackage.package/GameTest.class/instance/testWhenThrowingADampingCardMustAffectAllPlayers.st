@@ -1,4 +1,4 @@
-tests
+cards tests
 testWhenThrowingADampingCardMustAffectAllPlayers
 	| squares board diceEightFaces diceSixFaces collectionOfDices collectionOfplayers playerScorpion playerRaiden laps game cardsToAffectPlayer cardsPlayerScorpion cardsPlayerRaiden gameDeckCard cardsPlayerJuanMa playerJuanMa playerScorpionHistory playerRaidenHistory playerJuanMaHistory |
 	

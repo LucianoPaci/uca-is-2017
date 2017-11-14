@@ -1,3 +1,3 @@
 setter
 changePosition: anAmountOfPositions andLapsTo: anAmountOfLaps
-	position add: (PlayerPosition at: anAmountOfPositions withLaps: anAmountOfLaps)
+	positions add: (PlayerPosition at: anAmountOfPositions withLaps: anAmountOfLaps)

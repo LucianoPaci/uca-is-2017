@@ -1,4 +1,4 @@
-tests
+Movement
 testWhenPlayerMovesForwardWithoutDice
 	| player board dice game squares playerHistory |
 	playerHistory := OrderedCollection new.

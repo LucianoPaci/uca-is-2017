@@ -1,4 +1,4 @@
-tests
+squares tests
 testWhenPlayerFallsInSquareWithoutEffectThenPlayerDoesntMoveAfterwards
 	| player game dice board squares playerHistory |
 	playerHistory := OrderedCollection new.

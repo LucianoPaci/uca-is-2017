@@ -1,4 +1,4 @@
-tests
+squares tests
 testWhenPlayerFallsInWormHoleEffectSquareThenPlayerMovesFourPositionsBackwards
 	| player1 game dice board squares playerHistory |
 	playerHistory := OrderedCollection new.

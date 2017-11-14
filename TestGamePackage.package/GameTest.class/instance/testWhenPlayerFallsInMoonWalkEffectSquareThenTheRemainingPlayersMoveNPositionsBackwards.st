@@ -1,4 +1,4 @@
-tests
+squares tests
 testWhenPlayerFallsInMoonWalkEffectSquareThenTheRemainingPlayersMoveNPositionsBackwards
 	| player1 player2 game dice board squares player1History player2History |
 	player1History := OrderedCollection new.

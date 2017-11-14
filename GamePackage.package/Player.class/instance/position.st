@@ -1,3 +1,3 @@
 accessing
 position
-	^ position "last playerPosition"
+	^ positions "last playerPosition"

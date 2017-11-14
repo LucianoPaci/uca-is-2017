@@ -1,4 +1,4 @@
-tests
+playing
 testGameIsPlayedUntilAWinnerIsDeclared
 	| playerScorpion playerRaiden game collectionOfDices board laps collectionOfplayers squares playerScorpionHistory playerRaidenHistory |
 	squares := (1 to: 10) collect: [ :n | SquareWithoutEffect onPosition: n ].

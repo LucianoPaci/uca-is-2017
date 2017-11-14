@@ -1,12 +1,11 @@
-tests
-testWhenAPlayerThrowsUndoCarToAnotherPlayerThenLastSquareEffectIsUndone
-	| squares board diceSixFaces collectionOfDices collectionOfplayers playerScorpion playerRaiden laps game cardsPlayerScorpion cardsPlayerRaiden gameDeckCard cardsToAffectPlayer playerScorpionHistory playerRaidenHistory  |
+cards tests
+testWhenAPlayerThrowsUndoCardToAnotherPlayerThenLastSquareEffectIsUndone
+"Ejemplo 1"
+	| squares board diceSixFaces collectionOfDices collectionOfplayers playerScorpion playerRaiden laps game cardsPlayerScorpion cardsPlayerRaiden gameDeckCard cardsToAffectPlayer playerScorpionHistory playerRaidenHistory |
 	playerScorpionHistory := OrderedCollection new.
 	playerScorpionHistory add: (PlayerPosition at: 1 withLaps: 0).
 	playerRaidenHistory := OrderedCollection new.
 	playerRaidenHistory add: (PlayerPosition at: 1 withLaps: 0).
-	
-	
 	squares := (1 to: 8) collect: [ :n | SquareWithoutEffect onPosition: n ].
 	squares at: 3 put: (SquareSpeedUp onPosition: 3).
 	board := Board definedSquares: squares.
@@ -21,13 +20,11 @@ testWhenAPlayerThrowsUndoCarToAnotherPlayerThenLastSquareEffectIsUndone
 		add: cardsToAffectPlayer;
 		add: (CardUndo named: 'CardUndo2');
 		add: (CardDamping named: 'CardDamping1').
-
 	cardsPlayerRaiden
-		add: (CardPotentiation  named: 'CardPotentiation1');
-		add: (CardPotentiation  named: 'CardPotentiation2').
-
-	playerScorpion := Player named: 'Scorpion' withCards: cardsPlayerScorpion andPositionHistory: playerScorpionHistory .
-	playerRaiden := Player named: 'Raiden' withCards: cardsPlayerRaiden andPositionHistory: playerRaidenHistory .
+		add: (CardPotentiation named: 'CardPotentiation1');
+		add: (CardPotentiation named: 'CardPotentiation2').
+	playerScorpion := Player named: 'Scorpion' withCards: cardsPlayerScorpion andPositionHistory: playerScorpionHistory.
+	playerRaiden := Player named: 'Raiden' withCards: cardsPlayerRaiden andPositionHistory: playerRaidenHistory.
 	laps := 1.
 	collectionOfplayers add: playerScorpion.
 	collectionOfplayers add: playerRaiden.
@@ -48,4 +45,4 @@ testWhenAPlayerThrowsUndoCarToAnotherPlayerThenLastSquareEffectIsUndone
 	self assert: playerRaiden currentPosition equals: 7.
 	playerScorpion affectAPlayer: playerRaiden withAnInstantCard: cardsToAffectPlayer into: game.
 	"self assert: playerScorpion instantCardsToBePlayed size equals: 2."
-	self assert: playerRaiden currentPosition equals: 3.
+	self assert: playerRaiden currentPosition equals: 2

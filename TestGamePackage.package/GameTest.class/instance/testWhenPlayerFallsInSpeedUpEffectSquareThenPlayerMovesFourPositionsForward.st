@@ -1,4 +1,4 @@
-tests
+squares tests
 testWhenPlayerFallsInSpeedUpEffectSquareThenPlayerMovesFourPositionsForward
 	| player game dice board squares playerHistory |
 	playerHistory := OrderedCollection new.

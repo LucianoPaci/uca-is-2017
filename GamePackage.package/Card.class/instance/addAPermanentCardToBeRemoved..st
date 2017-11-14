@@ -1,0 +1,3 @@
+adding
+addAPermanentCardToBeRemoved: aCard
+self subclassResponsibility.

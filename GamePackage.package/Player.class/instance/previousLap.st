@@ -1,3 +1,3 @@
 accessing
 previousLap
-	^ (position at: position size - 1) playerLaps
+	^ (positions at: positions size - 1) playerLaps

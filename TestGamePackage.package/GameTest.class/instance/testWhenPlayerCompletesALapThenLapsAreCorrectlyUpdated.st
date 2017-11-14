@@ -1,4 +1,4 @@
-tests
+Movement
 testWhenPlayerCompletesALapThenLapsAreCorrectlyUpdated
 	| player board dice game squares playerHistory |
 	playerHistory := OrderedCollection new.
@@ -16,8 +16,12 @@ testWhenPlayerCompletesALapThenLapsAreCorrectlyUpdated
 	self assert: (game players at: 1) currentPosition equals: 1.
 	self assert: (game players at: 1) lapsTravelled equals: 0.
 	game move: (game players at: 1) positions: 5.
+	self assert: player previousPosition equals:1.
+	self assert: player previousLap equals:0.
 	self assert: (game players at: 1) lapsTravelled equals: 0.
 	self assert: (game players at: 1) currentPosition equals: 6.
 	game move: (game players at: 1) positions: 4.
+	self assert: player previousPosition equals:6.
+	self assert: player previousLap equals:0.
 	self assert: (game players at: 1) currentPosition equals: 2.
 	self assert: (game players at: 1) lapsTravelled equals: 1
