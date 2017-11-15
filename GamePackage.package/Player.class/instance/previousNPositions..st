@@ -1,5 +1,5 @@
 accessing
-previousNPositions: nPositions
-	positions size >nPositions
-	ifTrue: [ ^ (positions at: positions size - 1) playerPosition ]
-	ifFalse: [ ^ (positions at: 1 ) playerPosition  ]
+previousNPositions: anAmountOfPositions
+	^positions size >anAmountOfPositions
+	ifTrue: [  (positions at: positions size - anAmountOfPositions) ]
+	ifFalse: [  (positions at: 1 )   ]

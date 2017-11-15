@@ -19,8 +19,8 @@ testWhenPlayerFallsInTimeMachineEffectSquareAfterCompletingALapThenPlayerMovesBa
 	game nextTurnFor: player1.
 	self assert: player1 currentPosition equals: 1.
 	self assert: player1 lapsTravelled equals: 0.
-	self assert: (player1 previousNLaps:1) equals: 1.
+	self assert: (player1 previousNPositions:1)lap equals: 1.
 	game nextTurnFor: player1.
 	self assert: player1 currentPosition equals: 1.
 	self assert: player1 lapsTravelled equals: 1.
-	self assert: (player1 previousNLaps:1) equals: 0
+	self assert: (player1 previousNPositions:1)lap equals: 0
