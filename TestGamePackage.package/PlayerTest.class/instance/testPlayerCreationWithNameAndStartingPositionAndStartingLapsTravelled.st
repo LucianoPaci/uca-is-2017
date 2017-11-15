@@ -4,7 +4,7 @@ testPlayerCreationWithNameAndStartingPositionAndStartingLapsTravelled
 	playerHistory := OrderedCollection new.
 	playerHistory add: (PlayerPosition at: 1 withLaps:0 ).
 	cardsCollection := OrderedCollection new.
-	cardsCollection add: (CardSpeed named: 'CardSpeed1') ; add:(CardUndo named: 'CardUndo1') .
+	cardsCollection add: (CardSpeed named: 'CardSpeed1') ; add:(CardOverloading  named: 'CardOverloading1') .
 	player := Player named: 'Jorge' withCards: cardsCollection andPositionHistory: playerHistory.
 	self
 		assert: player name equals: 'Jorge';

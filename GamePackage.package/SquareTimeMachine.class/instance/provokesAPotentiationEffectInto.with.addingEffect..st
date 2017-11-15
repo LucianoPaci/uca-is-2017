@@ -1,3 +1,3 @@
 affecting
 provokesAPotentiationEffectInto:  aGame with: aPlayer addingEffect: permanentCardEffects
-aPlayer changePosition: (aPlayer twoPositionsBack  * permanentCardEffects) ceiling andLapsTo: aPlayer twoLapsBack.
+aPlayer changePosition: ((aPlayer previousNPositions:2)  * permanentCardEffects) ceiling andLapsTo: (aPlayer previousNLaps:2).

@@ -17,7 +17,7 @@ testAPlayerCanThrowAnInstantCardNotOnHisTurn
 	collectionOfplayers := OrderedCollection new.
 	cardsPlayer1 := OrderedCollection new.
 	cardsPlayer2 := OrderedCollection new.
-	cardsPlayer1 add: (CardDamping named: 'CardDamping1');add:(CardUndo named: 'CardUndo1') .
+	cardsPlayer1 add: (CardDamping named: 'CardDamping1');add:(CardSpeed  named: 'CardSpeed2') .
 	cardsToAffectPlayer := CardSpeed named: 'CardSpeed1'.
 	cardsPlayer2 add: cardsToAffectPlayer;add: (CardOverloading named: 'CardOverloading1') .
 	player1 := Player named: 'Scorpion' withCards: cardsPlayer1 andPositionHistory: player1History.
@@ -26,7 +26,7 @@ testAPlayerCanThrowAnInstantCardNotOnHisTurn
 	collectionOfplayers add: player1.
 	collectionOfplayers add: player2.
 	gameDeckCard:= OrderedCollection new.
-	gameDeckCard add: (CardUndo named: 'CardUndo2');add: (CardSpeed named: 'CardSpeed2') .
+	gameDeckCard add: (CardSpeed named: 'CardSpeed4');add: (CardSpeed named: 'CardSpeed3') .
 	game := Game
 		playedBy: collectionOfplayers on: board throwing: collectionOfDices  winningWhenCompleting: laps 	withACardDeck: gameDeckCard.
 	self assert: player2 cards size equals:2.

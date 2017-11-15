@@ -25,7 +25,7 @@ testWhenAPlayerThrowsADampingCardASpeedCardAndAnOverloadingCardSevenPositionsMus
 	laps := 1.
 	gameDeckCard := OrderedCollection new.
 	gameDeckCard
-		add: (CardUndo named: 'CardUndo2');
+		add: (CardSpeed named: 'CardSpeed3');
 		add: (CardSpeed named: 'CardSpeed2').
 	game := Game
 		playedBy: collectionOfplayers
@@ -38,5 +38,5 @@ testWhenAPlayerThrowsADampingCardASpeedCardAndAnOverloadingCardSevenPositionsMus
 	playerRaiden affectAPlayer: playerRaiden withAPermanentCard: thirdCardToAffectPlayer into: game.
 	self assert: playerRaiden permanentCardsToBePlayed size equals: 3.
 	game nextTurnFor: playerRaiden.
-	self assert: playerRaiden previousPosition equals: 4.
+	self assert: (playerRaiden previousNPositions:1) equals: 4.
 	self assert: playerRaiden currentPosition equals: 6

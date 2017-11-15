@@ -1,4 +1,4 @@
-cards tests
+tests
 testWhenAPotentiationCardIsThrownAfterPlayerFellInSpeedUpSquare
     | player1History squares board diceOneFace collectionOfDices collectionOfplayers cardsPlayer1 cardsToAffectPlayer player1 laps gameDeckCard game |
     
@@ -18,7 +18,7 @@ testWhenAPotentiationCardIsThrownAfterPlayerFellInSpeedUpSquare
     laps := 1.
     collectionOfplayers add: player1.
     gameDeckCard:= OrderedCollection new.
-    gameDeckCard add: (CardUndo named: 'CardUndo2');add: (CardSpeed named: 'CardSpeed2') .
+    gameDeckCard add: (CardOverloading named: 'CardOverloading2');add: (CardSpeed named: 'CardSpeed2') .
     game := Game
         playedBy: collectionOfplayers on: board throwing: collectionOfDices  winningWhenCompleting: laps     withACardDeck: gameDeckCard.
     self assert: (player1 cards) size equals:2.

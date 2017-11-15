@@ -1,8 +1,8 @@
 tests
 testWhenAPlayerCardIsEqualsToAnotherCard
 	| aPlayer aPlayerCard anotherCard aCollectionOfCards aPlayerHistory |
-	anotherCard := CardUndo named: 'CardUndo1'.
-	aPlayerCard := CardUndo named: 'CardUndo1'.
+	anotherCard := CardDamping  named: 'CardDamping1'.
+	aPlayerCard := CardDamping  named: 'CardDamping1'.
 	aCollectionOfCards := OrderedCollection new.
 	aCollectionOfCards
 		add: anotherCard;

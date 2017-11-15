@@ -20,7 +20,7 @@ testWhenAPlayerAffectsAnotherPlayerWithACardThenTheCardIsAddedToThatPlayerCardDe
 	
 	cardsPlayerScorpion
 		add: (CardDamping named: 'CardDamping1');
-		add: (CardUndo named: 'CardUndo1').
+		add: (CardDamping named: 'CardDamping2').
 		
 	cardsToAffectPlayer := CardSpeed named: 'CardSpeed1'.
 	
@@ -35,7 +35,7 @@ testWhenAPlayerAffectsAnotherPlayerWithACardThenTheCardIsAddedToThatPlayerCardDe
 	collectionOfplayers add: playerRaiden.
 	gameDeckCard := OrderedCollection new.
 	gameDeckCard
-		add: (CardUndo named: 'CardUndo2');
+		add: (CardSpeed named: 'CardSpeed3');
 		add: (CardSpeed named: 'CardSpeed2').
 	game := Game
 		playedBy: collectionOfplayers
