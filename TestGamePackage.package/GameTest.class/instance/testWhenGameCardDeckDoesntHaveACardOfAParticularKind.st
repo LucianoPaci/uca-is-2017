@@ -1,11 +1,11 @@
-cards tests
+tests
 testWhenGameCardDeckDoesntHaveACardOfAParticularKind
 |  board   game player squares dice aGameDeckCards collectionOfPlayerCards playerHistory |
 	playerHistory := OrderedCollection new.
 	playerHistory add: (PlayerPosition at: 1 withLaps: 0).
 	aGameDeckCards := OrderedCollection new.
-	aGameDeckCards add: CardSpeed new;
-						add: CardUndo new.
+	aGameDeckCards add: (CardSpeed named: 'CardSpeed1');
+						add: (CardSpeed named:'CardSpeed2').
 	collectionOfPlayerCards:= OrderedCollection new.
 	collectionOfPlayerCards add: (self aCollectionOfGameCards )removeFirst ; add: (self aCollectionOfGameCards )removeFirst.
 	player := Player named: 'jorge' withCards:collectionOfPlayerCards andPositionHistory: playerHistory.

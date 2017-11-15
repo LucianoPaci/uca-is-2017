@@ -11,7 +11,7 @@ nextTurnFor: aPlayer
 						cardEffect := aPlayer throwsPermanentCardsAddingAnEffectOnASquareEffect.
 						actualSquare provokesAnEffectInto: self with: aPlayer addingEffect: cardEffect.
 						actualSquare addToAPlayerCardDeck: aPlayer from: self.
-						previousSquare := board squareAtPosition: aPlayer previousPosition.
+						previousSquare := board squareAtPosition: (aPlayer previousNPositions:1).
 						aPlayer throwsPotentiationCardsToASquare: previousSquare fromAGame: self withACard: cardEffect.
 						aPlayer emptyInstantCardsToBePlayed.
 						self checkIsAWinnerOfGame: aPlayer.

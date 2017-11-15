@@ -1,4 +1,0 @@
-addingEffect
-addAnEffectOverASquare
-	^1
-	

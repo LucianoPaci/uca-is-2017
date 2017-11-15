@@ -1,3 +1,3 @@
 affecting
 provokesAnEffectInto: aGame with: aPlayer addingEffect: someEffect
- aPlayer changePosition: (aPlayer previousPosition * someEffect) ceiling andLapsTo: aPlayer previousLap.
+ aPlayer changePosition: ((aPlayer previousNPositions:1) * someEffect) ceiling andLapsTo: (aPlayer previousNLaps:1).

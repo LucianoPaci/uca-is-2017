@@ -27,10 +27,10 @@ testWhenThrowingADampingCardMustAffectAllPlayers
 		add: (CardOverloading named: 'CardOverloading1').
 	cardsPlayerScorpion
 		add: (CardDamping named: 'CardDamping1');
-		add: (CardUndo named: 'CardUndo1').
+		add: (CardOverloading  named: 'CardOverloading2').
 	cardsPlayerJuanMa
-		add: (CardUndo named: 'CardUndo2');
-		add: (CardUndo named: 'CardUndo3').
+		add: (CardSpeed named: 'CardSpeed1');
+		add: (CardSpeed named: 'CardSpeed2').
 	playerScorpion := Player named: 'Scorpion' withCards: cardsPlayerScorpion  andPositionHistory: playerScorpionHistory.
 	playerRaiden := Player named: 'Raiden' withCards: cardsPlayerRaiden  andPositionHistory: playerRaidenHistory.
 	playerJuanMa := Player named: 'JuanMa' withCards: cardsPlayerJuanMa  andPositionHistory: playerJuanMaHistory.
@@ -40,8 +40,8 @@ testWhenThrowingADampingCardMustAffectAllPlayers
 	collectionOfplayers add: playerJuanMa.
 	gameDeckCard := OrderedCollection new.
 	gameDeckCard
-		add: (CardUndo named: 'CardUndo5');
-		add: (CardSpeed named: 'CardSpeed2').
+		add: (CardSpeed named: 'CardSpeed4');
+		add: (CardSpeed named: 'CardSpeed3').
 	game := Game
 		playedBy: collectionOfplayers
 		on: board
