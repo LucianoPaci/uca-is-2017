@@ -1,4 +1,4 @@
-testing
+playing
 nextTurnFor: aPlayer
 	| movesToBeMade actualSquare cardEffect previousSquare |
 	cardEffect := 1.
@@ -14,7 +14,7 @@ nextTurnFor: aPlayer
 						previousSquare := board squareAtPosition: aPlayer previousPosition.
 						aPlayer throwsPotentiationCardsToASquare: previousSquare fromAGame: self withACard: cardEffect.
 						aPlayer emptyInstantCardsToBePlayed.
-						self CheckIsAWinnerOfGame: aPlayer.
+						self checkIsAWinnerOfGame: aPlayer.
 						self changeIndexOfExpectedPlayer. 
 					]
 		ifTrue: [ WrongTurnPlayerError signal: 'Al jugador no le corresponde jugar en este turno ' ]

@@ -1,4 +1,4 @@
-as yet unclassified
+use of cards
 affectACard: aCard ofAPlayer: aPlayer withACancellationCard: aCancellationCard into: aGame
 | cardToBeRemoved  cancellationCards |
 	(self cards select: [ :each | self aCard: aCancellationCard isEqualTo: each ]) isEmpty

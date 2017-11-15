@@ -1,4 +1,4 @@
-as yet unclassified
+use of cards
 emptyInstantCardsToBePlayed
 | emptyCollection |
 emptyCollection := OrderedCollection new.

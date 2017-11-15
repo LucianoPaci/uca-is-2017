@@ -1,3 +1,3 @@
-playing
+addingEffect
 addAnEffectOnADiceRoll
 self subclassResponsibility

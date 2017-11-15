@@ -1,3 +1,3 @@
-as yet unclassified
+affecting
 provokesAPotentiationEffectInto:  aGame with: aPlayer addingEffect: permanentCardEffects
 self subclassResponsibility.

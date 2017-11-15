@@ -1,3 +1,3 @@
-playing
+addingEffect
 addAnEffectOverASquare
 self subclassResponsibility

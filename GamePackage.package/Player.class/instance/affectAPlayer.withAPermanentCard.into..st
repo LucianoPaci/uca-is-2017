@@ -1,4 +1,4 @@
-as yet unclassified
+use of cards
 affectAPlayer: aPlayer withAPermanentCard: aCard into: aGame
 	| cardToBeAdded |
 	(aGame wrongTurnFor: self)

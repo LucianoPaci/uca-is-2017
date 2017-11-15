@@ -1,4 +1,4 @@
 accessing
-CheckIsAWinnerOfGame: aPlayer
+checkIsAWinnerOfGame: aPlayer
 	aPlayer lapsTravelled  >= laps
 		ifTrue: [ winner := aPlayer ]
