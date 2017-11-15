@@ -6,8 +6,8 @@
 	"pools" : [ ],
 	"classvars" : [ ],
 	"instvars" : [
-		"playerPosition",
-		"playerLaps"
+		"lap",
+		"squareNumber"
 	],
 	"name" : "PlayerPosition",
 	"type" : "normal"

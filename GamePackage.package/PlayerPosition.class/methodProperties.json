@@ -1,8 +1,8 @@
 {
 	"instance" : {
-		"initializePosition:initializeLaps:" : "LucianoPaci 11/12/2017 14:25",
-		"playerPosition" : "LucianoPaci 11/12/2017 15:33",
-		"playerLaps" : "LucianoPaci 11/12/2017 15:34"
+		"initializePosition:initializeLaps:" : "LucianoPaci 11/15/2017 19:43",
+		"squareNumber" : "LucianoPaci 11/15/2017 19:43",
+		"lap" : "LucianoPaci 11/15/2017 19:40"
 	},
 	"class" : {
 		"at:withLaps:" : "LucianoPaci 11/12/2017 12:55"
