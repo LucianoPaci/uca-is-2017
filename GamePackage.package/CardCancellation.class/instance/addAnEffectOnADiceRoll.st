@@ -1,2 +1,2 @@
-playing
+addingEffect
 addAnEffectOnADiceRoll

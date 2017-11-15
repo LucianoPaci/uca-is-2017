@@ -1,2 +1,2 @@
 adding
-addToAPlayer: aPlayer fromAGame: aGame.
+addToAPlayer: aPlayer fromAGame: aGame

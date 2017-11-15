@@ -1,5 +1,3 @@
-as yet unclassified
+adding position
 moveToBeginning
-self changePosition: 1.
-self modifyLaps: 0.
-
+	self changePosition: 1 andLapsTo: 0.

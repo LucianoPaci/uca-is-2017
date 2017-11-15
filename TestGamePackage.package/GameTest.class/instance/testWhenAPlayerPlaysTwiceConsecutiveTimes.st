@@ -1,6 +1,11 @@
 Movement
 testWhenAPlayerPlaysTwiceConsecutiveTimes
-	| squares board diceEightFaces diceSixFaces collectionOfDices collectionOfplayers playerScorpion playerRaiden laps game |
+	| squares board diceEightFaces diceSixFaces collectionOfDices collectionOfplayers playerScorpion playerRaiden laps game playerScorpionHistory playerRaidenHistory |
+	
+	playerScorpionHistory := OrderedCollection new.
+	playerScorpionHistory add: (PlayerPosition at: 1 withLaps: 0).
+	playerRaidenHistory := OrderedCollection new.
+	playerRaidenHistory add: (PlayerPosition at: 1 withLaps: 0).
 	
 	squares:= (1 to: 8) collect: [:n | SquareWithoutEffect onPosition: n ]. 
 	board:=Board definedSquares: squares.
@@ -11,8 +16,8 @@ testWhenAPlayerPlaysTwiceConsecutiveTimes
 		add: diceSixFaces;
 		add: diceEightFaces.
 	collectionOfplayers := OrderedCollection new.
-	playerScorpion := Player named: 'Scorpion' withCards: (self aCollectionOfGameCards )removeFirst.
-	playerRaiden := Player named: 'Raiden' withCards: (self aCollectionOfGameCards )removeFirst.
+	playerScorpion := Player named: 'Scorpion' withCards: (self aCollectionOfGameCards )removeFirst andPositionHistory: playerScorpionHistory.
+	playerRaiden := Player named: 'Raiden' withCards: (self aCollectionOfGameCards )removeFirst andPositionHistory: playerRaidenHistory .
 	laps := 1.
 	collectionOfplayers add: playerScorpion.
 	collectionOfplayers add: playerRaiden.

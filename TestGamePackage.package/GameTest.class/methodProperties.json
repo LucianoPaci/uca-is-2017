@@ -1,0 +1,31 @@
+{
+	"instance" : {
+		"testGameIsPlayedUntilAWinnerIsDeclared" : "LucianoPaci 11/13/2017 02:49",
+		"testWhenPlayerFallsInSquareWithoutEffectThenPlayerDoesntMoveAfterwards" : "LucianoPaci 11/13/2017 01:46",
+		"testWhenAPlayerPlaysTwiceConsecutiveTimes" : "LucianoPaci 11/13/2017 02:36",
+		"testWhenAPlayerFallsInASpecialSquareANewCardMustBeAddedToThisPlayerCardDeck" : "LucianoPaci 11/13/2017 02:41",
+		"testWhenPlayerFallsInTimeMachineEffectSquareAfterCompletingALapThenPlayerMovesBackToPreviousPosition" : "LucianoPaci 11/13/2017 01:33",
+		"testWhenPlayerCompletesALapThenLapsAreCorrectlyUpdated" : "juanMaDiMartino 11/14/2017 09:31",
+		"testWhenGameCardDeckDoesntHaveACardOfAParticularKind" : "LucianoPaci 11/13/2017 01:54",
+		"testWhenAPotentiationCardIsThrownAfterPlayerFellInSpeedUpSquare" : "LucianoPaci 11/14/2017 19:13",
+		"testWhenAPlayerAffectsAnotherPlayerWithACardTheCardIsRemovedFromFirstPlayerCardDeck" : "juanMaDiMartino 11/13/2017 11:05",
+		"testWhenPlayerFallsInTimeMachineEffectSquareThenPlayerMovesBackToPreviousPosition" : "LucianoPaci 11/13/2017 01:35",
+		"testWhenPlayerFallsInWormHoleEffectSquareThenPlayerMovesFourPositionsBackwards" : "LucianoPaci 11/13/2017 01:36",
+		"testWhenPlayingAGameInOrder" : "LucianoPaci 11/13/2017 01:41",
+		"testWhenPlayerAffectsWithACardAnotherPlayerNotOnHisTurnAnErrorMessageIsThrown" : "LucianoPaci 11/13/2017 01:53",
+		"testSuccessfulGameCreationWithSeveralDicesAndPlayers" : "LucianoPaci 11/13/2017 02:47",
+		"testWhenAPlayerFallsInAtomicBombSquareThenAllPlayersReturnToTheBeginningOfTheBoard" : "LucianoPaci 11/13/2017 02:40",
+		"testWhenPlayerFallsInSpeedUpEffectSquareThenPlayerMovesFourPositionsForward" : "LucianoPaci 11/13/2017 01:46",
+		"testWhenACancellationCardIsThrownAPermanentCardMustBeRemovedFromAPlayer" : "juanMaDiMartino 11/13/2017 23:39",
+		"testAPlayerCanThrowAnInstantCardNotOnHisTurn" : "juanMaDiMartino 11/13/2017 14:12",
+		"testWhenACancellationCardIsThrownAndThereIsNoPermanentCardInGameAnErrorMessageIsThrown" : "juanMaDiMartino 11/13/2017 15:03",
+		"testWhenThrowingADampingCardMustAffectAllPlayers" : "LucianoPaci 11/13/2017 01:45",
+		"testWhenAPlayerThrowsADampingCardASpeedCardAndAnOverloadingCardSevenPositionsMustBeMovedFromOrigin" : "LucianoPaci 11/13/2017 02:34",
+		"testWhenPlayerFallsInMoonWalkEffectSquareThenTheRemainingPlayersMoveNPositionsBackwards" : "LucianoPaci 11/13/2017 01:49",
+		"testWhenPlayingAGameDisordered" : "LucianoPaci 11/13/2017 01:40",
+		"testWhenAPlayerAffectsAnotherPlayerWithACardThenTheCardIsAddedToThatPlayerCardDeck" : "LucianoPaci 11/13/2017 02:42",
+		"testWhenPlayerMovesForwardWithoutDice" : "LucianoPaci 11/13/2017 01:37",
+		"aCollectionOfGameCards" : "juanMartinDiMartino 11/4/2017 08:44"
+	},
+	"class" : { }
+}

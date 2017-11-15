@@ -1,0 +1,3 @@
+use of cards
+addInstantCardsToBePlayed: aCollectionOfCancellationCards
+instantCardsToBePlayed := aCollectionOfCancellationCards.

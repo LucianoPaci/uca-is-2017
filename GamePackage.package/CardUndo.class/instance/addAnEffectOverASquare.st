@@ -1,3 +1,4 @@
-playing
+addingEffect
 addAnEffectOverASquare
 	^1
+	

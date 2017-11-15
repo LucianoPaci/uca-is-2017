@@ -1,9 +1,11 @@
-tests
+squares tests
 testWhenAPlayerFallsInASpecialSquareANewCardMustBeAddedToThisPlayerCardDeck
-| player game dice board squares  collectionOfPlayerCards |
+| player game dice board squares  collectionOfPlayerCards playerHistory |
+	playerHistory := OrderedCollection new.
+	playerHistory add: (PlayerPosition at: 1 withLaps: 0).
 	collectionOfPlayerCards:= OrderedCollection new.
 	collectionOfPlayerCards add: (self aCollectionOfGameCards )removeFirst ; add: (self aCollectionOfGameCards )removeFirst.
-	player := Player named: 'Johny Maidana' withCards: collectionOfPlayerCards.
+	player := Player named: 'Johny Maidana' withCards: collectionOfPlayerCards andPositionHistory: playerHistory. 
 	squares := (1 to: 3) collect: [ :n | SquareWithoutEffect onPosition: n ].
 	squares at: 1 put: (SquareThatAddADampingCard  onPosition: 1).
 	squares at: 3 put: (SquareThatAddADampingCard  onPosition: 3).

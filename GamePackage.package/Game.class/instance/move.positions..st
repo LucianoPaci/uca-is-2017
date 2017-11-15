@@ -1,15 +1,11 @@
-as yet unclassified
+playing
 move: aPlayer positions: anAmountOfPositions
-	| aux |
-	aux := aPlayer position + anAmountOfPositions.
-	aPlayer changePreviousPosition: aPlayer position.
-	aPlayer changePreviousLap: aPlayer lapsTravelled.
-	
-	aux <= 0
-		ifTrue: [ aPlayer modifyLaps: aPlayer lapsTravelled - (((aux / board squares size) integerPart) abs)]
-		ifFalse: [ aPlayer modifyLaps: aPlayer lapsTravelled + (aux / board squares size) integerPart ].
-		
-	(aux % board squares size) abs ==0
-		ifTrue: [ aPlayer changePosition: 1]
-		ifFalse:[aPlayer changePosition: (aux % board squares size) abs].
-	
+	|  newLap newPosition |
+	newPosition := aPlayer currentPosition + anAmountOfPositions.
+
+	newPosition <= 0
+		ifTrue: [ newLap := aPlayer lapsTravelled - (newPosition / board squares size) integerPart abs ]
+		ifFalse: [ newLap := aPlayer lapsTravelled + (newPosition / board squares size) integerPart ].
+	(newPosition % board squares size) abs == 0
+		ifTrue: [ aPlayer changePosition: 1 andLapsTo: newLap ]
+		ifFalse: [ aPlayer changePosition: (newPosition % board squares size) abs andLapsTo: newLap ]

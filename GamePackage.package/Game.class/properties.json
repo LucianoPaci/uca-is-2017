@@ -17,8 +17,7 @@
 		"players",
 		"dices",
 		"indexOfExpectedPlayer",
-		"cardsDeck",
-		"prueba"
+		"cardsDeck"
 	],
 	"name" : "Game",
 	"type" : "normal"
