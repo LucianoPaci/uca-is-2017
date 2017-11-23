@@ -1,6 +1,6 @@
 {
 	"commentStamp" : "<historical>",
-	"super" : "Card",
+	"super" : "InstantCard",
 	"category" : "GamePackage",
 	"classinstvars" : [ ],
 	"pools" : [ ],
