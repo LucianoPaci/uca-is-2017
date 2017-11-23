@@ -1,3 +1,3 @@
-as yet unclassified
+playing
 moveEveryPlayerToBeginning
 players do: [ :player| player moveToBeginning].

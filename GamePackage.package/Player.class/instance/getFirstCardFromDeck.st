@@ -1,3 +1,3 @@
-as yet unclassified
+accessing
 getFirstCardFromDeck
 ^(cards at:1)
