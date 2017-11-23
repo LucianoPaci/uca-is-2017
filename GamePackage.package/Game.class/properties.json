@@ -1,0 +1,19 @@
+{
+	"commentStamp" : "<historical>",
+	"super" : "Object",
+	"category" : "GamePackage",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"board",
+		"laps",
+		"dices",
+		"winner",
+		"players",
+		"indexOfExpectedPlayer",
+		"cardsDeck"
+	],
+	"name" : "Game",
+	"type" : "normal"
+}

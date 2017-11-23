@@ -1,0 +1,3 @@
+error
+playerCollectionOutOfBound
+^indexOfExpectedPlayer >= self numberOfPlayers

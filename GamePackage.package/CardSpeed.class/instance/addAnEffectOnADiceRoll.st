@@ -1,0 +1,3 @@
+addingEffect
+addAnEffectOnADiceRoll
+^1.

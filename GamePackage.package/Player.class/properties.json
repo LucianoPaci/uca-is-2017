@@ -1,0 +1,17 @@
+{
+	"commentStamp" : "<historical>",
+	"super" : "Object",
+	"category" : "GamePackage",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"positions",
+		"name",
+		"cards",
+		"permanentCardsToBePlayed",
+		"instantCardsToBePlayed"
+	],
+	"name" : "Player",
+	"type" : "normal"
+}
