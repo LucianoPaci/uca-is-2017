@@ -13,15 +13,15 @@ testWhenPlayerCompletesALapThenLapsAreCorrectlyUpdated
 		throwing: (OrderedCollection with: dice)
 		winningWhenCompleting: 1
 		withACardDeck: self aCollectionOfGameCards.
-	self assert: (game players at: 1) currentPosition equals: 1.
-	self assert: (game players at: 1) lapsTravelled equals: 0.
-	game move: (game players at: 1) positions: 5.
+	self assert: (game getPlayerAtIndex:  1) currentPosition equals: 1.
+	self assert: (game getPlayerAtIndex:  1) lapsTravelled equals: 0.
+	game move: (game getPlayerAtIndex:  1) positions: 5.
 	self assert: (player previousNPositions:1) squareNumber equals:1.
 	self assert: (player previousNPositions:1) lap equals:0.
-	self assert: (game players at: 1) lapsTravelled equals: 0.
-	self assert: (game players at: 1) currentPosition equals: 6.
-	game move: (game players at: 1) positions: 4.
+	self assert: (game getPlayerAtIndex:  1) lapsTravelled equals: 0.
+	self assert: (game getPlayerAtIndex:  1) currentPosition equals: 6.
+	game move: (game getPlayerAtIndex:  1) positions: 4.
 	self assert: (player previousNPositions:1) squareNumber equals:6.
 	self assert: (player previousNPositions:1) lap equals:0.
-	self assert: (game players at: 1) currentPosition equals: 2.
-	self assert: (game players at: 1) lapsTravelled equals: 1
+	self assert: (game getPlayerAtIndex:  1) currentPosition equals: 2.
+	self assert: (game getPlayerAtIndex:  1) lapsTravelled equals: 1

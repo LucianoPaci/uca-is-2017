@@ -7,4 +7,4 @@ testBoardCreationWithDefinedAmountOfSquares
 	squares add: squareWormHole.
 	squares add: squareAtomicBomb.
 	board:= Board definedSquares: squares.
-	self assert: board squares size  equals: 2
+	self assert: board numberOfSquares equals: 2

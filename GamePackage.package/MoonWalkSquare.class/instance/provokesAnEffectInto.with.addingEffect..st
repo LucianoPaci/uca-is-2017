@@ -1,5 +1,6 @@
 affecting
 provokesAnEffectInto: aGame with: aPlayer addingEffect: someEffect
+|  upRoundedEffectCalculation |
+upRoundedEffectCalculation := (effect * someEffect) ceiling.
 
-(aGame players reject: [:player | player = aPlayer ])
-do: [:player | aGame move: player positions: (effect * someEffect) ceiling]
+aGame provokesAnEffect: upRoundedEffectCalculation intoEveryPlayerExcept: aPlayer.

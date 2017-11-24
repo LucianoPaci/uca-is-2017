@@ -49,11 +49,11 @@ testWhenThrowingADampingCardMustAffectAllPlayers
 		winningWhenCompleting: laps
 		withACardDeck: gameDeckCard.
 	game nextTurnFor: playerScorpion.
-	self assert: playerScorpion permanentCardsToBePlayed size equals: 0.
-	self assert: playerRaiden permanentCardsToBePlayed size equals: 0.
-	self assert: playerJuanMa permanentCardsToBePlayed size equals: 0.
+	self assert: playerScorpion numberOfPermanentCardsToBePlayed equals: 0.
+	self assert: playerRaiden numberOfPermanentCardsToBePlayed equals: 0.
+	self assert: playerJuanMa numberOfPermanentCardsToBePlayed equals: 0.
 	playerRaiden affectAPlayer: playerScorpion withAPermanentCard: cardsToAffectPlayer into: game.
-	self assert: playerRaiden cards size equals: 1.
-	self assert: playerScorpion permanentCardsToBePlayed size equals: 1.
-	self assert: playerRaiden permanentCardsToBePlayed size equals: 1.
-	self assert: playerJuanMa permanentCardsToBePlayed size equals: 1
+	self assert: playerRaiden numberOfCardsInDeck equals: 1.
+	self assert: playerScorpion numberOfPermanentCardsToBePlayed equals: 1.
+	self assert: playerRaiden numberOfPermanentCardsToBePlayed equals: 1.
+	self assert: playerJuanMa numberOfPermanentCardsToBePlayed equals: 1

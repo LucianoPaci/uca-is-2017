@@ -18,10 +18,10 @@ testWhenAPlayerFallsInASquareThatAddASpeedCardANewCardOfThatKindMustBeAddedToThi
 		winningWhenCompleting: 1
 		withACardDeck: self aCollectionOfGameCards.
 		
-	self assert: player cards size equals:2.
+	self assert: player numberOfCardsInDeck equals:2.
 	game nextTurnFor: player.
-	self assert: player cards size equals:2.
+	self assert: player numberOfCardsInDeck equals:2.
 	game nextTurnFor: player.
-	self assert: player cards size equals:3.
+	self assert: player numberOfCardsInDeck equals:3.
 	game nextTurnFor: player.
-	self assert: player cards size equals:4.
+	self assert: player numberOfCardsInDeck equals:4.

@@ -17,4 +17,4 @@ nextTurnFor: aPlayer
 						self checkIsAWinnerOfGame: aPlayer.
 						self changeIndexOfExpectedPlayer. 
 					]
-		ifTrue: [ WrongTurnPlayerError signal: 'Al jugador no le corresponde jugar en este turno ' ]
+		ifTrue: [ GameFailed signal: 'Al jugador no le corresponde jugar en este turno ' ]

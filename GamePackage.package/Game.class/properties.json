@@ -2,20 +2,15 @@
 	"commentStamp" : "<historical>",
 	"super" : "Object",
 	"category" : "GamePackage",
-	"classinstvars" : [
-		"player",
-		"board",
-		"dice",
-		"laps"
-	],
+	"classinstvars" : [ ],
 	"pools" : [ ],
 	"classvars" : [ ],
 	"instvars" : [
 		"board",
 		"laps",
+		"dices",
 		"winner",
 		"players",
-		"dices",
 		"indexOfExpectedPlayer",
 		"cardsDeck"
 	],

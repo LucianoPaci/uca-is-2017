@@ -1,3 +1,3 @@
-accessing
+initialization
 initializedWithAName: aName
 name := aName

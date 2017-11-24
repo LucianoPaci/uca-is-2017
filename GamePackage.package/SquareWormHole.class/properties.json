@@ -5,9 +5,7 @@
 	"classinstvars" : [ ],
 	"pools" : [ ],
 	"classvars" : [ ],
-	"instvars" : [
-		"position"
-	],
+	"instvars" : [ ],
 	"name" : "SquareWormHole",
 	"type" : "normal"
 }

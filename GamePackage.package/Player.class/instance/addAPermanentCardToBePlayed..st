@@ -1,0 +1,3 @@
+adding
+addAPermanentCardToBePlayed: aPermanentCard
+permanentCardsToBePlayed add: aPermanentCard.

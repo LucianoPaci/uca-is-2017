@@ -10,6 +10,6 @@ testPlayerCreationWithNameAndStartingPositionAndStartingLapsTravelled
 		assert: player name equals: 'Jorge';
 		assert: player lapsTravelled equals: 0;
 		assert: player currentPosition equals: 1;
-		assert: player cards size equals:2.
+		assert: player numberOfCardsInDeck equals:2.
 	
 	

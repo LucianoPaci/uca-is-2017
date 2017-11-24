@@ -1,3 +1,3 @@
 error
 playerCollectionOutOfBound
-^indexOfExpectedPlayer >= self players size 
+^indexOfExpectedPlayer >= self numberOfPlayers

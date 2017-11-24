@@ -6,8 +6,7 @@
 	"pools" : [ ],
 	"classvars" : [ ],
 	"instvars" : [
-		"effect",
-		"position"
+		"effect"
 	],
 	"name" : "MoonWalkSquare",
 	"type" : "normal"

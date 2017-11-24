@@ -1,3 +1,0 @@
-initialization
-initializedPosition: aPosition
-	self subclassResponsibility

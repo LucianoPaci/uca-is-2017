@@ -1,0 +1,3 @@
+accessing
+numberOfInstantCardsToBePlayed
+	^instantCardsToBePlayed size

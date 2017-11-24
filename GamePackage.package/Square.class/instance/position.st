@@ -1,3 +1,3 @@
 accessing
 position
-SubclassResponsibility.
+	^ self subclassResponsibility

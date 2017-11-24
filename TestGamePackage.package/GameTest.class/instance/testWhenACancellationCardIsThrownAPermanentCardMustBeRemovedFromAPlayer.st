@@ -35,20 +35,20 @@ testWhenACancellationCardIsThrownAPermanentCardMustBeRemovedFromAPlayer
 	game := Game
 		playedBy: collectionOfplayers on: board throwing: collectionOfDices  winningWhenCompleting: laps 	withACardDeck: gameDeckCard.
 	game nextTurnFor: playerScorpion.
-	self assert: playerRaiden  cards size equals:2.
+	self assert: playerRaiden  numberOfCardsInDeck equals:2.
 	playerRaiden affectAPlayer: playerScorpion withAPermanentCard: cardsToAffectPlayer   into: game. 
-	self assert: playerRaiden cards size equals: 1.
+	self assert: playerRaiden numberOfCardsInDeck  equals: 1.
 	cancellationCard := CardCancellation named: 'CardCancellation1'.
-	playerRaiden cards add: cancellationCard.
-	self assert: playerRaiden cards size equals: 2.
-	self assert: playerScorpion cards size equals: 2.
-	self assert: playerScorpion permanentCardsToBePlayed size equals: 1.
+	playerRaiden addACardToDeck: cancellationCard.
+	self assert: playerRaiden numberOfCardsInDeck equals: 2.
+	self assert: playerScorpion numberOfCardsInDeck equals: 2.
+	self assert: playerScorpion numberOfPermanentCardsToBePlayed equals: 1.
 	playerRaiden affectACard: cardsToAffectPlayer ofAPlayer: playerScorpion withACancellationCard: cancellationCard into: game.
-	self assert: playerScorpion instantCardsToBePlayed size equals:1.
-	self assert: playerRaiden cards size equals: 1.
-	self assert: playerScorpion cards size equals: 2.
-	self assert: playerScorpion permanentCardsToBePlayed size equals:1.
+	self assert: playerScorpion numberOfInstantCardsToBePlayed equals:1.
+	self assert: playerRaiden numberOfCardsInDeck equals: 1.
+	self assert: playerScorpion numberOfCardsInDeck equals: 2.
+	self assert: playerScorpion numberOfPermanentCardsToBePlayed  equals:1.
 	game nextTurnFor: playerRaiden.
 	game nextTurnFor: playerScorpion.
-	self assert: playerScorpion permanentCardsToBePlayed size equals:0.
-	self assert: playerScorpion instantCardsToBePlayed size equals: 0.
+	self assert: playerScorpion numberOfPermanentCardsToBePlayed equals:0.
+	self assert: playerScorpion numberOfInstantCardsToBePlayed equals: 0.

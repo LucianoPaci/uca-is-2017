@@ -1,0 +1,3 @@
+accessing
+numberOfSquares
+^squares size.

@@ -1,0 +1,3 @@
+adding
+addAnInstantCardToBePlayed: anInstantCard
+instantCardsToBePlayed add: anInstantCard.

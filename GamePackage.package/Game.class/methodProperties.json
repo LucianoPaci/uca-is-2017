@@ -2,18 +2,24 @@
 	"instance" : {
 		"wrongTurnFor:" : "juanMartinDiMartino 10/29/2017 21:10",
 		"expectedPlayer" : "juanMartinDiMartino 10/29/2017 21:16",
+		"provokesAnEffect:intoEveryPlayerExcept:" : "juanMaDiMartino 11/22/2017 23:21",
 		"winner" : "Luciano 9/18/2017 18:22",
 		"nextTurnFor:" : "LucianoPaci 11/15/2017 19:49",
 		"playerCollectionOutOfBound" : "juanMartinDiMartino 10/29/2017 20:44",
 		"laps" : "Luciano 9/13/2017 16:20",
+		"nextTurnFor:" : "juanMaDiMartino 11/22/2017 09:02",
+		"numberOfPlayers" : "juanMaDiMartino 11/22/2017 14:21",
 		"initializedWithPlayers:initializedBoard:initializedWithDices:initializedAmountOfLaps:initializedWithACardDeck:" : "juanMaDiMartino 11/13/2017 15:05",
-		"players" : "Luciano 9/20/2017 01:18",
-		"removeACardFromDeck:" : "juanMartinDiMartino 11/4/2017 11:40",
-		"move:positions:" : "LucianoPaci 11/14/2017 20:36",
+		"playerCollectionOutOfBound" : "juanMaDiMartino 11/22/2017 14:22",
+		"removeACardFromDeck:" : "juanMaDiMartino 11/22/2017 09:03",
+		"addAPermanentCardToEveryPlayer:" : "juanMaDiMartino 11/22/2017 23:10",
+		"move:positions:" : "juanMaDiMartino 11/22/2017 15:46",
+		"moveEveryPlayerToBeginning" : "juanMaDiMartino 11/22/2017 23:24",
 		"changeIndexOfExpectedPlayer" : "juanMartinDiMartino 10/29/2017 21:14",
-		"dices" : "juanMartinDiMartino 10/29/2017 20:51",
-		"checkIsAWinnerOfGame:" : "LucianoPaci 11/14/2017 20:37",
-		"board" : "Luciano 9/11/2017 18:08"
+		"getPlayerAtIndex:" : "juanMaDiMartino 11/22/2017 14:43",
+		"numberOfDices" : "juanMaDiMartino 11/22/2017 15:43",
+		"board" : "Luciano 9/11/2017 18:08",
+		"checkIsAWinnerOfGame:" : "LucianoPaci 11/14/2017 20:37"
 	},
 	"class" : {
 		"playedBy:on:throwing:winningWhenCompleting:withACardDeck:" : "juanMartinDiMartino 11/4/2017 09:01"
