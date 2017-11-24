@@ -34,7 +34,7 @@ testWhenPlayingAGameDisordered
 	self assert: game expectedPlayer equals: playerRaiden.
 	game nextTurnFor: playerRaiden.
 	self assert: game expectedPlayer equals: playerJuanMa.
-	self should: [ game nextTurnFor: playerRaiden ] raise: WrongTurnPlayerError.
+	self should: [ game nextTurnFor: playerRaiden ] raise: GameFailed.
 	self assert: game expectedPlayer equals: playerJuanMa.
 	game nextTurnFor: playerJuanMa.
 	self assert: game expectedPlayer equals: playerScorpion

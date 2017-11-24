@@ -35,6 +35,6 @@ testWhenAPlayerAffectsAnotherPlayerWithACardTheCardIsRemovedFromFirstPlayerCardD
 	game := Game
 		playedBy: collectionOfplayers on: board throwing: collectionOfDices  winningWhenCompleting: laps 	withACardDeck: gameDeckCard.
 	game nextTurnFor: playerScorpion.
-	self assert: playerRaiden  cards size equals:2.
+	self assert: playerRaiden  numberOfCardsInDeck equals:2.
 	playerRaiden affectAPlayer: playerScorpion withAPermanentCard: cardsToAffectPlayer   into: game. 
-		self assert: playerRaiden cards size equals: 1.
+		self assert: playerRaiden numberOfCardsInDeck equals: 1.

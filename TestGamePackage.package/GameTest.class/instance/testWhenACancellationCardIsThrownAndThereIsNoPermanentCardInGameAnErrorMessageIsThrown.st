@@ -28,6 +28,6 @@ testWhenACancellationCardIsThrownAndThereIsNoPermanentCardInGameAnErrorMessageIs
 	aCard:= CardSpeed named: 'CardSpeed1'.
 	game := Game
 		playedBy: collectionOfplayers on: board throwing: collectionOfDices  winningWhenCompleting: laps 	withACardDeck: gameDeckCard.
-	self should: [player1 affectACard: aCard ofAPlayer: player2 withACancellationCard: aCancellationCard into: game] raise: PermanentCardIsNotInPlayerDeckError.
+	self should: [player1 affectACard: aCard ofAPlayer: player2 withACancellationCard: aCancellationCard into: game] raise: GameFailed.
 	
 	

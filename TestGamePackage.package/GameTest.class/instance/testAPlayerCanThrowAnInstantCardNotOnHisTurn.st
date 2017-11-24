@@ -4,7 +4,7 @@ testAPlayerCanThrowAnInstantCardNotOnHisTurn
 	player1History := OrderedCollection new.
 	player1History add: (PlayerPosition at: 1 withLaps: 0).
 	player2History := OrderedCollection new.
-	player2History add: (PlayerPosition at: 1 withLaps: 0).
+	player2History add: (PlayerPosition at: 1 withLaps: 0). 
 	
 	squares:= (1 to: 8) collect: [:n | SquareWithoutEffect onPosition: n ].
 	board := Board definedSquares: squares.
@@ -29,8 +29,8 @@ testAPlayerCanThrowAnInstantCardNotOnHisTurn
 	gameDeckCard add: (CardSpeed named: 'CardSpeed4');add: (CardSpeed named: 'CardSpeed3') .
 	game := Game
 		playedBy: collectionOfplayers on: board throwing: collectionOfDices  winningWhenCompleting: laps 	withACardDeck: gameDeckCard.
-	self assert: player2 cards size equals:2.
+	self assert: player2 numberOfCardsInDeck equals:2.
 	player2 affectAPlayer: player1 withAnInstantCard: cardsToAffectPlayer into: game.
 	self assert: player2  ~= game expectedPlayer.
-	self assert: player2 cards size equals:1.
+	self assert: player2 numberOfCardsInDeck equals:1.
 	

@@ -37,7 +37,7 @@ testWhenPlayerAffectsWithACardAnotherPlayerNotOnHisTurnAnErrorMessageIsThrown
 	game := Game
 		playedBy: collectionOfplayers on: board throwing: collectionOfDices  winningWhenCompleting: laps 	withACardDeck: self aCollectionOfGameCards.
 	game nextTurnFor: playerScorpion.
-	cardsToAffectPlayer := playerScorpion cards removeFirst.
-	self should: [playerScorpion affectAPlayer: playerRaiden withAPermanentCard: cardsToAffectPlayer into: game] raise: PlayerNotAllowedToThrowACardError.
+	cardsToAffectPlayer := playerScorpion getFirstCardFromDeck.
+	self should: [playerScorpion affectAPlayer: playerRaiden withAPermanentCard: cardsToAffectPlayer into: game] raise: GameFailed.
 	 
 	

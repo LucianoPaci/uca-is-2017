@@ -14,6 +14,6 @@ testWhenGameCardDeckDoesntHaveACardOfAParticularKind
 	dice := Dice faces: 6.
 	game := Game
 		playedBy: (OrderedCollection with: player) on: board throwing: ( OrderedCollection with: Dice) winningWhenCompleting: 1 withACardDeck:  aGameDeckCards.
-	self should: [game removeACardFromDeck: CardDamping ] raise: 	NoCardForAKindOfInGameCardError.
+	self should: [game removeACardFromDeck: CardDamping ] raise: 	GameFailed.
 		
 	

@@ -36,7 +36,7 @@ testWhenAPlayerThrowsADampingCardASpeedCardAndAnOverloadingCardSevenPositionsMus
 	playerRaiden affectAPlayer: playerRaiden withAPermanentCard: firstCardToAffectPlayer into: game.
 	playerRaiden affectAPlayer: playerRaiden withAPermanentCard: secondCardToAffectPlayer into: game.
 	playerRaiden affectAPlayer: playerRaiden withAPermanentCard: thirdCardToAffectPlayer into: game.
-	self assert: playerRaiden permanentCardsToBePlayed size equals: 3.
+	self assert: playerRaiden numberOfPermanentCardsToBePlayed equals: 3.
 	game nextTurnFor: playerRaiden.
-	self assert: (playerRaiden previousNPositions:1) equals: 4.
+	self assert: (playerRaiden previousNPositions:1) squareNumber equals: 4.
 	self assert: playerRaiden currentPosition equals: 6

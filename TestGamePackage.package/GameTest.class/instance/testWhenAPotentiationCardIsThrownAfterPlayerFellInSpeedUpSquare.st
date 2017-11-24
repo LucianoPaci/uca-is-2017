@@ -21,9 +21,9 @@ testWhenAPotentiationCardIsThrownAfterPlayerFellInSpeedUpSquare
     gameDeckCard add: (CardOverloading named: 'CardOverloading2');add: (CardSpeed named: 'CardSpeed2') .
     game := Game
         playedBy: collectionOfplayers on: board throwing: collectionOfDices  winningWhenCompleting: laps     withACardDeck: gameDeckCard.
-    self assert: (player1 cards) size equals:2.
+    self assert: player1 numberOfCardsInDeck equals:2.
     player1 affectAPlayer: player1 withAnInstantCard: cardsToAffectPlayer into: game.
-    self assert: (player1 cards) size equals:1.
+    self assert: player1 numberOfCardsInDeck equals:1.
     self assert: player1 currentPosition equals:1.
     game nextTurnFor: player1.
     self assert: player1 currentPosition equals:12.
