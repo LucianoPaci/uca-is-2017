@@ -16,9 +16,9 @@ testWhenPlayingAGameInOrder
 		add: diceSixFaces;
 		add: diceEightFaces.
 	collectionOfplayers := OrderedCollection new.
-	playerScorpion := Player named: 'Scorpion' withCards: self aCollectionOfGameCards andPositionHistory: playerScorpionHistory.
-	playerRaiden := Player named: 'Raiden' withCards: self aCollectionOfGameCards andPositionHistory: playerRaidenHistory.
-	playerJuanMa := Player named: 'JuanMa' withCards: self aCollectionOfGameCards andPositionHistory: playerJuanMaHistory.
+	playerScorpion := Player named: 'Scorpion' withCards: (self aCollectionOfGameCards removeFirst) andPositionHistory: playerScorpionHistory.
+	playerRaiden := Player named: 'Raiden' withCards: (self aCollectionOfGameCards removeAt:2) andPositionHistory: playerRaidenHistory.
+	playerJuanMa := Player named: 'JuanMa' withCards: (self aCollectionOfGameCards removeAt:3) andPositionHistory: playerJuanMaHistory.
 	laps := 1.
 	collectionOfplayers add: playerScorpion.
 	collectionOfplayers add: playerRaiden.

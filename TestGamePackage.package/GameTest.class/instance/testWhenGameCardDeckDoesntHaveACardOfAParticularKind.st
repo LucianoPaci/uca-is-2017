@@ -1,4 +1,4 @@
-tests
+cards tests
 testWhenGameCardDeckDoesntHaveACardOfAParticularKind
 |  board   game player squares dice aGameDeckCards collectionOfPlayerCards playerHistory |
 	playerHistory := OrderedCollection new.
@@ -7,7 +7,7 @@ testWhenGameCardDeckDoesntHaveACardOfAParticularKind
 	aGameDeckCards add: (CardSpeed named: 'CardSpeed1');
 						add: (CardSpeed named:'CardSpeed2').
 	collectionOfPlayerCards:= OrderedCollection new.
-	collectionOfPlayerCards add: (self aCollectionOfGameCards )removeFirst ; add: (self aCollectionOfGameCards )removeFirst.
+	collectionOfPlayerCards add: (self aCollectionOfGameCards )removeFirst ; add: ((self aCollectionOfGameCards )removeAt:2).
 	player := Player named: 'jorge' withCards:collectionOfPlayerCards andPositionHistory: playerHistory.
 	squares := (1 to: 8) collect: [ :n | SquareWithoutEffect onPosition: n ].
 	board := Board definedSquares: squares.

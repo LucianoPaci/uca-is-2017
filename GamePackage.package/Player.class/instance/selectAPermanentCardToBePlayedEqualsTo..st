@@ -1,3 +1,3 @@
 accessing
 selectAPermanentCardToBePlayedEqualsTo: aCard
-^(permanentCardsToBePlayed select:  [:each | self  aCard:aCard isEqualTo:  each ]).
+^(permanentCardsToBePlayed select:  [:each | aCard isEqualTo:  each ]).

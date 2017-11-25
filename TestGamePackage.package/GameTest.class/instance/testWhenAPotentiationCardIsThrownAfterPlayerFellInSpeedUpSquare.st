@@ -1,4 +1,4 @@
-tests
+cards tests
 testWhenAPotentiationCardIsThrownAfterPlayerFellInSpeedUpSquare
     | player1History squares board diceOneFace collectionOfDices collectionOfplayers cardsPlayer1 cardsToAffectPlayer player1 laps gameDeckCard game |
     
