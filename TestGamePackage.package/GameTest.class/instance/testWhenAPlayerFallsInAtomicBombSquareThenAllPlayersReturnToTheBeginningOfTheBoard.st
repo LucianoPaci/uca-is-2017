@@ -12,8 +12,8 @@ testWhenAPlayerFallsInAtomicBombSquareThenAllPlayersReturnToTheBeginningOfTheBoa
 	
 	
 	player1 := Player named: 'JaimeLannister' withCards: (self aCollectionOfGameCards )removeFirst andPositionHistory: player1History .
-	player2 := Player named: 'NedStark' withCards: (self aCollectionOfGameCards )removeFirst andPositionHistory: player2History.
-	player3 := Player named: 'Jon Snow' withCards: (self aCollectionOfGameCards )removeFirst andPositionHistory: player3History.
+	player2 := Player named: 'NedStark' withCards: ((self aCollectionOfGameCards )removeAt:2) andPositionHistory: player2History.
+	player3 := Player named: 'Jon Snow' withCards: ((self aCollectionOfGameCards )removeAt:3) andPositionHistory: player3History.
 	squares := (1 to: 8) collect: [ :n | SquareWithoutEffect onPosition: n ]. 
 	squares at: 6 put: (AtomicBombSquare onPosition: 6).
 	board := Board definedSquares: squares.

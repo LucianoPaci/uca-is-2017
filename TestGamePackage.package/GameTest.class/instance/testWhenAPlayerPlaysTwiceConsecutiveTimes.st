@@ -17,7 +17,7 @@ testWhenAPlayerPlaysTwiceConsecutiveTimes
 		add: diceEightFaces.
 	collectionOfplayers := OrderedCollection new.
 	playerScorpion := Player named: 'Scorpion' withCards: (self aCollectionOfGameCards )removeFirst andPositionHistory: playerScorpionHistory.
-	playerRaiden := Player named: 'Raiden' withCards: (self aCollectionOfGameCards )removeFirst andPositionHistory: playerRaidenHistory .
+	playerRaiden := Player named: 'Raiden' withCards: ((self aCollectionOfGameCards )removeAt:2) andPositionHistory: playerRaidenHistory .
 	laps := 1.
 	collectionOfplayers add: playerScorpion.
 	collectionOfplayers add: playerRaiden.

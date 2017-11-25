@@ -1,10 +1,9 @@
 {
 	"instance" : {
-		"position" : "juanMartinDiMartino 10/29/2017 15:51",
-		"addToAPlayerCardDeck:from:" : "juanMartinDiMartino 10/22/2017 21:01",
-		"provokesAnEffectInto:with:addingEffect:" : "juanMaDiMartino 11/10/2017 15:51",
+		"provokesAnEffectInto:with:addingEffect:" : "juanMaDiMartino 11/25/2017 07:49",
 		"initializedPosition:" : "juanMartinDiMartino 10/29/2017 16:34",
-		"provokesAPotentiationEffectInto:with:addingEffect:" : "juanMaDiMartino 11/14/2017 11:56"
+		"position" : "juanMartinDiMartino 10/29/2017 15:51",
+		"provokesAPotentiationEffectInto:with:addingEffect:" : "juanMaDiMartino 11/25/2017 07:49"
 	},
 	"class" : { }
 }

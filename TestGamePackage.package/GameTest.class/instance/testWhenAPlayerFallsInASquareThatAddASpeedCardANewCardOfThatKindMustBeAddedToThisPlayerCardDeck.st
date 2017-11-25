@@ -1,14 +1,14 @@
-tests
+squares tests
 testWhenAPlayerFallsInASquareThatAddASpeedCardANewCardOfThatKindMustBeAddedToThisPlayerCardDeck
 | player game dice board squares  collectionOfPlayerCards playerHistory |
 	playerHistory := OrderedCollection new.
 	playerHistory add: (PlayerPosition at: 1 withLaps: 0).
 	collectionOfPlayerCards:= OrderedCollection new.
-	collectionOfPlayerCards add: (self aCollectionOfGameCards )removeFirst ; add: (self aCollectionOfGameCards )removeFirst.
+	collectionOfPlayerCards add: (self aCollectionOfGameCards )removeFirst ; add: ((self aCollectionOfGameCards )removeAt:2).
 	player := Player named: 'Johny Maidana' withCards: collectionOfPlayerCards andPositionHistory: playerHistory. 
 	squares := (1 to: 3) collect: [ :n | SquareWithoutEffect onPosition: n ].
-	squares at: 1 put: (SquareThatAddASpeedCard  onPosition: 1).
-	squares at: 3 put: (SquareThatAddASpeedCard  onPosition: 3).
+	squares at: 1 put: (SquareThatAddACard   onPosition: 1 withACardToBeAdded:((self aCollectionOfGameCards )removeAt:5)).
+	squares at: 3 put: (SquareThatAddACard  onPosition: 3 withACardToBeAdded:((self aCollectionOfGameCards )removeAt:6)).
 	board := Board definedSquares: squares.
 	dice := Dice faces: 6 obtainingValuesFrom: (FixedNumberSource providing: #(1 2 3 4 5 6)).
 	game := Game

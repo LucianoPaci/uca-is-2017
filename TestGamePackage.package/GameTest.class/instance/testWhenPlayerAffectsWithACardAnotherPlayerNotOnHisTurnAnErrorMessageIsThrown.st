@@ -24,9 +24,9 @@ testWhenPlayerAffectsWithACardAnotherPlayerNotOnHisTurnAnErrorMessageIsThrown
 	cardsPlayerScorpion := OrderedCollection new.
 	cardsPlayerRaiden := OrderedCollection new.
 	cardsPlayerJuanMa := OrderedCollection new.
-	cardsPlayerScorpion add: self aCollectionOfGameCards removeFirst;add: self aCollectionOfGameCards removeFirst.
-	cardsPlayerRaiden add: self aCollectionOfGameCards removeFirst;add: self aCollectionOfGameCards removeFirst.
-	cardsPlayerJuanMa add: self aCollectionOfGameCards removeFirst;add: self aCollectionOfGameCards removeFirst.
+	cardsPlayerScorpion add: self aCollectionOfGameCards removeFirst;add: (self aCollectionOfGameCards removeAt:2).
+	cardsPlayerRaiden add: (self aCollectionOfGameCards removeAt:3);add: (self aCollectionOfGameCards removeAt:4).
+	cardsPlayerJuanMa add: (self aCollectionOfGameCards removeAt:5);add: (self aCollectionOfGameCards removeAt:6).
 	playerScorpion := Player named: 'Scorpion' withCards: cardsPlayerScorpion andPositionHistory: playerScorpionHistory.
 	playerRaiden := Player named: 'Raiden' withCards: cardsPlayerRaiden andPositionHistory: playerRaidenHistory.
 	playerJuanMa := Player named: 'JuanMa' withCards: cardsPlayerJuanMa andPositionHistory: playerJuanMaHistory .

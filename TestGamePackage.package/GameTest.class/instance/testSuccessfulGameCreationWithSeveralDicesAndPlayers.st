@@ -6,7 +6,7 @@ testSuccessfulGameCreationWithSeveralDicesAndPlayers
 	player2History := OrderedCollection new.
 	player2History add: (PlayerPosition at: 1 withLaps: 0).
 	player1 := Player named: 'Scorpion' withCards: (self aCollectionOfGameCards )removeFirst andPositionHistory: player1History.  
-	player2 := Player named: 'Raiden' withCards: (self aCollectionOfGameCards )removeFirst andPositionHistory: player2History.
+	player2 := Player named: 'Raiden' withCards: ((self aCollectionOfGameCards )removeAt:2) andPositionHistory: player2History.
 	squareAtomicBomb := AtomicBombSquare initialize.
 	squareWornHole := SquareWormHole initialize.
 	squares := OrderedCollection new.

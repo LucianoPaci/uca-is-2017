@@ -5,7 +5,9 @@
 	"classinstvars" : [ ],
 	"pools" : [ ],
 	"classvars" : [ ],
-	"instvars" : [ ],
-	"name" : "SquareThatAddAnOverloadingCard",
+	"instvars" : [
+		"cardToBeAdded"
+	],
+	"name" : "SquareThatAddACard",
 	"type" : "normal"
 }

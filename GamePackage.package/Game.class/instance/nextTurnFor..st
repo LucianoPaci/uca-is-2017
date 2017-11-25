@@ -1,6 +1,6 @@
 playing
 nextTurnFor: aPlayer
-	| movesToBeMade actualSquare cardEffect previousSquare |
+	| movesToBeMade actualSquare cardEffect  |
 	cardEffect := 1.
 	(self wrongTurnFor: aPlayer)
 		ifFalse: [ 	movesToBeMade := dices sumNumbers: [ :dice | dice roll ].
@@ -10,9 +10,8 @@ nextTurnFor: aPlayer
 						actualSquare := board squareAtPosition: aPlayer currentPosition.
 						cardEffect := aPlayer throwsPermanentCardsAddingAnEffectOnASquareEffect.
 						actualSquare provokesAnEffectInto: self with: aPlayer addingEffect: cardEffect.
-						actualSquare addToAPlayerCardDeck: aPlayer from: self.
-						previousSquare := board squareAtPosition: (aPlayer previousNPositions:1) squareNumber.
-						aPlayer throwsPotentiationCardsToASquare: previousSquare fromAGame: self withACard: cardEffect.
+						aPlayer throwsPotentiationCardsToASquare: actualSquare fromAGame: self withACard: cardEffect.
+						
 						aPlayer emptyInstantCardsToBePlayed.
 						self checkIsAWinnerOfGame: aPlayer.
 						self changeIndexOfExpectedPlayer. 
