@@ -1,3 +1,3 @@
 accessing
 numberOfPermanentCardsToBePlayed
-	^permanentCardsToBePlayed size
+	^permanentCardsToBePlayed copy size

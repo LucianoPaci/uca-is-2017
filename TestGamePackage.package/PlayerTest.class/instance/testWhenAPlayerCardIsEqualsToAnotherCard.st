@@ -1,11 +1,10 @@
 tests
 testWhenAPlayerCardIsEqualsToAnotherCard
-	| aPlayer aPlayerCard  aCollectionOfCards aPlayerHistory |
-	aCollectionOfCards := OrderedCollection new.
-	aPlayerCard := CardDamping named: 'CardDamping1'.
-	aCollectionOfCards
-		add: aPlayerCard.
-	aPlayerHistory := OrderedCollection new.
-	aPlayerHistory add: (PlayerPosition at: 1 withLaps: 0).
-	aPlayer := Player named: 'Scorpion' withCards: aCollectionOfCards andPositionHistory:aPlayerHistory.
-	self assert: (aPlayerCard isEqualTo: aPlayerCard) equals: true
+	| playerScorpion card playerScorpionDeck playerScorpionHistory |
+	playerScorpionDeck := OrderedCollection new.
+	card := CardDamping named: 'CardDamping1'.
+	playerScorpionDeck add: card.
+	playerScorpionHistory := OrderedCollection new.
+	playerScorpionHistory add: (PlayerPosition at: 1 withLaps: 0).
+	playerScorpion := Player named: 'Scorpion' withCards: playerScorpionDeck andPositionHistory: playerScorpionHistory.
+	self assert: (card isEqualTo: card) equals: true

@@ -1,3 +1,3 @@
 accessing
 numberOfSquares
-^squares size.
+^squares copy size.

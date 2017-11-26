@@ -1,43 +1,46 @@
-cards tests
+tests
 testWhenPlayerAffectsWithACardAnotherPlayerNotOnHisTurnAnErrorMessageIsThrown
-| squares board diceEightFaces diceSixFaces collectionOfDices collectionOfplayers playerScorpion playerRaiden playerJuanMa laps game cardsToAffectPlayer cardsPlayerScorpion cardsPlayerRaiden cardsPlayerJuanMa playerScorpionHistory playerRaidenHistory playerJuanMaHistory |
-
+	| squares board diceEightFaces diceSixFaces collectionOfDices collectionOfPlayers playerScorpion playerRaiden playerJuanma laps game cardToAffectPlayer playerScorpionDeck playerRaidenDeck playerJuanmaDeck playerScorpionHistory playerRaidenHistory playerJuanmaHistory |
 	playerScorpionHistory := OrderedCollection new.
 	playerScorpionHistory add: (PlayerPosition at: 1 withLaps: 0).
 	playerRaidenHistory := OrderedCollection new.
 	playerRaidenHistory add: (PlayerPosition at: 1 withLaps: 0).
-	playerJuanMaHistory := OrderedCollection new.
-	playerJuanMaHistory add: (PlayerPosition at: 1 withLaps: 0).
-	squares:= (1 to: 8) collect: [:n | SquareWithoutEffect onPosition: n ].
+	playerJuanmaHistory := OrderedCollection new.
+	playerJuanmaHistory add: (PlayerPosition at: 1 withLaps: 0).
+	squares := (1 to: 8) collect: [ :n | SquareWithoutEffect onPosition: n ].
 	board := Board definedSquares: squares.
-	diceEightFaces := Dice
-		faces: 8
-		obtainingValuesFrom: (FixedNumberSource providing: #(1 2 3 4 5 6 7 8)).
-	diceSixFaces := Dice
-		faces: 6
-		obtainingValuesFrom: (FixedNumberSource providing: #(1 2 3 4 5 6)).
+	diceEightFaces := Dice faces: 8 obtainingValuesFrom: (FixedNumberSource providing: #(1 2 3 4 5 6 7 8)).
+	diceSixFaces := Dice faces: 6 obtainingValuesFrom: (FixedNumberSource providing: #(1 2 3 4 5 6)).
 	collectionOfDices := OrderedCollection new.
 	collectionOfDices
 		add: diceSixFaces;
 		add: diceEightFaces.
-	collectionOfplayers := OrderedCollection new.
-	cardsPlayerScorpion := OrderedCollection new.
-	cardsPlayerRaiden := OrderedCollection new.
-	cardsPlayerJuanMa := OrderedCollection new.
-	cardsPlayerScorpion add: self aCollectionOfGameCards removeFirst;add: (self aCollectionOfGameCards removeAt:2).
-	cardsPlayerRaiden add: (self aCollectionOfGameCards removeAt:3);add: (self aCollectionOfGameCards removeAt:4).
-	cardsPlayerJuanMa add: (self aCollectionOfGameCards removeAt:5);add: (self aCollectionOfGameCards removeAt:6).
-	playerScorpion := Player named: 'Scorpion' withCards: cardsPlayerScorpion andPositionHistory: playerScorpionHistory.
-	playerRaiden := Player named: 'Raiden' withCards: cardsPlayerRaiden andPositionHistory: playerRaidenHistory.
-	playerJuanMa := Player named: 'JuanMa' withCards: cardsPlayerJuanMa andPositionHistory: playerJuanMaHistory .
+	collectionOfPlayers := OrderedCollection new.
+	playerScorpionDeck := OrderedCollection new.
+	playerRaidenDeck := OrderedCollection new.
+	playerJuanmaDeck := OrderedCollection new.
+	playerScorpionDeck
+		add: self aCollectionOfGameCards removeFirst;
+		add: (self aCollectionOfGameCards removeAt: 2).
+	playerRaidenDeck
+		add: (self aCollectionOfGameCards removeAt: 3);
+		add: (self aCollectionOfGameCards removeAt: 4).
+	playerJuanmaDeck
+		add: (self aCollectionOfGameCards removeAt: 5);
+		add: (self aCollectionOfGameCards removeAt: 6).
+	playerScorpion := Player named: 'Scorpion' withCards: playerScorpionDeck andPositionHistory: playerScorpionHistory.
+	playerRaiden := Player named: 'Raiden' withCards: playerRaidenDeck andPositionHistory: playerRaidenHistory.
+	playerJuanma := Player named: 'Juanma' withCards: playerJuanmaDeck andPositionHistory: playerJuanmaHistory.
 	laps := 1.
-	collectionOfplayers add: playerScorpion.
-	collectionOfplayers add: playerRaiden.
-	collectionOfplayers add: playerJuanMa.
+	collectionOfPlayers add: playerScorpion.
+	collectionOfPlayers add: playerRaiden.
+	collectionOfPlayers add: playerJuanma.
 	game := Game
-		playedBy: collectionOfplayers on: board throwing: collectionOfDices  winningWhenCompleting: laps 	withACardDeck: self aCollectionOfGameCards.
+		playedBy: collectionOfPlayers
+		on: board
+		throwing: collectionOfDices
+		winningWhenCompleting: laps
+		withACardDeck: self aCollectionOfGameCards.
 	game nextTurnFor: playerScorpion.
-	cardsToAffectPlayer := playerScorpion getFirstCardFromDeck.
-	self should: [playerScorpion affectAPlayer: playerRaiden withAPermanentCard: cardsToAffectPlayer into: game] raise: GameFailed.
-	 
-	
+	cardToAffectPlayer := playerScorpion getFirstCardFromDeck.
+	self should: [ playerScorpion affect: playerRaiden withAPermanentCard: cardToAffectPlayer into: game ] raise: GameFailed

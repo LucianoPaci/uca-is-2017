@@ -16,7 +16,7 @@ assertAPlayerCanPlayCards: aPlayer
 				addingEffect: cardEffect.
 			aPlayer
 				throwsPotentiationCardsToASquare: actualSquare
-				fromAGame: self
+				from: self
 				withACard: cardEffect.
 			aPlayer emptyInstantCardsToBePlayed.
 			self checkIsAWinnerOfGame: aPlayer.

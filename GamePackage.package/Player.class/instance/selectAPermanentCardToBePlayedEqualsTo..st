@@ -1,3 +1,3 @@
 accessing
 selectAPermanentCardToBePlayedEqualsTo: aCard
-^(permanentCardsToBePlayed select:  [:each | aCard isEqualTo:  each ]).
+	^ permanentCardsToBePlayed copy select: [ :each | aCard isEqualTo: each ]

@@ -1,42 +1,40 @@
 cards tests
 testWhenAPlayerThrowsADampingCardASpeedCardAndAnOverloadingCardSevenPositionsMustBeMovedFromOrigin
-	| squares board diceOneFace collectionOfDices collectionOfplayers playerRaiden cardsPlayerRaiden playerRaidenHistory laps gameDeckCard game firstCardToAffectPlayer secondCardToAffectPlayer thirdCardToAffectPlayer |
+	| squares board diceOneFace collectionOfDices collectionOfPlayers playerRaiden playerRaidenDeck playerRaidenHistory laps gameDeck game firstCardToAffectPlayer secondCardToAffectPlayer thirdCardToAffectPlayer |
 	playerRaidenHistory := OrderedCollection new.
-	playerRaidenHistory add:(PlayerPosition at: 1 withLaps: 0).
+	playerRaidenHistory add: (PlayerPosition at: 1 withLaps: 0).
 	squares := (1 to: 10) collect: [ :n | SquareWithoutEffect onPosition: n ].
 	squares at: 4 put: (SquareSpeedUp onPosition: 4).
 	board := Board definedSquares: squares.
 	diceOneFace := Dice faces: 1 obtainingValuesFrom: (FixedNumberSource providing: #(4)).
-	
 	collectionOfDices := OrderedCollection new.
 	collectionOfDices add: diceOneFace.
-	collectionOfplayers := OrderedCollection new.
-	
-	cardsPlayerRaiden := OrderedCollection new.
+	collectionOfPlayers := OrderedCollection new.
+	playerRaidenDeck := OrderedCollection new.
 	firstCardToAffectPlayer := CardSpeed named: 'CardSpeed1'.
 	secondCardToAffectPlayer := CardOverloading named: 'CardOverloading1'.
 	thirdCardToAffectPlayer := CardDamping named: 'CardDamping1'.
-	cardsPlayerRaiden
+	playerRaidenDeck
 		add: firstCardToAffectPlayer;
 		add: secondCardToAffectPlayer;
 		add: thirdCardToAffectPlayer.
-	playerRaiden := Player named: 'Raiden' withCards: cardsPlayerRaiden andPositionHistory: playerRaidenHistory .
-	collectionOfplayers add: playerRaiden.
+	playerRaiden := Player named: 'Raiden' withCards: playerRaidenDeck andPositionHistory: playerRaidenHistory.
+	collectionOfPlayers add: playerRaiden.
 	laps := 1.
-	gameDeckCard := OrderedCollection new.
-	gameDeckCard
+	gameDeck := OrderedCollection new.
+	gameDeck
 		add: (CardSpeed named: 'CardSpeed3');
 		add: (CardSpeed named: 'CardSpeed2').
 	game := Game
-		playedBy: collectionOfplayers
+		playedBy: collectionOfPlayers
 		on: board
 		throwing: collectionOfDices
 		winningWhenCompleting: laps
-		withACardDeck: gameDeckCard.
-	playerRaiden affectAPlayer: playerRaiden withAPermanentCard: firstCardToAffectPlayer into: game.
-	playerRaiden affectAPlayer: playerRaiden withAPermanentCard: secondCardToAffectPlayer into: game.
-	playerRaiden affectAPlayer: playerRaiden withAPermanentCard: thirdCardToAffectPlayer into: game.
+		withACardDeck: gameDeck.
+	playerRaiden affect: playerRaiden withAPermanentCard: firstCardToAffectPlayer into: game.
+	playerRaiden affect: playerRaiden withAPermanentCard: secondCardToAffectPlayer into: game.
+	playerRaiden affect: playerRaiden withAPermanentCard: thirdCardToAffectPlayer into: game.
 	self assert: playerRaiden numberOfPermanentCardsToBePlayed equals: 3.
 	game nextTurnFor: playerRaiden.
-	self assert: (playerRaiden previousNPositions:1) squareNumber equals: 4.
+	self assert: (playerRaiden previousNPositions: 1) squareNumber equals: 4.
 	self assert: playerRaiden currentPosition equals: 6
