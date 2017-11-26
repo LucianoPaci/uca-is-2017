@@ -1,7 +1,6 @@
-cards tests
+tests
 testWhenAPlayerAffectsAnotherPlayerWithACardThenTheCardIsAddedToThatPlayerCardDeck
-	| squares board diceEightFaces diceSixFaces collectionOfDices collectionOfplayers playerScorpion playerRaiden laps game cardsToAffectPlayer cardsPlayerScorpion cardsPlayerRaiden gameDeckCard playerScorpionHistory playerRaidenHistory |
-	
+	| squares board diceEightFaces diceSixFaces collectionOfDices collectionOfPlayers playerScorpion playerRaiden laps game cardToAffectPlayer playerScorpionDeck playerRaidenDeck gameDeck playerScorpionHistory playerRaidenHistory |
 	playerScorpionHistory := OrderedCollection new.
 	playerScorpionHistory add: (PlayerPosition at: 1 withLaps: 0).
 	playerRaidenHistory := OrderedCollection new.
@@ -14,37 +13,33 @@ testWhenAPlayerAffectsAnotherPlayerWithACardThenTheCardIsAddedToThatPlayerCardDe
 	collectionOfDices
 		add: diceSixFaces;
 		add: diceEightFaces.
-	collectionOfplayers := OrderedCollection new.
-	cardsPlayerScorpion := OrderedCollection new.
-	cardsPlayerRaiden := OrderedCollection new.
-	
-	cardsPlayerScorpion
+	collectionOfPlayers := OrderedCollection new.
+	playerScorpionDeck := OrderedCollection new.
+	playerRaidenDeck := OrderedCollection new.
+	playerScorpionDeck
 		add: (CardDamping named: 'CardDamping1');
 		add: (CardDamping named: 'CardDamping2').
-		
-	cardsToAffectPlayer := CardSpeed named: 'CardSpeed1'.
-	
-	cardsPlayerRaiden
-		add: cardsToAffectPlayer;
+	cardToAffectPlayer := CardSpeed named: 'CardSpeed1'.
+	playerRaidenDeck
+		add: cardToAffectPlayer;
 		add: (CardOverloading named: 'CardOverloading1').
-		
-	playerScorpion := Player named: 'Scorpion' withCards: cardsPlayerScorpion andPositionHistory: playerScorpionHistory .
-	playerRaiden := Player named: 'Raiden' withCards: cardsPlayerRaiden andPositionHistory: playerRaidenHistory .
+	playerScorpion := Player named: 'Scorpion' withCards: playerScorpionDeck andPositionHistory: playerScorpionHistory.
+	playerRaiden := Player named: 'Raiden' withCards: playerRaidenDeck andPositionHistory: playerRaidenHistory.
 	laps := 1.
-	collectionOfplayers add: playerScorpion.
-	collectionOfplayers add: playerRaiden.
-	gameDeckCard := OrderedCollection new.
-	gameDeckCard
+	collectionOfPlayers add: playerScorpion.
+	collectionOfPlayers add: playerRaiden.
+	gameDeck := OrderedCollection new.
+	gameDeck
 		add: (CardSpeed named: 'CardSpeed3');
 		add: (CardSpeed named: 'CardSpeed2').
 	game := Game
-		playedBy: collectionOfplayers
+		playedBy: collectionOfPlayers
 		on: board
 		throwing: collectionOfDices
 		winningWhenCompleting: laps
-		withACardDeck: gameDeckCard.
+		withACardDeck: gameDeck.
 	game nextTurnFor: playerScorpion.
-	self assert: playerScorpion numberOfPermanentCardsToBePlayed  equals: 0.
-	playerRaiden affectAPlayer: playerScorpion withAPermanentCard: cardsToAffectPlayer into: game.
+	self assert: playerScorpion numberOfPermanentCardsToBePlayed equals: 0.
+	playerRaiden affect: playerScorpion withAPermanentCard: cardToAffectPlayer into: game.
 	self assert: playerScorpion numberOfPermanentCardsToBePlayed equals: 1.
 	self assert: playerRaiden numberOfCardsInDeck equals: 1

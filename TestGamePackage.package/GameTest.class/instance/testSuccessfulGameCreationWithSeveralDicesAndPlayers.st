@@ -1,30 +1,30 @@
 playing
 testSuccessfulGameCreationWithSeveralDicesAndPlayers
-	| player1 player2 board dice1 dice2 game laps players dices squareAtomicBomb squareWornHole squares  player1History  player2History |
-	player1History := OrderedCollection new.
-	player1History add: (PlayerPosition at: 1 withLaps: 0).
-	player2History := OrderedCollection new.
-	player2History add: (PlayerPosition at: 1 withLaps: 0).
-	player1 := Player named: 'Scorpion' withCards: (self aCollectionOfGameCards )removeFirst andPositionHistory: player1History.  
-	player2 := Player named: 'Raiden' withCards: ((self aCollectionOfGameCards )removeAt:2) andPositionHistory: player2History.
+	| playerScorpion playerRaiden board diceSixFaces diceNineFaces game laps collectionOfPlayers dices squareAtomicBomb squareWormHole squares playerScorpionHistory playerRaidenHistory |
+	playerScorpionHistory := OrderedCollection new.
+	playerScorpionHistory add: (PlayerPosition at: 1 withLaps: 0).
+	playerRaidenHistory := OrderedCollection new.
+	playerRaidenHistory add: (PlayerPosition at: 1 withLaps: 0).
+	playerScorpion := Player named: 'Scorpion' withCards: self aCollectionOfGameCards removeFirst andPositionHistory: playerScorpionHistory.
+	playerRaiden := Player named: 'Raiden' withCards: (self aCollectionOfGameCards removeAt: 2) andPositionHistory: playerRaidenHistory.
 	squareAtomicBomb := AtomicBombSquare initialize.
-	squareWornHole := SquareWormHole initialize.
+	squareWormHole := SquareWormHole initialize.
 	squares := OrderedCollection new.
-	squares add: squareWornHole.
+	squares add: squareWormHole.
 	squares add: squareAtomicBomb.
 	board := Board definedSquares: squares.
-	dice1 := Dice faces: 6.
-	dice2 := Dice faces: 9.
+	diceSixFaces := Dice faces: 6.
+	diceNineFaces := Dice faces: 9.
 	laps := 1.
-	players := OrderedCollection new.
-	players add: player1.
+	collectionOfPlayers := OrderedCollection new.
+	collectionOfPlayers add: playerScorpion.
 	dices := OrderedCollection new.
-	players add: player2.
+	collectionOfPlayers add: playerRaiden.
 	dices
-		add: dice1;
-		add: dice2.
+		add: diceSixFaces;
+		add: diceNineFaces.
 	game := Game
-		playedBy: players
+		playedBy: collectionOfPlayers
 		on: board
 		throwing: dices
 		winningWhenCompleting: laps

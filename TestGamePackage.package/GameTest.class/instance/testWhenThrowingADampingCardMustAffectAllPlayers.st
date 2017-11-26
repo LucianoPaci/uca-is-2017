@@ -1,14 +1,12 @@
-cards tests
+tests
 testWhenThrowingADampingCardMustAffectAllPlayers
-	| squares board diceEightFaces diceSixFaces collectionOfDices collectionOfplayers playerScorpion playerRaiden laps game cardsToAffectPlayer cardsPlayerScorpion cardsPlayerRaiden gameDeckCard cardsPlayerJuanMa playerJuanMa playerScorpionHistory playerRaidenHistory playerJuanMaHistory |
-	
+	| squares board diceEightFaces diceSixFaces collectionOfDices collectionOfPlayers playerScorpion playerRaiden laps game cardToAffectPlayer playerScorpionDeck playerRaidenDeck gameDeck playerJuanmaDeck playerJuanma playerScorpionHistory playerRaidenHistory playerJuanmaHistory |
 	playerScorpionHistory := OrderedCollection new.
 	playerScorpionHistory add: (PlayerPosition at: 1 withLaps: 0).
 	playerRaidenHistory := OrderedCollection new.
 	playerRaidenHistory add: (PlayerPosition at: 1 withLaps: 0).
-	playerJuanMaHistory := OrderedCollection new.
-	playerJuanMaHistory add: (PlayerPosition at: 1 withLaps: 0).
-	
+	playerJuanmaHistory := OrderedCollection new.
+	playerJuanmaHistory add: (PlayerPosition at: 1 withLaps: 0).
 	squares := (1 to: 8) collect: [ :n | SquareWithoutEffect onPosition: n ].
 	board := Board definedSquares: squares.
 	diceEightFaces := Dice faces: 8 obtainingValuesFrom: (FixedNumberSource providing: #(1 2 3 4 5 6 7 8)).
@@ -17,43 +15,43 @@ testWhenThrowingADampingCardMustAffectAllPlayers
 	collectionOfDices
 		add: diceSixFaces;
 		add: diceEightFaces.
-	collectionOfplayers := OrderedCollection new.
-	cardsPlayerScorpion := OrderedCollection new.
-	cardsPlayerRaiden := OrderedCollection new.
-	cardsPlayerJuanMa := OrderedCollection new.
-	cardsToAffectPlayer := CardDamping named: 'CardDamping2'.
-	cardsPlayerRaiden
-		add: cardsToAffectPlayer;
+	collectionOfPlayers := OrderedCollection new.
+	playerScorpionDeck := OrderedCollection new.
+	playerRaidenDeck := OrderedCollection new.
+	playerJuanmaDeck := OrderedCollection new.
+	cardToAffectPlayer := CardDamping named: 'CardDamping2'.
+	playerRaidenDeck
+		add: cardToAffectPlayer;
 		add: (CardOverloading named: 'CardOverloading1').
-	cardsPlayerScorpion
+	playerScorpionDeck
 		add: (CardDamping named: 'CardDamping1');
-		add: (CardOverloading  named: 'CardOverloading2').
-	cardsPlayerJuanMa
+		add: (CardOverloading named: 'CardOverloading2').
+	playerJuanmaDeck
 		add: (CardSpeed named: 'CardSpeed1');
 		add: (CardSpeed named: 'CardSpeed2').
-	playerScorpion := Player named: 'Scorpion' withCards: cardsPlayerScorpion  andPositionHistory: playerScorpionHistory.
-	playerRaiden := Player named: 'Raiden' withCards: cardsPlayerRaiden  andPositionHistory: playerRaidenHistory.
-	playerJuanMa := Player named: 'JuanMa' withCards: cardsPlayerJuanMa  andPositionHistory: playerJuanMaHistory.
+	playerScorpion := Player named: 'Scorpion' withCards: playerScorpionDeck andPositionHistory: playerScorpionHistory.
+	playerRaiden := Player named: 'Raiden' withCards: playerRaidenDeck andPositionHistory: playerRaidenHistory.
+	playerJuanma := Player named: 'Juanma' withCards: playerJuanmaDeck andPositionHistory: playerJuanmaHistory.
 	laps := 1.
-	collectionOfplayers add: playerScorpion.
-	collectionOfplayers add: playerRaiden.
-	collectionOfplayers add: playerJuanMa.
-	gameDeckCard := OrderedCollection new.
-	gameDeckCard
+	collectionOfPlayers add: playerScorpion.
+	collectionOfPlayers add: playerRaiden.
+	collectionOfPlayers add: playerJuanma.
+	gameDeck := OrderedCollection new.
+	gameDeck
 		add: (CardSpeed named: 'CardSpeed4');
 		add: (CardSpeed named: 'CardSpeed3').
 	game := Game
-		playedBy: collectionOfplayers
+		playedBy: collectionOfPlayers
 		on: board
 		throwing: collectionOfDices
 		winningWhenCompleting: laps
-		withACardDeck: gameDeckCard.
+		withACardDeck: gameDeck.
 	game nextTurnFor: playerScorpion.
 	self assert: playerScorpion numberOfPermanentCardsToBePlayed equals: 0.
 	self assert: playerRaiden numberOfPermanentCardsToBePlayed equals: 0.
-	self assert: playerJuanMa numberOfPermanentCardsToBePlayed equals: 0.
-	playerRaiden affectAPlayer: playerScorpion withAPermanentCard: cardsToAffectPlayer into: game.
+	self assert: playerJuanma numberOfPermanentCardsToBePlayed equals: 0.
+	playerRaiden affect: playerScorpion withAPermanentCard: cardToAffectPlayer into: game.
 	self assert: playerRaiden numberOfCardsInDeck equals: 1.
 	self assert: playerScorpion numberOfPermanentCardsToBePlayed equals: 1.
 	self assert: playerRaiden numberOfPermanentCardsToBePlayed equals: 1.
-	self assert: playerJuanMa numberOfPermanentCardsToBePlayed equals: 1
+	self assert: playerJuanma numberOfPermanentCardsToBePlayed equals: 1

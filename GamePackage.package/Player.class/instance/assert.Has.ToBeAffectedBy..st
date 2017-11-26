@@ -1,5 +1,5 @@
 use of cards
-assert: aPlayer Has: aCard ToBeAffectedBy: aCancellationCard
+assert: aPlayer has: aCard toBeAffectedBy: aCancellationCard
 	| cardToBeRemoved |
 	(cardToBeRemoved := aPlayer
 		selectAPermanentCardToBePlayedEqualsTo: aCard) isNotEmpty

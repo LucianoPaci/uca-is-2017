@@ -1,3 +1,3 @@
 removing
 removeAPermanentCardToBePlayed: aPermanentCard
-permanentCardsToBePlayed remove: (aPermanentCard) removeFirst.
+	permanentCardsToBePlayed remove: aPermanentCard removeFirst
