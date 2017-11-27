@@ -7,7 +7,7 @@
 		"testWhenAPotentiationCardIsThrownAfterPlayerFellInTimeMachineSquareEffectIsDoubled" : "LucianoPaci 11/26/2017 19:09",
 		"testWhenAPotentiationCardIsThrownAfterPlayerFellInMoonWalkSquareEffectIsDoubled" : "LucianoPaci 11/26/2017 19:09",
 		"testWhenPlayerFallsInTimeMachineEffectSquareAfterCompletingALapThenPlayerMovesBackToPreviousPosition" : "LucianoPaci 11/26/2017 18:45",
-		"testWhenGameCardDeckDoesntHaveACardOfAParticularKind" : "LucianoPaci 11/26/2017 18:14",
+		"testWhenGameCardDeckDoesntHaveACardOfAParticularKind" : "juanMaDiMartino 11/27/2017 10:41",
 		"testWhenAPlayerFallsInASquareThatAddAnOverloadingCardANewCardOfThatKindMustBeAddedToThisPlayerCardDeck" : "LucianoPaci 11/26/2017 18:41",
 		"testWhenPlayerCompletesALapThenLapsAreCorrectlyUpdated" : "LucianoPaci 11/26/2017 18:18",
 		"testWhenAPlayerAffectsAnotherPlayerWithACardTheCardIsRemovedFromFirstPlayerCardDeck" : "LucianoPaci 11/26/2017 19:09",
