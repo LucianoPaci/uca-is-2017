@@ -1,3 +1,3 @@
 accessing
 currentPosition
-^positions copy  last squareNumber 
+^positions  last squareNumber 

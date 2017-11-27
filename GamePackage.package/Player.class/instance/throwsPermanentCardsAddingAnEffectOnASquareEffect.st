@@ -1,5 +1,5 @@
 use of cards
 throwsPermanentCardsAddingAnEffectOnASquareEffect
-	^ permanentCardsToBePlayed copy
+	^ permanentCardsToBePlayed 
 		inject: 1
 		into: [ :product :each | product * each addAnEffectOverASquare ]
