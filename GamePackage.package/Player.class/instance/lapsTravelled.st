@@ -1,3 +1,3 @@
 accessing
 lapsTravelled
-	^ (positions copy ) last lap 
+	^ (positions) last lap 

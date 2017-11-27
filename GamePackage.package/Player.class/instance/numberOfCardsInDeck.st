@@ -1,3 +1,3 @@
 accessing
 numberOfCardsInDeck
-^(cards) copy size
+^(cards) size

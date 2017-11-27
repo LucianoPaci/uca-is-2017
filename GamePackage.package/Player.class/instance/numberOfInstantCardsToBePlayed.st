@@ -1,3 +1,3 @@
 accessing
 numberOfInstantCardsToBePlayed
-	^instantCardsToBePlayed copy size
+	^instantCardsToBePlayed size

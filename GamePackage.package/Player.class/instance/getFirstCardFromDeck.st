@@ -1,3 +1,3 @@
 accessing
 getFirstCardFromDeck
-^(cards copy at:1)
+^(cards at:1)
