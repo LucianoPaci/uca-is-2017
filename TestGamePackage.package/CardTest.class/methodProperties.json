@@ -1,0 +1,8 @@
+{
+	"instance" : {
+		"testWhenACardIsNotEqualsToAnotherCard" : "juanMaDiMartino 11/27/2017 11:40",
+		"testWhenACardIsCreatedMustHaveAName" : "juanMaDiMartino 11/27/2017 11:57",
+		"testWhenACardIsEqualsToAnotherCard" : "juanMaDiMartino 11/27/2017 11:39"
+	},
+	"class" : { }
+}

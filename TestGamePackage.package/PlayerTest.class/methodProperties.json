@@ -1,7 +1,6 @@
 {
 	"instance" : {
 		"testPlayerCreationWithNameAndStartingPositionAndStartingLapsTravelled" : "LucianoPaci 11/26/2017 19:12",
-		"testWhenAPlayerCardIsEqualsToAnotherCard" : "LucianoPaci 11/26/2017 18:49",
 		"testWhenAPlayerMovesTwoPositionsBackLapsTravelledAndCurrentPositionMustBeUpdated" : "LucianoPaci 11/26/2017 19:11"
 	},
 	"class" : { }
