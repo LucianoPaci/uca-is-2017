@@ -21,4 +21,6 @@ testWhenGameCardDeckDoesntHaveACardOfAParticularKind
 		throwing: (OrderedCollection with: Dice)
 		winningWhenCompleting: 1
 		withACardDeck: gameDeck.
-	self should: [ game removeACardFromDeck: CardDamping ] raise: GameFailed
+	cardNotInDeck := CardDamping named: 'CardDamping3'.
+	self should: [game removeACardFromDeck: cardNotInDeck ] raise: 	GameFailed.
+

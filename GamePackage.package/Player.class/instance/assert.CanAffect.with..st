@@ -1,8 +1,6 @@
 use of cards
-assert: aPlayer canAffect: aCard with: aCancellationCard
-	(cards select: [ :each | aCancellationCard isEqualTo: each ])
-		isNotEmpty
-		ifTrue:
-			[ self assert: aPlayer has: aCard toBeAffectedBy: aCancellationCard ]
-		ifFalse:
-			[ GameFailed signal: 'La carta no se encuentra en la mano del jugador' ]
+assert: aPlayer CanAffect: aCard with: aCancellationCard
+	(cards) indexOf: aCancellationCard ifAbsent: [GameFailed signal: 'La carta no se encuentra en la mano del jugador'].
+	self assert: aPlayer Has: aCard ToBeAffectedBy: aCancellationCard.
+		
+			 

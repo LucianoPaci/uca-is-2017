@@ -1,2 +1,1 @@
-(name 'GamePackage-juanMaDiMartino.1' message 'added tests to throw a potentiation card to
-a timeMachineSquare, to a wormHoleSquare and to a moonWalkSquare' id '65c8b1c9-301b-0d00-9afa-f8850203d7f6' date '25 November 2017' time '10:57:33.490277 am' author 'juanMaDiMartino' ancestors () stepChildren ())
+(name 'GamePackage-juanMaDiMartino.4' message 'added collection protocol into player and game instance messages' id '9711d0b1-571b-0d00-b081-72d80d15d845' date '27 November 2017' time '9:22:36.546455 am' author 'juanMaDiMartino' ancestors ((name 'GamePackage-juanMaDiMartino.3' message '' id '919904e9-331b-0d00-bd9c-ca380bbb820f' date '25 November 2017' time '2:41:03.913361 pm' author 'juanMaDiMartino' ancestors () stepChildren ())) stepChildren ())
