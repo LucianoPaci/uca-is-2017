@@ -1,4 +1,4 @@
-as yet unclassified
+use of cards
 throwsPermamentCardsProducingAnEffectOnADiceRollTo: aPlayer	
 	^ (aPlayer permanentCardsToBePlayed) 
 		inject: 0
