@@ -28,9 +28,9 @@ testWhenAPotentiationCardIsThrownAfterPlayerFellInSpeedUpSquareEffectIsDoubled
 		throwing: collectionOfDices
 		winningWhenCompleting: laps
 		withACardDeck: gameDeck.
-	self assert: playerLucho numberOfCardsInDeck equals: 2.
-	playerLucho affect: playerLucho withAnInstantCard: cardToAffectPlayer into: game.
-	self assert: playerLucho numberOfCardsInDeck equals: 1.
-	self assert: playerLucho currentPosition equals: 1.
+	self assert: playerLucho cards size equals: 2.
+	game  affect: playerLucho withAnInstantCard: cardToAffectPlayer of: playerLucho.
+	self assert: playerLucho cards size equals: 1.
+	self assert: playerLucho lastPosition squareNumber equals: 1.
 	game nextTurnFor: playerLucho.
-	self assert: playerLucho currentPosition equals: 12
+	self assert: playerLucho lastPosition squareNumber equals: 12

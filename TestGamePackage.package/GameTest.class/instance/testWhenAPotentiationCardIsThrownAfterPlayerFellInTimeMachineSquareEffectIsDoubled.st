@@ -35,23 +35,23 @@ testWhenAPotentiationCardIsThrownAfterPlayerFellInTimeMachineSquareEffectIsDoubl
 		throwing: collectionOfDices
 		winningWhenCompleting: laps
 		withACardDeck: gameDeck.
-	self assert: playerJuanma numberOfCardsInDeck equals: 2.
-	self assert: playerJuanma numberOfCardsInDeck equals: 2.
-	self assert: playerLucho currentPosition equals: 1.
-	self assert: playerJuanma currentPosition equals: 1.
+	self assert: playerJuanma cards size equals: 2.
+	self assert: playerJuanma cards size equals: 2.
+	self assert: playerLucho lastPosition squareNumber equals: 1.
+	self assert: playerJuanma lastPosition squareNumber equals: 1.
 	game nextTurnFor: playerJuanma.
-	self assert: playerLucho currentPosition equals: 1.
-	self assert: playerJuanma currentPosition equals: 2.
+	self assert: playerLucho lastPosition squareNumber equals: 1.
+	self assert: playerJuanma lastPosition squareNumber equals: 2.
 	game nextTurnFor: playerLucho.
-	self assert: playerJuanma currentPosition equals: 2.
-	self assert: playerLucho currentPosition equals: 2.
+	self assert: playerJuanma lastPosition squareNumber equals: 2.
+	self assert: playerLucho lastPosition squareNumber equals: 2.
 	game nextTurnFor: playerJuanma.
-	self assert: playerJuanma currentPosition equals: 3.
-	self assert: playerLucho currentPosition equals: 2.
+	self assert: playerJuanma lastPosition squareNumber equals: 3.
+	self assert: playerLucho lastPosition squareNumber equals: 2.
 	game nextTurnFor: playerLucho.
-	self assert: playerLucho currentPosition equals: 3.
-	self assert: playerJuanma currentPosition equals: 3.
-	playerJuanma affect: playerJuanma withAnInstantCard: cardToAffectPlayer into: game.
+	self assert: playerLucho lastPosition squareNumber equals: 3.
+	self assert: playerJuanma lastPosition squareNumber equals: 3.
+	game affect: playerJuanma withAnInstantCard: cardToAffectPlayer of: playerJuanma.
 	game nextTurnFor: playerJuanma.
-	self assert: playerJuanma currentPosition equals: 3.
-	self assert: playerJuanma numberOfInstantCardsToBePlayed equals: 0
+	self assert: playerJuanma lastPosition squareNumber equals: 3.
+	self assert: playerJuanma instantCardsToBePlayed  size equals: 0

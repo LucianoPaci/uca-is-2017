@@ -14,13 +14,13 @@ testWhenPlayerFallsInTimeMachineEffectSquareAfterCompletingALapThenPlayerMovesBa
 		throwing: (OrderedCollection with: dice)
 		winningWhenCompleting: 2
 		withACardDeck: self aCollectionOfGameCards.
-	self assert: playerLucho currentPosition equals: 1.
-	self assert: playerLucho lapsTravelled equals: 0.
+	self assert: playerLucho lastPosition squareNumber equals: 1.
+	self assert: playerLucho lastPosition lap equals: 0.
 	game nextTurnFor: playerLucho.
-	self assert: playerLucho currentPosition equals: 1.
-	self assert: playerLucho lapsTravelled equals: 0.
+	self assert: playerLucho lastPosition squareNumber equals: 1.
+	self assert: playerLucho lastPosition lap equals: 0.
 	self assert: (playerLucho previousNPositions: 1) lap equals: 1.
 	game nextTurnFor: playerLucho.
-	self assert: playerLucho currentPosition equals: 1.
-	self assert: playerLucho lapsTravelled equals: 1.
+	self assert: playerLucho lastPosition squareNumber equals: 1.
+	self assert: playerLucho lastPosition lap equals: 1.
 	self assert: (playerLucho previousNPositions: 1) lap equals: 0

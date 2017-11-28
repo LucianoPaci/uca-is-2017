@@ -31,10 +31,10 @@ testWhenAPlayerThrowsADampingCardASpeedCardAndAnOverloadingCardSevenPositionsMus
 		throwing: collectionOfDices
 		winningWhenCompleting: laps
 		withACardDeck: gameDeck.
-	playerRaiden affect: playerRaiden withAPermanentCard: firstCardToAffectPlayer into: game.
-	playerRaiden affect: playerRaiden withAPermanentCard: secondCardToAffectPlayer into: game.
-	playerRaiden affect: playerRaiden withAPermanentCard: thirdCardToAffectPlayer into: game.
-	self assert: playerRaiden numberOfPermanentCardsToBePlayed equals: 3.
+	game affect: playerRaiden withAPermanentCard: firstCardToAffectPlayer of: playerRaiden.
+	game affect: playerRaiden withAPermanentCard: secondCardToAffectPlayer of: playerRaiden.
+	game affect: playerRaiden withAPermanentCard: thirdCardToAffectPlayer of: playerRaiden.
+	self assert: playerRaiden permanentCardsToBePlayed size equals: 3.
 	game nextTurnFor: playerRaiden.
 	self assert: (playerRaiden previousNPositions: 1) squareNumber equals: 4.
-	self assert: playerRaiden currentPosition equals: 6
+	self assert: playerRaiden lastPosition squareNumber equals: 6

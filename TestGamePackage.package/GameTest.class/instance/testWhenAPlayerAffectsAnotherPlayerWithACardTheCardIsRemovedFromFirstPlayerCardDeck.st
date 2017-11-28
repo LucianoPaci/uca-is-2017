@@ -39,6 +39,6 @@ testWhenAPlayerAffectsAnotherPlayerWithACardTheCardIsRemovedFromFirstPlayerCardD
 		winningWhenCompleting: laps
 		withACardDeck: gameDeck.
 	game nextTurnFor: playerScorpion.
-	self assert: playerRaiden numberOfCardsInDeck equals: 2.
-	playerRaiden affect: playerScorpion withAPermanentCard: cardToAffectPlayer into: game.
-	self assert: playerRaiden numberOfCardsInDeck equals: 1
+	self assert: playerRaiden cards size equals: 2.
+	game affect: playerScorpion withAPermanentCard: cardToAffectPlayer of: playerRaiden.
+	self assert: playerRaiden cards size equals: 1

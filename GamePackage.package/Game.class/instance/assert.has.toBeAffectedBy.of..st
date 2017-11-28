@@ -1,9 +1,8 @@
-use of cards
-assert: aPlayer has: aCard toBeAffectedBy: aCancellationCard
+asserting
+assert: aPlayer has: aCard toBeAffectedBy: aCancellationCard of: anotherPlayer
 	| cardToBeRemoved |
-	(cardToBeRemoved := aPlayer
-		selectAPermanentCardToBePlayedEqualsTo: aCard) isNotEmpty
+	(cardToBeRemoved := aPlayer selectAPermanentCardToBePlayedEqualsTo: aCard) isNotEmpty
 		ifTrue: [ aCancellationCard addAPermanentCardToBeRemoved: cardToBeRemoved.
 			aPlayer addAnInstantCardToBePlayed: aCancellationCard.
-			cards remove: aCancellationCard ]
+			anotherPlayer removeACardFromDeck: aCancellationCard ]
 		ifFalse: [ GameFailed signal: 'La carta permanente no se encuentra en juego' ]

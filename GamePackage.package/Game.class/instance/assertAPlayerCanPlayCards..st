@@ -3,20 +3,20 @@ assertAPlayerCanPlayCards: aPlayer
 	| movesToBeMade actualSquare cardEffect |
 	(self detect: aPlayer)
 		ifTrue: [ movesToBeMade := dices sumNumbers: [ :dice | dice roll ].
-			aPlayer throwsCancellationCards.
+			self throwsCancellationCardsTo: aPlayer.
 			movesToBeMade := movesToBeMade
-				+ aPlayer throwsPermamentCardsProducingAnEffectOnADiceRoll.
+				+ (self throwsPermamentCardsProducingAnEffectOnADiceRollTo:aPlayer).
 			self move: aPlayer positions: movesToBeMade.
-			actualSquare := board squareAtPosition: aPlayer currentPosition.
-			cardEffect := aPlayer
-				throwsPermanentCardsAddingAnEffectOnASquareEffect.
+			actualSquare := board squareAtPosition: aPlayer lastPosition squareNumber.
+			cardEffect := (self
+				throwsPermanentCardsAddingAnEffectOnASquareEffectTo: aPlayer).
 			actualSquare
 				provokesAnEffectInto: self
 				with: aPlayer
 				addingEffect: cardEffect.
-			aPlayer
+			self
 				throwsPotentiationCardsToASquare: actualSquare
-				from: self
+				to: aPlayer
 				withACard: cardEffect.
 			aPlayer emptyInstantCardsToBePlayed.
 			self checkIsAWinnerOfGame: aPlayer.

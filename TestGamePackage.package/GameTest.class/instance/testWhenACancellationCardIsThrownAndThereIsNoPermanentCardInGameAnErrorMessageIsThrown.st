@@ -38,9 +38,8 @@ testWhenACancellationCardIsThrownAndThereIsNoPermanentCardInGameAnErrorMessageIs
 		winningWhenCompleting: laps
 		withACardDeck: gameDeck.
 	self
-		should: [ playerScorpion
-				affect: aCard
+		should: [ game affect: aCard
 				from: playerRaiden
 				using: aCancellationCard
-				into: game ]
+				of: playerScorpion ]
 		raise: GameFailed

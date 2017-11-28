@@ -39,7 +39,7 @@ testWhenAPlayerAffectsAnotherPlayerWithACardThenTheCardIsAddedToThatPlayerCardDe
 		winningWhenCompleting: laps
 		withACardDeck: gameDeck.
 	game nextTurnFor: playerScorpion.
-	self assert: playerScorpion numberOfPermanentCardsToBePlayed equals: 0.
-	playerRaiden affect: playerScorpion withAPermanentCard: cardToAffectPlayer into: game.
-	self assert: playerScorpion numberOfPermanentCardsToBePlayed equals: 1.
-	self assert: playerRaiden numberOfCardsInDeck equals: 1
+	self assert: playerScorpion permanentCardsToBePlayed size equals: 0.
+	game affect: playerScorpion withAPermanentCard: cardToAffectPlayer of: playerRaiden.
+	self assert: playerScorpion permanentCardsToBePlayed size equals: 1.
+	self assert: playerRaiden cards size equals: 1

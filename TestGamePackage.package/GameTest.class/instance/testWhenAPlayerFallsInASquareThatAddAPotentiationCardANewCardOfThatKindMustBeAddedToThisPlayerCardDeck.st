@@ -19,10 +19,10 @@ testWhenAPlayerFallsInASquareThatAddAPotentiationCardANewCardOfThatKindMustBeAdd
 		throwing: (OrderedCollection with: dice)
 		winningWhenCompleting: 1
 		withACardDeck: self aCollectionOfGameCards.
-	self assert: playerLucho numberOfCardsInDeck equals: 2.
+	self assert: playerLucho cards size equals: 2.
 	game nextTurnFor: playerLucho.
-	self assert: playerLucho numberOfCardsInDeck equals: 2.
+	self assert: playerLucho cards size equals: 2.
 	game nextTurnFor: playerLucho.
-	self assert: playerLucho numberOfCardsInDeck equals: 3.
+	self assert: playerLucho cards size equals: 3.
 	game nextTurnFor: playerLucho.
-	self assert: playerLucho numberOfCardsInDeck equals: 4
+	self assert: playerLucho cards size equals: 4
