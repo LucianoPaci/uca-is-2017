@@ -25,32 +25,32 @@ testGameIsPlayedUntilAWinnerIsDeclared
 		withACardDeck: self aCollectionOfGameCards.
 	self
 		assert: collectionOfPlayers size equals: 2;
-		assert: playerScorpion currentPosition equals: 1;
-		assert: playerRaiden currentPosition equals: 1;
-		assert: playerScorpion lapsTravelled equals: 0;
-		assert: playerRaiden lapsTravelled equals: 0.
+		assert: playerScorpion lastPosition squareNumber equals: 1;
+		assert: playerRaiden lastPosition squareNumber  equals: 1;
+		assert: playerScorpion lastPosition lap equals: 0;
+		assert: playerRaiden lastPosition lap equals: 0.
 	game nextTurnFor: playerScorpion.
 	self
-		assert: playerScorpion currentPosition equals: 3;
-		assert: playerRaiden currentPosition equals: 1;
-		assert: playerScorpion lapsTravelled equals: 0;
-		assert: playerRaiden lapsTravelled equals: 0.
+		assert: playerScorpion lastPosition squareNumber  equals: 3;
+		assert: playerRaiden lastPosition squareNumber equals: 1;
+		assert: playerScorpion lastPosition lap equals: 0;
+		assert: playerRaiden lastPosition lap equals: 0.
 	game nextTurnFor: playerRaiden.
 	self
-		assert: playerScorpion currentPosition equals: 3;
-		assert: playerRaiden currentPosition equals: 5;
-		assert: playerScorpion lapsTravelled equals: 0;
-		assert: playerRaiden lapsTravelled equals: 0.
+		assert: playerScorpion lastPosition squareNumber equals: 3;
+		assert: playerRaiden lastPosition squareNumber equals: 5;
+		assert: playerScorpion lastPosition lap equals: 0;
+		assert: playerRaiden lastPosition lap equals: 0.
 	game nextTurnFor: playerScorpion.
 	self
-		assert: playerScorpion currentPosition equals: 9;
-		assert: playerRaiden currentPosition equals: 5;
-		assert: playerScorpion lapsTravelled equals: 0;
-		assert: playerRaiden lapsTravelled equals: 0.
+		assert: playerScorpion lastPosition squareNumber equals: 9;
+		assert: playerRaiden lastPosition squareNumber equals: 5;
+		assert: playerScorpion lastPosition lap equals: 0;
+		assert: playerRaiden lastPosition lap equals: 0.
 	game nextTurnFor: playerRaiden.
 	self
-		assert: playerScorpion currentPosition equals: 9;
-		assert: playerRaiden currentPosition equals: 3;
-		assert: playerScorpion lapsTravelled equals: 0;
-		assert: playerRaiden lapsTravelled equals: 1.
+		assert: playerScorpion lastPosition squareNumber equals: 9;
+		assert: playerRaiden lastPosition squareNumber equals: 3;
+		assert: playerScorpion lastPosition lap equals: 0;
+		assert: playerRaiden lastPosition lap equals: 1.
 	self assert: game winner equals: playerRaiden

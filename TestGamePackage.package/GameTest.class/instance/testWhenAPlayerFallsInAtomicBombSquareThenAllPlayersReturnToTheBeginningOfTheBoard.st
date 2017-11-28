@@ -20,20 +20,20 @@ testWhenAPlayerFallsInAtomicBombSquareThenAllPlayersReturnToTheBeginningOfTheBoa
 		throwing: (OrderedCollection with: dice)
 		winningWhenCompleting: 1
 		withACardDeck: self aCollectionOfGameCards.
-	self assert: playerLannister currentPosition equals: 1.
-	self assert: playerStark currentPosition equals: 1.
-	self assert: playerSnow currentPosition equals: 1.
+	self assert: playerLannister lastPosition squareNumber equals: 1.
+	self assert: playerStark lastPosition squareNumber equals: 1.
+	self assert: playerSnow lastPosition squareNumber equals: 1.
 	game nextTurnFor: playerLannister.
-	self assert: playerLannister currentPosition equals: 2.
+	self assert: playerLannister lastPosition squareNumber equals: 2.
 	game nextTurnFor: playerStark.
-	self assert: playerStark currentPosition equals: 3.
+	self assert: playerStark lastPosition squareNumber equals: 3.
 	game nextTurnFor: playerSnow.
-	self assert: playerSnow currentPosition equals: 4.
+	self assert: playerSnow lastPosition squareNumber equals: 4.
 	game nextTurnFor: playerLannister.
 	self
-		assert: playerLannister currentPosition equals: 1;
-		assert: playerLannister lapsTravelled equals: 0;
-		assert: playerStark currentPosition equals: 1;
-		assert: playerStark lapsTravelled equals: 0;
-		assert: playerSnow currentPosition equals: 1;
-		assert: playerSnow lapsTravelled equals: 0
+		assert: playerLannister lastPosition squareNumber equals: 1;
+		assert: playerLannister lastPosition lap equals: 0;
+		assert: playerStark lastPosition squareNumber equals: 1;
+		assert: playerStark lastPosition lap equals: 0;
+		assert: playerSnow lastPosition squareNumber equals: 1;
+		assert: playerSnow lastPosition lap equals: 0

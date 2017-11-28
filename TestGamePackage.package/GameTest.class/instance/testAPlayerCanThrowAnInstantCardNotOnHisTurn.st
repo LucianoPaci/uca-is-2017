@@ -35,7 +35,7 @@ testAPlayerCanThrowAnInstantCardNotOnHisTurn
 		throwing: collectionOfDices
 		winningWhenCompleting: laps
 		withACardDeck: gameDeck.
-	self assert: playerLucho numberOfCardsInDeck equals: 2.
-	playerLucho affect: playerJuanma withAnInstantCard: cardToAffectPlayer into: game.
+	self assert: playerLucho cards size equals: 2.
+	game affect: playerJuanma withAnInstantCard: cardToAffectPlayer of: playerLucho.
 	self assert: playerLucho ~= game expectedPlayer.
-	self assert: playerLucho numberOfCardsInDeck equals: 1
+	self assert: playerLucho cards size equals: 1

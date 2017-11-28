@@ -42,5 +42,5 @@ testWhenPlayerAffectsWithACardAnotherPlayerNotOnHisTurnAnErrorMessageIsThrown
 		winningWhenCompleting: laps
 		withACardDeck: self aCollectionOfGameCards.
 	game nextTurnFor: playerScorpion.
-	cardToAffectPlayer := playerScorpion getFirstCardFromDeck.
-	self should: [ playerScorpion affect: playerRaiden withAPermanentCard: cardToAffectPlayer into: game ] raise: GameFailed
+	cardToAffectPlayer := self aCollectionOfGameCards removeFirst.
+	self should: [ game affect: playerRaiden withAPermanentCard: cardToAffectPlayer of: playerScorpion ] raise: GameFailed

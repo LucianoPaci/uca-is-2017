@@ -35,11 +35,11 @@ testWhenAPotentiationCardIsThrownAfterPlayerFellInMoonWalkSquareEffectIsDoubled
 		throwing: collectionOfDices
 		winningWhenCompleting: laps
 		withACardDeck: gameDeck.
-	self assert: playerJuanma numberOfCardsInDeck equals: 2.
-	playerJuanma affect: playerJuanma withAnInstantCard: cardToAffectPlayer into: game.
-	self assert: playerJuanma numberOfCardsInDeck equals: 1.
-	self assert: playerLucho currentPosition equals: 3.
-	self assert: playerJuanma currentPosition equals: 1.
+	self assert: playerJuanma cards size equals: 2.
+	game affect: playerJuanma withAnInstantCard: cardToAffectPlayer of: playerJuanma.
+	self assert: playerJuanma cards size equals: 1.
+	self assert: playerLucho lastPosition squareNumber equals: 3.
+	self assert: playerJuanma lastPosition squareNumber equals: 1.
 	game nextTurnFor: playerJuanma.
-	self assert: playerLucho currentPosition equals: 1.
-	self assert: playerJuanma currentPosition equals: 4
+	self assert: playerLucho lastPosition squareNumber equals: 1.
+	self assert: playerJuanma lastPosition squareNumber equals: 4

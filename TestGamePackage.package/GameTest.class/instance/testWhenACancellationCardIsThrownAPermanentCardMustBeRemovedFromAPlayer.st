@@ -39,24 +39,24 @@ testWhenACancellationCardIsThrownAPermanentCardMustBeRemovedFromAPlayer
 		winningWhenCompleting: laps
 		withACardDeck: gameDeck.
 	game nextTurnFor: playerScorpion.
-	self assert: playerRaiden numberOfCardsInDeck equals: 2.
-	playerRaiden affect: playerScorpion withAPermanentCard: cardToAffectPlayer into: game.
-	self assert: playerRaiden numberOfCardsInDeck equals: 1.
+	self assert: playerRaiden cards size equals: 2.
+	game affect: playerScorpion withAPermanentCard: cardToAffectPlayer of: playerRaiden.
+	self assert: playerRaiden cards size equals: 1.
 	cancellationCard := CardCancellation named: 'CardCancellation1'.
 	playerRaiden addACardToDeck: cancellationCard.
-	self assert: playerRaiden numberOfCardsInDeck equals: 2.
-	self assert: playerScorpion numberOfCardsInDeck equals: 2.
-	self assert: playerScorpion numberOfPermanentCardsToBePlayed equals: 1.
-	playerRaiden
+	self assert: playerRaiden cards size equals: 2.
+	self assert: playerScorpion cards size equals: 2.
+	self assert: playerScorpion permanentCardsToBePlayed size equals: 1.
+	game
 		affect: cardToAffectPlayer
 		from: playerScorpion
 		using: cancellationCard
-		into: game.
-	self assert: playerScorpion numberOfInstantCardsToBePlayed equals: 1.
-	self assert: playerRaiden numberOfCardsInDeck equals: 1.
-	self assert: playerScorpion numberOfCardsInDeck equals: 2.
-	self assert: playerScorpion numberOfPermanentCardsToBePlayed equals: 1.
+		of: playerRaiden.
+	self assert: playerScorpion instantCardsToBePlayed size equals: 1.
+	self assert: playerRaiden cards size equals: 1.
+	self assert: playerScorpion cards size equals: 2.
+	self assert: playerScorpion permanentCardsToBePlayed size equals: 1.
 	game nextTurnFor: playerRaiden.
 	game nextTurnFor: playerScorpion.
-	self assert: playerScorpion numberOfPermanentCardsToBePlayed equals: 0.
-	self assert: playerScorpion numberOfInstantCardsToBePlayed equals: 0
+	self assert: playerScorpion permanentCardsToBePlayed size equals: 0.
+	self assert: playerScorpion instantCardsToBePlayed size equals: 0

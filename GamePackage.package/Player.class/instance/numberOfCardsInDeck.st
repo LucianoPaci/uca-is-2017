@@ -1,3 +1,0 @@
-accessing
-numberOfCardsInDeck
-^(cards) size
