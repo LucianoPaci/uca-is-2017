@@ -1,4 +1,4 @@
-as yet unclassified
+use of cards
 throwsPermanentCardsAddingAnEffectOnASquareEffectTo: aPlayer
 	^ ( aPlayer permanentCardsToBePlayed) 
 		inject: 1
