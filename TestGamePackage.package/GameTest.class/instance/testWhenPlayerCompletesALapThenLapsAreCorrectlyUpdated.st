@@ -13,15 +13,15 @@ testWhenPlayerCompletesALapThenLapsAreCorrectlyUpdated
 		throwing: (OrderedCollection with: dice)
 		winningWhenCompleting: 1
 		withACardDeck: self aCollectionOfGameCards.
-	self assert: (game getPlayerAtIndex: 1) lastPosition squareNumber equals: 1.
-	self assert: (game getPlayerAtIndex: 1) lastPosition lap equals: 0.
+	self assert: (game getPlayerAtIndex: 1) positions last squareNumber equals: 1.
+	self assert: (game getPlayerAtIndex: 1) positions last lap equals: 0.
 	game move: (game getPlayerAtIndex: 1) positions: 5.
-	self assert: (playerLucho previousNPositions: 1) squareNumber equals: 1.
-	self assert: (playerLucho previousNPositions: 1) lap equals: 0.
-	self assert: (game getPlayerAtIndex: 1) lastPosition lap equals: 0.
-	self assert: (game getPlayerAtIndex: 1) lastPosition squareNumber equals: 6.
+	self assert: (playerLucho getPositionAt:  (playerLucho positions size -1)) squareNumber equals: 1.
+	self assert: (playerLucho getPositionAt:  (playerLucho positions size -1)) lap equals: 0.
+	self assert: (game getPlayerAtIndex: 1) positions last lap equals: 0.
+	self assert: (game getPlayerAtIndex: 1) positions last squareNumber equals: 6.
 	game move: (game getPlayerAtIndex: 1) positions: 4.
-	self assert: (playerLucho previousNPositions: 1) squareNumber equals: 6.
-	self assert: (playerLucho previousNPositions: 1) lap equals: 0.
-	self assert: (game getPlayerAtIndex: 1) lastPosition squareNumber equals: 2.
-	self assert: (game getPlayerAtIndex: 1) lastPosition lap equals: 1
+	self assert: (playerLucho getPositionAt:  (playerLucho positions size -1)) squareNumber equals: 6.
+	self assert: (playerLucho getPositionAt:  (playerLucho positions size -1)) lap equals: 0.
+	self assert: (game getPlayerAtIndex: 1) positions last squareNumber equals: 2.
+	self assert: (game getPlayerAtIndex: 1) positions last lap equals: 1

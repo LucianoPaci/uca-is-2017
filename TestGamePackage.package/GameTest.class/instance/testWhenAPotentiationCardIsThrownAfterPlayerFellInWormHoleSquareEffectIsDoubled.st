@@ -31,6 +31,6 @@ testWhenAPotentiationCardIsThrownAfterPlayerFellInWormHoleSquareEffectIsDoubled
 	self assert: playerLucho cards size equals: 2.
 	game affect: playerLucho withAnInstantCard: cardToAffectPlayer of: playerLucho.
 	self assert: playerLucho cards size equals: 1.
-	self assert: playerLucho lastPosition squareNumber equals: 1.
+	self assert: playerLucho positions last squareNumber equals: 1.
 	game nextTurnFor: playerLucho.
-	self assert: playerLucho lastPosition squareNumber equals: 2
+	self assert: playerLucho positions last squareNumber equals: 2

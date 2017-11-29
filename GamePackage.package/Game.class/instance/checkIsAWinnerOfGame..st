@@ -1,4 +1,4 @@
 accessing
 checkIsAWinnerOfGame: aPlayer
-	aPlayer lastPosition lap  >= laps
+	(aPlayer positions last) lap  >= laps
 		ifTrue: [ winner := aPlayer ]

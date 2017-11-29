@@ -17,12 +17,12 @@ testWhenPlayerFallsInMoonWalkEffectSquareThenTheRemainingPlayersMoveNPositionsBa
 		throwing: (OrderedCollection with: dice)
 		winningWhenCompleting: 1
 		withACardDeck: self aCollectionOfGameCards.
-	self assert: playerLucho lastPosition squareNumber equals: 1.
-	self assert: playerJuanma lastPosition squareNumber equals: 1.
+	self assert: playerLucho positions last squareNumber equals: 1.
+	self assert: playerJuanma positions last squareNumber equals: 1.
 	game nextTurnFor: playerLucho.
-	self assert: playerLucho lastPosition squareNumber equals: 2.
+	self assert: playerLucho positions last squareNumber equals: 2.
 	game nextTurnFor: playerJuanma.
-	self assert: playerJuanma lastPosition squareNumber equals: 8.
+	self assert: playerJuanma positions last squareNumber equals: 8.
 	game nextTurnFor: playerLucho.
-	self assert: playerLucho lastPosition squareNumber equals: 7.
-	self assert: playerJuanma lastPosition squareNumber equals: 2
+	self assert: playerLucho positions last squareNumber equals: 7.
+	self assert: playerJuanma positions last squareNumber equals: 2

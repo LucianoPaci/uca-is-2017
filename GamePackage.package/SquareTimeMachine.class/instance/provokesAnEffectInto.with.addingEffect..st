@@ -1,6 +1,6 @@
 affecting
 provokesAnEffectInto: aGame with: aPlayer addingEffect: someEffect
-aPlayer changePosition: ((aPlayer previousNPositions:1) squareNumber * someEffect) andLapsTo: (aPlayer previousNPositions:1) lap.
+aPlayer changePosition: ((aPlayer getPositionAt: (aPlayer positions size -1)) squareNumber * someEffect) andLapsTo: (aPlayer getPositionAt: (aPlayer positions size -1)) lap.
 
 
 

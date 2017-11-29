@@ -37,21 +37,21 @@ testWhenAPotentiationCardIsThrownAfterPlayerFellInTimeMachineSquareEffectIsDoubl
 		withACardDeck: gameDeck.
 	self assert: playerJuanma cards size equals: 2.
 	self assert: playerJuanma cards size equals: 2.
-	self assert: playerLucho lastPosition squareNumber equals: 1.
-	self assert: playerJuanma lastPosition squareNumber equals: 1.
+	self assert: playerLucho positions last squareNumber equals: 1.
+	self assert: playerJuanma positions last squareNumber equals: 1.
 	game nextTurnFor: playerJuanma.
-	self assert: playerLucho lastPosition squareNumber equals: 1.
-	self assert: playerJuanma lastPosition squareNumber equals: 2.
+	self assert: playerLucho positions last squareNumber equals: 1.
+	self assert: playerJuanma positions last squareNumber equals: 2.
 	game nextTurnFor: playerLucho.
-	self assert: playerJuanma lastPosition squareNumber equals: 2.
-	self assert: playerLucho lastPosition squareNumber equals: 2.
+	self assert: playerJuanma positions last squareNumber equals: 2.
+	self assert: playerLucho positions last squareNumber equals: 2.
 	game nextTurnFor: playerJuanma.
-	self assert: playerJuanma lastPosition squareNumber equals: 3.
-	self assert: playerLucho lastPosition squareNumber equals: 2.
+	self assert: playerJuanma positions last squareNumber equals: 3.
+	self assert: playerLucho positions last squareNumber equals: 2.
 	game nextTurnFor: playerLucho.
-	self assert: playerLucho lastPosition squareNumber equals: 3.
-	self assert: playerJuanma lastPosition squareNumber equals: 3.
+	self assert: playerLucho positions last squareNumber equals: 3.
+	self assert: playerJuanma positions last squareNumber equals: 3.
 	game affect: playerJuanma withAnInstantCard: cardToAffectPlayer of: playerJuanma.
 	game nextTurnFor: playerJuanma.
-	self assert: playerJuanma lastPosition squareNumber equals: 3.
+	self assert: playerJuanma positions last squareNumber equals: 3.
 	self assert: playerJuanma instantCardsToBePlayed  size equals: 0
