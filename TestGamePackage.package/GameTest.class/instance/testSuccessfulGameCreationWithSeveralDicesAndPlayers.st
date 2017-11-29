@@ -32,6 +32,6 @@ testSuccessfulGameCreationWithSeveralDicesAndPlayers
 	self
 		assert: game players size equals: 2;
 		assert: game dices size equals: 2;
-		assert: game board numberOfSquares equals: 2;
+		assert: game board squares size equals: 2;
 		assert: game board equals: board;
 		assert: game laps equals: laps

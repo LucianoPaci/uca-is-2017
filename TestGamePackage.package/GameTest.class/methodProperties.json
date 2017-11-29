@@ -15,7 +15,7 @@
 		"testWhenPlayerFallsInWormHoleEffectSquareThenPlayerMovesFourPositionsBackwards" : "juanMaDiMartino 11/28/2017 21:52",
 		"testWhenPlayingAGameInOrder" : "LucianoPaci 11/26/2017 18:28",
 		"testWhenPlayerAffectsWithACardAnotherPlayerNotOnHisTurnAnErrorMessageIsThrown" : "juanMaDiMartino 11/28/2017 15:51",
-		"testSuccessfulGameCreationWithSeveralDicesAndPlayers" : "juanMaDiMartino 11/28/2017 21:18",
+		"testSuccessfulGameCreationWithSeveralDicesAndPlayers" : "juanMaDiMartino 11/29/2017 11:58",
 		"testWhenAPlayerFallsInASquareThatAddACancellationCardANewCardOfThatKindMustBeAddedToThisPlayerCardDeck" : "juanMaDiMartino 11/28/2017 16:12",
 		"testWhenAPlayerFallsInAtomicBombSquareThenAllPlayersReturnToTheBeginningOfTheBoard" : "juanMaDiMartino 11/28/2017 22:02",
 		"testWhenAPlayerFallsInASquareThatAddASpeedCardANewCardOfThatKindMustBeAddedToThisPlayerCardDeck" : "juanMaDiMartino 11/28/2017 16:12",

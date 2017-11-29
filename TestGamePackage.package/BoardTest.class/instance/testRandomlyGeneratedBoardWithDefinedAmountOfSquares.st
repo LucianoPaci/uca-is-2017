@@ -14,4 +14,5 @@ testRandomlyGeneratedBoardWithDefinedAmountOfSquares
 	self assert: (squaresSpeedUp) size equals: 15.
 	self assert: (squaresTimeMachine ) size equals: 23.
 	self assert: (moonWalkSquares) size equals: 5.
-	self assert: (atomicBombSquares) size equals: 2
+	self assert: (atomicBombSquares) size equals: 2.
+	

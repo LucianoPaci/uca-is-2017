@@ -1,10 +1,8 @@
 tests
 testBoardCreationWithDefinedAmountOfSquares
-	| board squares squareAtomicBomb squareWormHole |
-	squareAtomicBomb:= AtomicBombSquare initialize.
-	squareWormHole:= SquareWormHole initialize.
+	| board squares   |
 	squares:= OrderedCollection new.
-	squares add: squareWormHole.
-	squares add: squareAtomicBomb.
+	squares add: (SquareWormHole onPosition: 1).
+	squares add: (AtomicBombSquare  onPosition: 2).
 	board:= Board definedSquares: squares.
-	self assert: board numberOfSquares equals: 2
+	self assert: board squares size equals: 2

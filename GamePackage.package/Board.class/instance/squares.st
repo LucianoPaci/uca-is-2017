@@ -1,3 +1,3 @@
 accessing
 squares
-^ squares copy.
+^squares copy.
