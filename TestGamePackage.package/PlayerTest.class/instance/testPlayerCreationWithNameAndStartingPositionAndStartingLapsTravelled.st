@@ -10,6 +10,6 @@ testPlayerCreationWithNameAndStartingPositionAndStartingLapsTravelled
 	player := Player named: 'Jorge' withCards: playerDeck andPositionHistory: playerHistory.
 	self
 		assert: player name equals: 'Jorge';
-		assert: player lastPosition lap equals: 0;
-		assert: player lastPosition squareNumber equals: 1;
+		assert: (player getPositionAt:1) lap equals: 0;
+		assert: (player getPositionAt:1) squareNumber equals: 1;
 		assert: player cards size equals: 2

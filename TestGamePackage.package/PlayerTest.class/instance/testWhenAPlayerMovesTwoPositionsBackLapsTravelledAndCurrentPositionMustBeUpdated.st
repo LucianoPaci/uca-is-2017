@@ -6,11 +6,11 @@ testWhenAPlayerMovesTwoPositionsBackLapsTravelledAndCurrentPositionMustBeUpdated
 	playerPepeDeck := OrderedCollection new.
 	playerPepeDeck add: (CardCancellation named: 'CardCancellation1').
 	playerPepe := Player named: 'Pepe' withCards: playerPepeDeck andPositionHistory: playerPepeHistory.
-	self assert: (playerPepe previousNPositions: 1) squareNumber equals: 1.
-	self assert: (playerPepe previousNPositions: 1) lap equals: 0.
+	self assert: (playerPepe getPositionAt:  1) squareNumber equals: 1.
+	self assert: (playerPepe getPositionAt: 1) lap equals: 0.
 	playerPepe changePosition: 3 andLapsTo: 0.
-	self assert: playerPepe lastPosition squareNumber equals: 3.
-	self assert: playerPepe lastPosition lap equals: 0.
-	playerPepe changePosition: (playerPepe previousNPositions: 2) squareNumber andLapsTo: (playerPepe previousNPositions: 2) lap.
-	self assert: playerPepe lastPosition squareNumber  equals: 1.
-	self assert: playerPepe lastPosition lap equals: 0
+	self assert: (playerPepe getPositionAt:2) squareNumber equals: 3.
+	self assert: (playerPepe getPositionAt:2) lap equals: 0.
+	playerPepe changePosition: (playerPepe getPositionAt:  1) squareNumber andLapsTo: (playerPepe getPositionAt:  1) lap.
+	self assert: (playerPepe getPositionAt:3) squareNumber  equals: 1.
+	self assert: (playerPepe getPositionAt:3) lap equals: 0

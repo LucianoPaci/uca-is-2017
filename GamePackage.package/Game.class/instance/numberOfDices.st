@@ -1,3 +1,0 @@
-accessing
-numberOfDices
-^dices size.

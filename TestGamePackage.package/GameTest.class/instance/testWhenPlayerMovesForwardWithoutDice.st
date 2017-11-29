@@ -13,8 +13,8 @@ testWhenPlayerMovesForwardWithoutDice
 		throwing: (OrderedCollection with: dice)
 		winningWhenCompleting: 1
 		withACardDeck: self aCollectionOfGameCards.
-	self assert: (game getPlayerAtIndex: 1) lastPosition squareNumber equals: 1.
+	self assert: (game getPlayerAtIndex: 1) positions last squareNumber equals: 1.
 	game move: (game getPlayerAtIndex: 1) positions: 5.
-	self assert: (game getPlayerAtIndex: 1) lastPosition squareNumber equals: 6.
+	self assert: (game getPlayerAtIndex: 1) positions last squareNumber equals: 6.
 	game move: (game getPlayerAtIndex: 1) positions: 2.
-	self assert: (game getPlayerAtIndex: 1) lastPosition squareNumber equals: 1
+	self assert: (game getPlayerAtIndex: 1) positions last squareNumber equals: 1

@@ -1,3 +1,0 @@
-accessing
-numberOfPlayers
-	^ players size

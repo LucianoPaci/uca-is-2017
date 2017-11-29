@@ -7,7 +7,7 @@ assertAPlayerCanPlayCards: aPlayer
 			movesToBeMade := movesToBeMade
 				+ (self throwsPermamentCardsProducingAnEffectOnADiceRollTo:aPlayer).
 			self move: aPlayer positions: movesToBeMade.
-			actualSquare := board squareAtPosition: aPlayer lastPosition squareNumber.
+			actualSquare := board squareAtPosition: (aPlayer positions last) squareNumber.
 			cardEffect := (self
 				throwsPermanentCardsAddingAnEffectOnASquareEffectTo: aPlayer).
 			actualSquare
@@ -16,7 +16,7 @@ assertAPlayerCanPlayCards: aPlayer
 				addingEffect: cardEffect.
 			self
 				throwsPotentiationCardsToASquare: actualSquare
-				to: aPlayer
+				affecting: aPlayer
 				withACard: cardEffect.
 			aPlayer emptyInstantCardsToBePlayed.
 			self checkIsAWinnerOfGame: aPlayer.

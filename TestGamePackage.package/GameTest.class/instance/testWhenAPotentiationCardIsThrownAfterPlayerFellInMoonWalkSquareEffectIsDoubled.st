@@ -38,8 +38,8 @@ testWhenAPotentiationCardIsThrownAfterPlayerFellInMoonWalkSquareEffectIsDoubled
 	self assert: playerJuanma cards size equals: 2.
 	game affect: playerJuanma withAnInstantCard: cardToAffectPlayer of: playerJuanma.
 	self assert: playerJuanma cards size equals: 1.
-	self assert: playerLucho lastPosition squareNumber equals: 3.
-	self assert: playerJuanma lastPosition squareNumber equals: 1.
+	self assert: playerLucho positions last squareNumber equals: 3.
+	self assert: playerJuanma positions last squareNumber equals: 1.
 	game nextTurnFor: playerJuanma.
-	self assert: playerLucho lastPosition squareNumber equals: 1.
-	self assert: playerJuanma lastPosition squareNumber equals: 4
+	self assert: playerLucho positions last squareNumber equals: 1.
+	self assert: playerJuanma positions last squareNumber equals: 4

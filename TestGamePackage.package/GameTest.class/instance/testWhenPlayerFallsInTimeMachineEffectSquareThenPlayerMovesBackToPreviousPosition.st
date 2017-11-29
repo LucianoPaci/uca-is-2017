@@ -14,8 +14,8 @@ testWhenPlayerFallsInTimeMachineEffectSquareThenPlayerMovesBackToPreviousPositio
 		throwing: (OrderedCollection with: dice)
 		winningWhenCompleting: 1
 		withACardDeck: self aCollectionOfGameCards.
-	self assert: playerLucho lastPosition squareNumber equals: 1.
+	self assert: playerLucho positions last squareNumber equals: 1.
 	game nextTurnFor: playerLucho.
-	self assert: playerLucho lastPosition squareNumber equals: 2.
+	self assert: playerLucho positions last squareNumber equals: 2.
 	game nextTurnFor: playerLucho.
-	self assert: playerLucho lastPosition squareNumber equals: 2
+	self assert: playerLucho positions last squareNumber equals: 2
