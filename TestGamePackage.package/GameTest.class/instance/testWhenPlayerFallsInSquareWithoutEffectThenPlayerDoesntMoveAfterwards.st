@@ -4,7 +4,7 @@ testWhenPlayerFallsInSquareWithoutEffectThenPlayerDoesntMoveAfterwards
 	playerLuchoHistory := OrderedCollection new.
 	playerLuchoHistory add: (PlayerPosition at: 1 withLaps: 0).
 	playerLucho := Player named: 'Lucho' withCards: self aCollectionOfGameCards removeFirst andPositionHistory: playerLuchoHistory.
-	squares := (1 to: 6) collect: [ :n | SquareWithoutEffect initialize ].
+	squares := (1 to: 6) collect: [ :n | SquareWithoutEffect initializate ].
 	board := Board definedSquares: squares.
 	dice := Dice faces: 6 obtainingValuesFrom: (FixedNumberSource providing: #(1 2 3 4 5 6)).
 	game := Game

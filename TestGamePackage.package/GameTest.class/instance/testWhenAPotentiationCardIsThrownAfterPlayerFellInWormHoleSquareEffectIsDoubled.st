@@ -3,9 +3,9 @@ testWhenAPotentiationCardIsThrownAfterPlayerFellInWormHoleSquareEffectIsDoubled
 	| playerLuchoHistory squares board diceOneFace collectionOfDices collectionOfPlayers playerLuchoDeck cardToAffectPlayer playerLucho laps gameDeck game |
 	playerLuchoHistory := OrderedCollection new.
 	playerLuchoHistory add: (PlayerPosition at: 1 withLaps: 0).
-	squares := (1 to: 16) collect: [ :n | SquareWithoutEffect initialize].
+	squares := (1 to: 16) collect: [ :n | SquareWithoutEffect initializate].
 	board := Board definedSquares: squares.
-	squares at: 10 put: (SquareWormHole initialize).
+	squares at: 10 put: (SquareWormHole initializate).
 	diceOneFace := Dice faces: 1 obtainingValuesFrom: (FixedNumberSource providing: #(9)).
 	collectionOfDices := OrderedCollection new.
 	collectionOfDices add: diceOneFace.

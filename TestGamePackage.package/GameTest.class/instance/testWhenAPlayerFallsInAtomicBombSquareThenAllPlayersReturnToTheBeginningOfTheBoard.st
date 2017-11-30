@@ -10,8 +10,8 @@ testWhenAPlayerFallsInAtomicBombSquareThenAllPlayersReturnToTheBeginningOfTheBoa
 	playerLannister := Player named: 'Lannister' withCards: self aCollectionOfGameCards removeFirst andPositionHistory: playerLannisterHistory.
 	playerStark := Player named: 'Stark' withCards: (self aCollectionOfGameCards removeAt: 2) andPositionHistory: playerStarkHistory.
 	playerSnow := Player named: 'Snow' withCards: (self aCollectionOfGameCards removeAt: 3) andPositionHistory: playerSnowHistory.
-	squares := (1 to: 8) collect: [ :n | SquareWithoutEffect initialize].
-	squares at: 6 put: (AtomicBombSquare initialize).
+	squares := (1 to: 8) collect: [ :n | SquareWithoutEffect initializate].
+	squares at: 6 put: (AtomicBombSquare initializate).
 	board := Board definedSquares: squares.
 	dice := Dice faces: 6 obtainingValuesFrom: (FixedNumberSource providing: #(1 2 3 4 5 6)).
 	game := Game
