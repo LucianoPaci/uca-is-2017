@@ -1,8 +1,9 @@
 {
 	"instance" : {
-		"testBoardCreationWithDefinedAmountOfSquares" : "juanMaDiMartino 11/29/2017 11:57",
-		"testRandomlyGeneratedBoardWithDefinedAmountOfSquares" : "juanMaDiMartino 11/29/2017 12:11",
-		"aCollectionOfBoardSquares" : "juanMaDiMartino 11/29/2017 12:09"
+		"testGeneratedBoardWithDefinedAmountOfSquares" : "juanMaDiMartino 11/29/2017 19:39",
+		"testBoardCreationWithDefinedAmountOfSquares" : "juanMaDiMartino 11/29/2017 17:13",
+		"testWhenSquareIsNotFoundInBoard" : "juanMaDiMartino 11/29/2017 19:37",
+		"aCollectionOfBoardSquares" : "juanMaDiMartino 11/29/2017 17:16"
 	},
 	"class" : { }
 }

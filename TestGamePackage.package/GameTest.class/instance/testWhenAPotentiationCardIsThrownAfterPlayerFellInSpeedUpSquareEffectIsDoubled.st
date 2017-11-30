@@ -3,9 +3,9 @@ testWhenAPotentiationCardIsThrownAfterPlayerFellInSpeedUpSquareEffectIsDoubled
 	| playerLuchoHistory squares board diceOneFace collectionOfDices collectionOfPlayers playerLuchoDeck cardToAffectPlayer playerLucho laps gameDeck game |
 	playerLuchoHistory := OrderedCollection new.
 	playerLuchoHistory add: (PlayerPosition at: 1 withLaps: 0).
-	squares := (1 to: 16) collect: [ :n | SquareWithoutEffect onPosition: n ].
+	squares := (1 to: 16) collect: [ :n | SquareWithoutEffect initialize].
 	board := Board definedSquares: squares.
-	squares at: 4 put: (SquareSpeedUp onPosition: 4).
+	squares at: 4 put: (SquareSpeedUp initialize).
 	diceOneFace := Dice faces: 1 obtainingValuesFrom: (FixedNumberSource providing: #(3)).
 	collectionOfDices := OrderedCollection new.
 	collectionOfDices add: diceOneFace.

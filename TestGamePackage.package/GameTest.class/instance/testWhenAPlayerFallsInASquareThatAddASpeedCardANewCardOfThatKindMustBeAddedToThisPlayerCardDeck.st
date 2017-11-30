@@ -8,7 +8,7 @@ testWhenAPlayerFallsInASquareThatAddASpeedCardANewCardOfThatKindMustBeAddedToThi
 		add: self aCollectionOfGameCards removeFirst;
 		add: (self aCollectionOfGameCards removeAt: 2).
 	playerLucho := Player named: 'Lucho' withCards: playerLuchoDeck andPositionHistory: playerLuchoHistory.
-	squares := (1 to: 3) collect: [ :n | SquareWithoutEffect onPosition: n ].
+	squares := (1 to: 3) collect: [ :n | SquareWithoutEffect initialize ].
 	squares at: 1 put: (SquareThatAddACard onPosition: 1 withACardToBeAdded: (self aCollectionOfGameCards removeAt: 5)).
 	squares at: 3 put: (SquareThatAddACard onPosition: 3 withACardToBeAdded: (self aCollectionOfGameCards removeAt: 6)).
 	board := Board definedSquares: squares.

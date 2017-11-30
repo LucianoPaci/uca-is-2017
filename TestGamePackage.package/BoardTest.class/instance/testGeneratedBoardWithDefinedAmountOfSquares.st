@@ -1,5 +1,5 @@
 tests
-testRandomlyGeneratedBoardWithDefinedAmountOfSquares
+testGeneratedBoardWithDefinedAmountOfSquares
 	| board squaresWithOutEffect squaresWornHole squaresSpeedUp squaresTimeMachine moonWalkSquares atomicBombSquares |
 	
 	board := Board definedSquares: self aCollectionOfBoardSquares .

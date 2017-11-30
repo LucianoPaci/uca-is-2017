@@ -1,8 +1,3 @@
 accessing
 squareAtPosition: aPosition
-	| indexOfPlayerCollection |
-	indexOfPlayerCollection := aPosition.
-	^ squares
-		detect: [ :square | indexOfPlayerCollection = square position ]
-		ifNone: [ Error
-				signal: ('No se encontro casillero para la posicion <1p>' expandMacrosWith: aPosition) ]
+	^ squares at: aPosition ifAbsent: [ GameFailed signal:'El casillero no se encuentra']
