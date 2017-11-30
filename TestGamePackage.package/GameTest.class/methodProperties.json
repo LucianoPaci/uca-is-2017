@@ -21,7 +21,7 @@
 		"testWhenAPlayerFallsInAtomicBombSquareThenAllPlayersReturnToTheBeginningOfTheBoard" : "juanMaDiMartino 11/29/2017 17:19",
 		"testWhenAPlayerFallsInASquareThatAddASpeedCardANewCardOfThatKindMustBeAddedToThisPlayerCardDeck" : "juanMaDiMartino 11/29/2017 17:18",
 		"testWhenACancellationCardIsThrownAPermanentCardMustBeRemovedFromAPlayer" : "juanMaDiMartino 11/29/2017 22:16",
-		"testWhenACancellationCardIsThrownAndThereIsNoPermanentCardInGameAnErrorMessageIsThrown" : "juanMaDiMartino 11/29/2017 22:39",
+		"testWhenACancellationCardIsThrownAndThereIsNoPermanentCardInGameAnErrorMessageIsThrown" : "juanMaDiMartino 11/29/2017 17:17",
 		"testAPlayerCanThrowAnInstantCardNotOnHisTurn" : "juanMaDiMartino 11/29/2017 17:16",
 		"testWhenAPlayerThrowsADampingCardASpeedCardAndAnOverloadingCardSevenPositionsMustBeMovedFromOrigin" : "juanMaDiMartino 11/29/2017 17:19",
 		"testWhenPlayerFallsInSpeedUpEffectSquareThenPlayerMovesFourPositionsForward" : "juanMaDiMartino 11/29/2017 17:23",
