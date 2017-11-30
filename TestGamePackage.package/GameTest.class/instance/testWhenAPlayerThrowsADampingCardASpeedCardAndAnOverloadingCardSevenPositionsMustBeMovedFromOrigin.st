@@ -3,8 +3,8 @@ testWhenAPlayerThrowsADampingCardASpeedCardAndAnOverloadingCardSevenPositionsMus
 	| squares board diceOneFace collectionOfDices collectionOfPlayers playerRaiden playerRaidenDeck playerRaidenHistory laps gameDeck game firstCardToAffectPlayer secondCardToAffectPlayer thirdCardToAffectPlayer |
 	playerRaidenHistory := OrderedCollection new.
 	playerRaidenHistory add: (PlayerPosition at: 1 withLaps: 0).
-	squares := (1 to: 10) collect: [ :n | SquareWithoutEffect onPosition: n ].
-	squares at: 4 put: (SquareSpeedUp onPosition: 4).
+	squares := (1 to: 10) collect: [ :n | SquareWithoutEffect initialize].
+	squares at: 4 put: (SquareSpeedUp initialize).
 	board := Board definedSquares: squares.
 	diceOneFace := Dice faces: 1 obtainingValuesFrom: (FixedNumberSource providing: #(4)).
 	collectionOfDices := OrderedCollection new.
@@ -36,5 +36,5 @@ testWhenAPlayerThrowsADampingCardASpeedCardAndAnOverloadingCardSevenPositionsMus
 	game affect: playerRaiden withAPermanentCard: thirdCardToAffectPlayer of: playerRaiden.
 	self assert: playerRaiden permanentCardsToBePlayed size equals: 3.
 	game nextTurnFor: playerRaiden.
-	self assert: (playerRaiden previousNPositions: 1) squareNumber equals: 4.
-	self assert: playerRaiden lastPosition squareNumber equals: 6
+	self assert: (playerRaiden getPositionAt: playerRaiden positions size -1) squareNumber equals: 4.
+	self assert: playerRaiden positions last squareNumber equals: 6

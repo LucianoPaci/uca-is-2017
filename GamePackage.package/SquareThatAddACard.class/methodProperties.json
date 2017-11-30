@@ -1,11 +1,10 @@
 {
 	"instance" : {
+		"initializedWithACardToBeAdded:" : "juanMaDiMartino 11/29/2017 17:12",
 		"provokesAPotentiationEffectInto:with:addingEffect:" : "juanMaDiMartino 11/14/2017 11:54",
-		"provokesAnEffectInto:with:addingEffect:" : "juanMaDiMartino 11/24/2017 15:30",
-		"initializedPosition:initializedWithACardToBeAdded:" : "juanMaDiMartino 11/24/2017 15:26",
-		"position" : "juanMartinDiMartino 10/29/2017 15:51"
+		"provokesAnEffectInto:with:addingEffect:" : "juanMaDiMartino 11/24/2017 15:30"
 	},
 	"class" : {
-		"onPosition:withACardToBeAdded:" : "juanMaDiMartino 11/24/2017 15:26"
+		"onPosition:withACardToBeAdded:" : "juanMaDiMartino 11/29/2017 17:18"
 	}
 }

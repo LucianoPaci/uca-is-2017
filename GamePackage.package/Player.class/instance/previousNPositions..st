@@ -1,3 +1,0 @@
-accessing
-previousNPositions: anAmountOfPositions
-	^ self assertPreviousNPositionItDoesntExist: anAmountOfPositions

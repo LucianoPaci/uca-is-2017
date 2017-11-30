@@ -4,8 +4,8 @@ testWhenPlayerFallsInWormHoleEffectSquareThenPlayerMovesFourPositionsBackwards
 	playerLuchoHistory := OrderedCollection new.
 	playerLuchoHistory add: (PlayerPosition at: 1 withLaps: 0).
 	playerLucho := Player named: 'Lucho' withCards: self aCollectionOfGameCards removeFirst andPositionHistory: playerLuchoHistory.
-	squares := (1 to: 10) collect: [ :n | SquareWithoutEffect onPosition: n ].
-	squares at: 7 put: (SquareWormHole onPosition: 7).
+	squares := (1 to: 10) collect: [ :n | SquareWithoutEffect initialize ].
+	squares at: 7 put: (SquareWormHole initialize).
 	board := Board definedSquares: squares.
 	dice := Dice faces: 3 obtainingValuesFrom: (FixedNumberSource providing: #(1 5 6)).
 	game := Game
@@ -14,8 +14,8 @@ testWhenPlayerFallsInWormHoleEffectSquareThenPlayerMovesFourPositionsBackwards
 		throwing: (OrderedCollection with: dice)
 		winningWhenCompleting: 1
 		withACardDeck: self aCollectionOfGameCards.
-	self assert: playerLucho lastPosition squareNumber equals: 1.
+	self assert: playerLucho positions last squareNumber equals: 1.
 	game nextTurnFor: playerLucho.
-	self assert: playerLucho lastPosition squareNumber equals: 2.
+	self assert: playerLucho positions last squareNumber equals: 2.
 	game nextTurnFor: playerLucho.
-	self assert: playerLucho lastPosition squareNumber equals: 3
+	self assert: playerLucho positions last squareNumber equals: 3

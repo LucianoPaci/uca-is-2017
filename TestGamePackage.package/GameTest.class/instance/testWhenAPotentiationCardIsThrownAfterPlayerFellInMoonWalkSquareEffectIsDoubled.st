@@ -5,9 +5,9 @@ testWhenAPotentiationCardIsThrownAfterPlayerFellInMoonWalkSquareEffectIsDoubled
 	playerJuanmaHistory add: (PlayerPosition at: 1 withLaps: 0).
 	playerLuchoHistory := OrderedCollection new.
 	playerLuchoHistory add: (PlayerPosition at: 3 withLaps: 0).
-	squares := (1 to: 16) collect: [ :n | SquareWithoutEffect onPosition: n ].
+	squares := (1 to: 16) collect: [ :n | SquareWithoutEffect initialize ].
 	board := Board definedSquares: squares.
-	squares at: 4 put: (MoonWalkSquare onPosition: 4 withEffect: -1).
+	squares at: 4 put: (MoonWalkSquare initializeWithEffect:  -1).
 	diceOneFace := Dice faces: 1 obtainingValuesFrom: (FixedNumberSource providing: #(3)).
 	collectionOfDices := OrderedCollection new.
 	collectionOfDices add: diceOneFace.
@@ -38,8 +38,8 @@ testWhenAPotentiationCardIsThrownAfterPlayerFellInMoonWalkSquareEffectIsDoubled
 	self assert: playerJuanma cards size equals: 2.
 	game affect: playerJuanma withAnInstantCard: cardToAffectPlayer of: playerJuanma.
 	self assert: playerJuanma cards size equals: 1.
-	self assert: playerLucho lastPosition squareNumber equals: 3.
-	self assert: playerJuanma lastPosition squareNumber equals: 1.
+	self assert: playerLucho positions last squareNumber equals: 3.
+	self assert: playerJuanma positions last squareNumber equals: 1.
 	game nextTurnFor: playerJuanma.
-	self assert: playerLucho lastPosition squareNumber equals: 1.
-	self assert: playerJuanma lastPosition squareNumber equals: 4
+	self assert: playerLucho positions last squareNumber equals: 1.
+	self assert: playerJuanma positions last squareNumber equals: 4

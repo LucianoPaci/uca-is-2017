@@ -5,9 +5,9 @@ testWhenAPotentiationCardIsThrownAfterPlayerFellInTimeMachineSquareEffectIsDoubl
 	playerJuanmaHistory add: (PlayerPosition at: 1 withLaps: 0).
 	playerLuchoHistory := OrderedCollection new.
 	playerLuchoHistory add: (PlayerPosition at: 1 withLaps: 0).
-	squares := (1 to: 16) collect: [ :n | SquareWithoutEffect onPosition: n ].
+	squares := (1 to: 16) collect: [ :n | SquareWithoutEffect initialize].
 	board := Board definedSquares: squares.
-	squares at: 4 put: (SquareTimeMachine onPosition: 4).
+	squares at: 4 put: (SquareTimeMachine initialize).
 	diceOneFace := Dice faces: 1 obtainingValuesFrom: (FixedNumberSource providing: #(1 1 1 1 1 1)).
 	collectionOfDices := OrderedCollection new.
 	collectionOfDices add: diceOneFace.
@@ -37,21 +37,21 @@ testWhenAPotentiationCardIsThrownAfterPlayerFellInTimeMachineSquareEffectIsDoubl
 		withACardDeck: gameDeck.
 	self assert: playerJuanma cards size equals: 2.
 	self assert: playerJuanma cards size equals: 2.
-	self assert: playerLucho lastPosition squareNumber equals: 1.
-	self assert: playerJuanma lastPosition squareNumber equals: 1.
+	self assert: playerLucho positions last squareNumber equals: 1.
+	self assert: playerJuanma positions last squareNumber equals: 1.
 	game nextTurnFor: playerJuanma.
-	self assert: playerLucho lastPosition squareNumber equals: 1.
-	self assert: playerJuanma lastPosition squareNumber equals: 2.
+	self assert: playerLucho positions last squareNumber equals: 1.
+	self assert: playerJuanma positions last squareNumber equals: 2.
 	game nextTurnFor: playerLucho.
-	self assert: playerJuanma lastPosition squareNumber equals: 2.
-	self assert: playerLucho lastPosition squareNumber equals: 2.
+	self assert: playerJuanma positions last squareNumber equals: 2.
+	self assert: playerLucho positions last squareNumber equals: 2.
 	game nextTurnFor: playerJuanma.
-	self assert: playerJuanma lastPosition squareNumber equals: 3.
-	self assert: playerLucho lastPosition squareNumber equals: 2.
+	self assert: playerJuanma positions last squareNumber equals: 3.
+	self assert: playerLucho positions last squareNumber equals: 2.
 	game nextTurnFor: playerLucho.
-	self assert: playerLucho lastPosition squareNumber equals: 3.
-	self assert: playerJuanma lastPosition squareNumber equals: 3.
+	self assert: playerLucho positions last squareNumber equals: 3.
+	self assert: playerJuanma positions last squareNumber equals: 3.
 	game affect: playerJuanma withAnInstantCard: cardToAffectPlayer of: playerJuanma.
 	game nextTurnFor: playerJuanma.
-	self assert: playerJuanma lastPosition squareNumber equals: 3.
+	self assert: playerJuanma positions last squareNumber equals: 3.
 	self assert: playerJuanma instantCardsToBePlayed  size equals: 0

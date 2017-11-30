@@ -1,3 +1,0 @@
-accessing
-lastPosition
-	^ (positions) last 

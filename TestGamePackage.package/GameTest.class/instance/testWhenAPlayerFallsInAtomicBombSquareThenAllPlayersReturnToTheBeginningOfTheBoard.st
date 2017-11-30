@@ -10,8 +10,8 @@ testWhenAPlayerFallsInAtomicBombSquareThenAllPlayersReturnToTheBeginningOfTheBoa
 	playerLannister := Player named: 'Lannister' withCards: self aCollectionOfGameCards removeFirst andPositionHistory: playerLannisterHistory.
 	playerStark := Player named: 'Stark' withCards: (self aCollectionOfGameCards removeAt: 2) andPositionHistory: playerStarkHistory.
 	playerSnow := Player named: 'Snow' withCards: (self aCollectionOfGameCards removeAt: 3) andPositionHistory: playerSnowHistory.
-	squares := (1 to: 8) collect: [ :n | SquareWithoutEffect onPosition: n ].
-	squares at: 6 put: (AtomicBombSquare onPosition: 6).
+	squares := (1 to: 8) collect: [ :n | SquareWithoutEffect initialize].
+	squares at: 6 put: (AtomicBombSquare initialize).
 	board := Board definedSquares: squares.
 	dice := Dice faces: 6 obtainingValuesFrom: (FixedNumberSource providing: #(1 2 3 4 5 6)).
 	game := Game
@@ -20,20 +20,20 @@ testWhenAPlayerFallsInAtomicBombSquareThenAllPlayersReturnToTheBeginningOfTheBoa
 		throwing: (OrderedCollection with: dice)
 		winningWhenCompleting: 1
 		withACardDeck: self aCollectionOfGameCards.
-	self assert: playerLannister lastPosition squareNumber equals: 1.
-	self assert: playerStark lastPosition squareNumber equals: 1.
-	self assert: playerSnow lastPosition squareNumber equals: 1.
+	self assert: playerLannister positions last squareNumber equals: 1.
+	self assert: playerStark positions last squareNumber equals: 1.
+	self assert: playerSnow positions last squareNumber equals: 1.
 	game nextTurnFor: playerLannister.
-	self assert: playerLannister lastPosition squareNumber equals: 2.
+	self assert: playerLannister positions last squareNumber equals: 2.
 	game nextTurnFor: playerStark.
-	self assert: playerStark lastPosition squareNumber equals: 3.
+	self assert: playerStark positions last squareNumber equals: 3.
 	game nextTurnFor: playerSnow.
-	self assert: playerSnow lastPosition squareNumber equals: 4.
+	self assert: playerSnow positions last squareNumber equals: 4.
 	game nextTurnFor: playerLannister.
 	self
-		assert: playerLannister lastPosition squareNumber equals: 1;
-		assert: playerLannister lastPosition lap equals: 0;
-		assert: playerStark lastPosition squareNumber equals: 1;
-		assert: playerStark lastPosition lap equals: 0;
-		assert: playerSnow lastPosition squareNumber equals: 1;
-		assert: playerSnow lastPosition lap equals: 0
+		assert: playerLannister positions last squareNumber equals: 1;
+		assert: playerLannister positions last lap equals: 0;
+		assert: playerStark positions last squareNumber equals: 1;
+		assert: playerStark positions last lap equals: 0;
+		assert: playerSnow positions last squareNumber equals: 1;
+		assert: playerSnow positions last lap equals: 0

@@ -12,7 +12,7 @@ testWhenGameCardDeckDoesntHaveACardOfAParticularKind
 		add: self aCollectionOfGameCards removeFirst;
 		add: (self aCollectionOfGameCards removeAt: 2).
 	playerLucho := Player named: 'Lucho' withCards: playerLuchoDeck andPositionHistory: playerLuchoHistory.
-	squares := (1 to: 8) collect: [ :n | SquareWithoutEffect onPosition: n ].
+	squares := (1 to: 8) collect: [ :n | SquareWithoutEffect initialize].
 	board := Board definedSquares: squares.
 	dice := Dice faces: 6.
 	game := Game

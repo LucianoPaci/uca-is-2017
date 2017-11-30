@@ -1,9 +1,8 @@
 {
 	"instance" : {
-		"provokesAnEffectInto:with:addingEffect:" : "juanMaDiMartino 11/25/2017 07:49",
-		"initializedPosition:" : "juanMartinDiMartino 10/29/2017 16:34",
-		"position" : "juanMartinDiMartino 10/29/2017 15:51",
-		"provokesAPotentiationEffectInto:with:addingEffect:" : "juanMaDiMartino 11/25/2017 07:49"
+		"initialized" : "juanMaDiMartino 11/29/2017 17:12",
+		"provokesAPotentiationEffectInto:with:addingEffect:" : "juanMaDiMartino 11/25/2017 07:49",
+		"provokesAnEffectInto:with:addingEffect:" : "juanMaDiMartino 11/25/2017 07:49"
 	},
 	"class" : { }
 }
