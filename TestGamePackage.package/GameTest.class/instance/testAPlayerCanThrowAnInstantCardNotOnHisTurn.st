@@ -5,7 +5,7 @@ testAPlayerCanThrowAnInstantCardNotOnHisTurn
 	playerJuanmaHistory add: (PlayerPosition at: 1 withLaps: 0).
 	playerLuchoHistory := OrderedCollection new.
 	playerLuchoHistory add: (PlayerPosition at: 1 withLaps: 0).
-	squares := (1 to: 8) collect: [ :n | SquareWithoutEffect onPosition: n ].
+	squares := (1 to: 8) collect: [ :n | SquareWithoutEffect initialize].
 	board := Board definedSquares: squares.
 	diceEightFaces := Dice faces: 8 obtainingValuesFrom: (FixedNumberSource providing: #(1 2 3 4 5 6 7 8)).
 	collectionOfDices := OrderedCollection new.
@@ -35,7 +35,7 @@ testAPlayerCanThrowAnInstantCardNotOnHisTurn
 		throwing: collectionOfDices
 		winningWhenCompleting: laps
 		withACardDeck: gameDeck.
-	self assert: playerLucho numberOfCardsInDeck equals: 2.
-	playerLucho affect: playerJuanma withAnInstantCard: cardToAffectPlayer into: game.
+	self assert: playerLucho cards size equals: 2.
+	game affect: playerJuanma withAnInstantCard: cardToAffectPlayer of: playerLucho.
 	self assert: playerLucho ~= game expectedPlayer.
-	self assert: playerLucho numberOfCardsInDeck equals: 1
+	self assert: playerLucho cards size equals: 1

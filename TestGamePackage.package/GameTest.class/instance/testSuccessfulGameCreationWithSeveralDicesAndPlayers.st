@@ -1,6 +1,6 @@
 playing
 testSuccessfulGameCreationWithSeveralDicesAndPlayers
-	| playerScorpion playerRaiden board diceSixFaces diceNineFaces game laps collectionOfPlayers dices squareAtomicBomb squareWormHole squares playerScorpionHistory playerRaidenHistory |
+	| playerScorpion playerRaiden board diceSixFaces diceNineFaces game laps collectionOfPlayers dices squareAtomicBomb squareWormHole squares playerScorpionHistory playerRaidenHistory | 
 	playerScorpionHistory := OrderedCollection new.
 	playerScorpionHistory add: (PlayerPosition at: 1 withLaps: 0).
 	playerRaidenHistory := OrderedCollection new.
@@ -30,8 +30,8 @@ testSuccessfulGameCreationWithSeveralDicesAndPlayers
 		winningWhenCompleting: laps
 		withACardDeck: self aCollectionOfGameCards.
 	self
-		assert: game numberOfPlayers equals: 2;
-		assert: game numberOfDices equals: 2;
-		assert: game board numberOfSquares equals: 2;
+		assert: game players size equals: 2;
+		assert: game dices size equals: 2;
+		assert: game board squares size equals: 2;
 		assert: game board equals: board;
 		assert: game laps equals: laps

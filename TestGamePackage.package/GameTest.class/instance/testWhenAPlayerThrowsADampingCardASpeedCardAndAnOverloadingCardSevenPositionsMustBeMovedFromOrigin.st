@@ -3,8 +3,8 @@ testWhenAPlayerThrowsADampingCardASpeedCardAndAnOverloadingCardSevenPositionsMus
 	| squares board diceOneFace collectionOfDices collectionOfPlayers playerRaiden playerRaidenDeck playerRaidenHistory laps gameDeck game firstCardToAffectPlayer secondCardToAffectPlayer thirdCardToAffectPlayer |
 	playerRaidenHistory := OrderedCollection new.
 	playerRaidenHistory add: (PlayerPosition at: 1 withLaps: 0).
-	squares := (1 to: 10) collect: [ :n | SquareWithoutEffect onPosition: n ].
-	squares at: 4 put: (SquareSpeedUp onPosition: 4).
+	squares := (1 to: 10) collect: [ :n | SquareWithoutEffect initialize].
+	squares at: 4 put: (SquareSpeedUp initialize).
 	board := Board definedSquares: squares.
 	diceOneFace := Dice faces: 1 obtainingValuesFrom: (FixedNumberSource providing: #(4)).
 	collectionOfDices := OrderedCollection new.
@@ -31,10 +31,10 @@ testWhenAPlayerThrowsADampingCardASpeedCardAndAnOverloadingCardSevenPositionsMus
 		throwing: collectionOfDices
 		winningWhenCompleting: laps
 		withACardDeck: gameDeck.
-	playerRaiden affect: playerRaiden withAPermanentCard: firstCardToAffectPlayer into: game.
-	playerRaiden affect: playerRaiden withAPermanentCard: secondCardToAffectPlayer into: game.
-	playerRaiden affect: playerRaiden withAPermanentCard: thirdCardToAffectPlayer into: game.
-	self assert: playerRaiden numberOfPermanentCardsToBePlayed equals: 3.
+	game affect: playerRaiden withAPermanentCard: firstCardToAffectPlayer of: playerRaiden.
+	game affect: playerRaiden withAPermanentCard: secondCardToAffectPlayer of: playerRaiden.
+	game affect: playerRaiden withAPermanentCard: thirdCardToAffectPlayer of: playerRaiden.
+	self assert: playerRaiden permanentCardsToBePlayed size equals: 3.
 	game nextTurnFor: playerRaiden.
-	self assert: (playerRaiden previousNPositions: 1) squareNumber equals: 4.
-	self assert: playerRaiden currentPosition equals: 6
+	self assert: (playerRaiden getPositionAt: playerRaiden positions size -1) squareNumber equals: 4.
+	self assert: playerRaiden positions last squareNumber equals: 6

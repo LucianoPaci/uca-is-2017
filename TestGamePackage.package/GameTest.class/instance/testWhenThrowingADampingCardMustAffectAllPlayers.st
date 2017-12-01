@@ -7,7 +7,7 @@ testWhenThrowingADampingCardMustAffectAllPlayers
 	playerRaidenHistory add: (PlayerPosition at: 1 withLaps: 0).
 	playerJuanmaHistory := OrderedCollection new.
 	playerJuanmaHistory add: (PlayerPosition at: 1 withLaps: 0).
-	squares := (1 to: 8) collect: [ :n | SquareWithoutEffect onPosition: n ].
+	squares := (1 to: 8) collect: [ :n | SquareWithoutEffect initialize].
 	board := Board definedSquares: squares.
 	diceEightFaces := Dice faces: 8 obtainingValuesFrom: (FixedNumberSource providing: #(1 2 3 4 5 6 7 8)).
 	diceSixFaces := Dice faces: 6 obtainingValuesFrom: (FixedNumberSource providing: #(1 2 3 4 5 6)).
@@ -47,11 +47,11 @@ testWhenThrowingADampingCardMustAffectAllPlayers
 		winningWhenCompleting: laps
 		withACardDeck: gameDeck.
 	game nextTurnFor: playerScorpion.
-	self assert: playerScorpion numberOfPermanentCardsToBePlayed equals: 0.
-	self assert: playerRaiden numberOfPermanentCardsToBePlayed equals: 0.
-	self assert: playerJuanma numberOfPermanentCardsToBePlayed equals: 0.
-	playerRaiden affect: playerScorpion withAPermanentCard: cardToAffectPlayer into: game.
-	self assert: playerRaiden numberOfCardsInDeck equals: 1.
-	self assert: playerScorpion numberOfPermanentCardsToBePlayed equals: 1.
-	self assert: playerRaiden numberOfPermanentCardsToBePlayed equals: 1.
-	self assert: playerJuanma numberOfPermanentCardsToBePlayed equals: 1
+	self assert: playerScorpion permanentCardsToBePlayed size equals: 0.
+	self assert: playerRaiden permanentCardsToBePlayed size equals: 0.
+	self assert: playerJuanma permanentCardsToBePlayed size equals: 0.
+	game affect: playerScorpion withAPermanentCard: cardToAffectPlayer of: playerRaiden.
+	self assert: playerRaiden cards size equals: 1.
+	self assert: playerScorpion permanentCardsToBePlayed size equals: 1.
+	self assert: playerRaiden permanentCardsToBePlayed size equals: 1.
+	self assert: playerJuanma permanentCardsToBePlayed size equals: 1

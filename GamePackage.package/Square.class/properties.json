@@ -6,8 +6,7 @@
 	"pools" : [ ],
 	"classvars" : [ ],
 	"instvars" : [
-		"name",
-		"position"
+		"name"
 	],
 	"name" : "Square",
 	"type" : "normal"

@@ -1,7 +1,7 @@
 playing
 assert: aPlayer has: newLap andZeroValue: newPosition
-	(newPosition % board numberOfSquares) abs == 0
+	(newPosition % board squares size) abs == 0
 		ifTrue: [ aPlayer changePosition: 1 andLapsTo: newLap ]
 		ifFalse: [ aPlayer
-				changePosition: (newPosition % board numberOfSquares) abs
+				changePosition: (newPosition % board squares size) abs
 				andLapsTo: newLap ]

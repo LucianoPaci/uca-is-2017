@@ -3,9 +3,9 @@ testWhenAPotentiationCardIsThrownAfterPlayerFellInSpeedUpSquareEffectIsDoubled
 	| playerLuchoHistory squares board diceOneFace collectionOfDices collectionOfPlayers playerLuchoDeck cardToAffectPlayer playerLucho laps gameDeck game |
 	playerLuchoHistory := OrderedCollection new.
 	playerLuchoHistory add: (PlayerPosition at: 1 withLaps: 0).
-	squares := (1 to: 16) collect: [ :n | SquareWithoutEffect onPosition: n ].
+	squares := (1 to: 16) collect: [ :n | SquareWithoutEffect initialize].
 	board := Board definedSquares: squares.
-	squares at: 4 put: (SquareSpeedUp onPosition: 4).
+	squares at: 4 put: (SquareSpeedUp initialize).
 	diceOneFace := Dice faces: 1 obtainingValuesFrom: (FixedNumberSource providing: #(3)).
 	collectionOfDices := OrderedCollection new.
 	collectionOfDices add: diceOneFace.
@@ -28,9 +28,9 @@ testWhenAPotentiationCardIsThrownAfterPlayerFellInSpeedUpSquareEffectIsDoubled
 		throwing: collectionOfDices
 		winningWhenCompleting: laps
 		withACardDeck: gameDeck.
-	self assert: playerLucho numberOfCardsInDeck equals: 2.
-	playerLucho affect: playerLucho withAnInstantCard: cardToAffectPlayer into: game.
-	self assert: playerLucho numberOfCardsInDeck equals: 1.
-	self assert: playerLucho currentPosition equals: 1.
+	self assert: playerLucho cards size equals: 2.
+	game  affect: playerLucho withAnInstantCard: cardToAffectPlayer of: playerLucho.
+	self assert: playerLucho cards size equals: 1.
+	self assert: playerLucho positions last squareNumber equals: 1.
 	game nextTurnFor: playerLucho.
-	self assert: playerLucho currentPosition equals: 12
+	self assert: playerLucho positions last squareNumber equals: 12

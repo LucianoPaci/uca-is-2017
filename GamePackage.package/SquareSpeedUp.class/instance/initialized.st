@@ -1,0 +1,5 @@
+initialization
+initialized
+	name:= 'SpeedUp'.
+	
+	 

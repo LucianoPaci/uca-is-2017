@@ -1,6 +1,6 @@
 cards tests
 testWhenGameCardDeckDoesntHaveACardOfAParticularKind
-	| board game playerLucho squares dice gameDeck playerLuchoDeck playerLuchoHistory |
+	| board game playerLucho squares dice gameDeck playerLuchoDeck playerLuchoHistory cardNotInDeck |
 	playerLuchoHistory := OrderedCollection new.
 	playerLuchoHistory add: (PlayerPosition at: 1 withLaps: 0).
 	gameDeck := OrderedCollection new.
@@ -12,7 +12,7 @@ testWhenGameCardDeckDoesntHaveACardOfAParticularKind
 		add: self aCollectionOfGameCards removeFirst;
 		add: (self aCollectionOfGameCards removeAt: 2).
 	playerLucho := Player named: 'Lucho' withCards: playerLuchoDeck andPositionHistory: playerLuchoHistory.
-	squares := (1 to: 8) collect: [ :n | SquareWithoutEffect onPosition: n ].
+	squares := (1 to: 8) collect: [ :n | SquareWithoutEffect initialize].
 	board := Board definedSquares: squares.
 	dice := Dice faces: 6.
 	game := Game
@@ -21,4 +21,5 @@ testWhenGameCardDeckDoesntHaveACardOfAParticularKind
 		throwing: (OrderedCollection with: Dice)
 		winningWhenCompleting: 1
 		withACardDeck: gameDeck.
-	self should: [ game removeACardFromDeck: CardDamping ] raise: GameFailed
+	cardNotInDeck := CardDamping named: 'CardDamping3'.
+	self should: [ game removeACardFromDeck: cardNotInDeck ] raise: GameFailed
