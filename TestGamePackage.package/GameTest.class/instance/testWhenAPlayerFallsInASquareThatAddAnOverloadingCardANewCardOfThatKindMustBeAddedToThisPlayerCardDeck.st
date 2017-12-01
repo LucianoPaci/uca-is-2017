@@ -11,7 +11,7 @@ testWhenAPlayerFallsInASquareThatAddAnOverloadingCardANewCardOfThatKindMustBeAdd
 		named: 'Lucho'
 		withCards: playerLuchoDeck
 		andPositionHistory: playerLuchoHistory.
-	squares := (1 to: 3) collect: [ :n | SquareWithoutEffect initialized ].
+	squares := (1 to: 3) collect: [ :n | SquareWithoutEffect initialize ].
 	squares
 		at: 1
 		put:

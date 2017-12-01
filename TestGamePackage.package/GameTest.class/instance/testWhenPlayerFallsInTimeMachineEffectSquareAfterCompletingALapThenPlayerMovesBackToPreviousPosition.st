@@ -4,8 +4,8 @@ testWhenPlayerFallsInTimeMachineEffectSquareAfterCompletingALapThenPlayerMovesBa
 	playerHistory := OrderedCollection new.
 	playerHistory add: (PlayerPosition at: 1 withLaps: 0).
 	playerLucho := Player named: 'Lucho' withCards: self aCollectionOfGameCards removeFirst andPositionHistory: playerHistory.
-	squares := (1 to: 3) collect: [ :n | SquareWithoutEffect initialized ].
-	squares at: 2 put: (SquareTimeMachine initialized).
+	squares := (1 to: 3) collect: [ :n | SquareWithoutEffect initialize ].
+	squares at: 2 put: (SquareTimeMachine initialize).
 	board := Board definedSquares: squares.
 	dice := Dice faces: 2 obtainingValuesFrom: (FixedNumberSource providing: #(4 2)).
 	game := Game

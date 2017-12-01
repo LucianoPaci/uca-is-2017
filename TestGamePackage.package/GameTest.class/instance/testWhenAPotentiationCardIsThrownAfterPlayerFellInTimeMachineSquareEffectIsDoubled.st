@@ -5,9 +5,9 @@ testWhenAPotentiationCardIsThrownAfterPlayerFellInTimeMachineSquareEffectIsDoubl
 	playerJuanmaHistory add: (PlayerPosition at: 1 withLaps: 0).
 	playerLuchoHistory := OrderedCollection new.
 	playerLuchoHistory add: (PlayerPosition at: 1 withLaps: 0).
-	squares := (1 to: 16) collect: [ :n | SquareWithoutEffect initialized].
+	squares := (1 to: 16) collect: [ :n | SquareWithoutEffect initialize].
 	board := Board definedSquares: squares.
-	squares at: 4 put: (SquareTimeMachine initialized).
+	squares at: 4 put: (SquareTimeMachine initialize).
 	diceOneFace := Dice faces: 1 obtainingValuesFrom: (FixedNumberSource providing: #(1 1 1 1 1 1)).
 	collectionOfDices := OrderedCollection new.
 	collectionOfDices add: diceOneFace.
