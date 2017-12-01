@@ -11,7 +11,7 @@ testWhenAPlayerFallsInASquareThatAddACancellationCardANewCardOfThatKindMustBeAdd
 		named: 'Lucho'
 		withCards: playerLuchoDeck
 		andPositionHistory: playerLuchoHistory.
-	squares := (1 to: 3) collect: [ :n | SquareWithoutEffect initialize ].
+	squares := (1 to: 3) collect: [ :n | SquareWithoutEffect initialized ].
 	squares
 		at: 1
 		put:

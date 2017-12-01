@@ -7,7 +7,7 @@ testWhenPlayerFallsInMoonWalkEffectSquareThenTheRemainingPlayersMoveNPositionsBa
 	playerJuanmaHistory add: (PlayerPosition at: 1 withLaps: 0).
 	playerLucho := Player named: 'Lucho' withCards: self aCollectionOfGameCards removeFirst andPositionHistory: playerLuchoHistory.
 	playerJuanma := Player named: 'Juanma' withCards: (self aCollectionOfGameCards removeAt: 2) andPositionHistory: playerJuanmaHistory.
-	squares := (1 to: 10) collect: [ :n | SquareWithoutEffect initialize ].
+	squares := (1 to: 10) collect: [ :n | SquareWithoutEffect initialized ].
 	squares at: 7 put: (MoonWalkSquare initializeWithEffect: -6).
 	board := Board definedSquares: squares.
 	dice := Dice faces: 3 obtainingValuesFrom: (FixedNumberSource providing: #(1 7 5)).
