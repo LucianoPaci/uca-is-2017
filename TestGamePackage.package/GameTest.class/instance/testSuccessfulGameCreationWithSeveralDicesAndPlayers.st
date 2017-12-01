@@ -1,6 +1,6 @@
 playing
 testSuccessfulGameCreationWithSeveralDicesAndPlayers
-	| playerScorpion playerRaiden board diceSixFaces diceNineFaces game laps collectionOfPlayers dices squareAtomicBomb squareWormHole squares playerScorpionHistory playerRaidenHistory |
+	| playerScorpion playerRaiden board diceSixFaces diceNineFaces game laps collectionOfPlayers dices squareAtomicBomb squareWormHole squares playerScorpionHistory playerRaidenHistory | 
 	playerScorpionHistory := OrderedCollection new.
 	playerScorpionHistory add: (PlayerPosition at: 1 withLaps: 0).
 	playerRaidenHistory := OrderedCollection new.

@@ -1,4 +1,4 @@
-tests
+cards tests
 testWhenAPotentiationCardIsThrownAfterPlayerFellInMoonWalkSquareEffectIsDoubled
 	| playerJuanmaHistory squares board diceOneFace collectionOfDices collectionOfPlayers playerJuanmaDeck cardToAffectPlayer playerJuanma laps gameDeck game playerLuchoHistory playerLuchoDeck playerLucho |
 	playerJuanmaHistory := OrderedCollection new.

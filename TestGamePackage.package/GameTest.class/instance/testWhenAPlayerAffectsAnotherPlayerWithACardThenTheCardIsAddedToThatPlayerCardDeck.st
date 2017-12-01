@@ -1,11 +1,11 @@
-tests
+cards tests
 testWhenAPlayerAffectsAnotherPlayerWithACardThenTheCardIsAddedToThatPlayerCardDeck
 	| squares board diceEightFaces diceSixFaces collectionOfDices collectionOfPlayers playerScorpion playerRaiden laps game cardToAffectPlayer playerScorpionDeck playerRaidenDeck gameDeck playerScorpionHistory playerRaidenHistory |
 	playerScorpionHistory := OrderedCollection new.
 	playerScorpionHistory add: (PlayerPosition at: 1 withLaps: 0).
 	playerRaidenHistory := OrderedCollection new.
 	playerRaidenHistory add: (PlayerPosition at: 1 withLaps: 0).
-	squares := (1 to: 8) collect: [ :n | SquareWithoutEffect initialize].
+	squares := (1 to: 8) collect: [ :n | SquareWithoutEffect initialized].
 	board := Board definedSquares: squares.
 	diceEightFaces := Dice faces: 8 obtainingValuesFrom: (FixedNumberSource providing: #(1 2 3 4 5 6 7 8)).
 	diceSixFaces := Dice faces: 6 obtainingValuesFrom: (FixedNumberSource providing: #(1 2 3 4 5 6)).
