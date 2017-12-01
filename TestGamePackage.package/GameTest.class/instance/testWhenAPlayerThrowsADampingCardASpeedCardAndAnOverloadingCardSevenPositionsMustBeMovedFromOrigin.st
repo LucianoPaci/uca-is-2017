@@ -3,8 +3,8 @@ testWhenAPlayerThrowsADampingCardASpeedCardAndAnOverloadingCardSevenPositionsMus
 	| squares board diceOneFace collectionOfDices collectionOfPlayers playerRaiden playerRaidenDeck playerRaidenHistory laps gameDeck game firstCardToAffectPlayer secondCardToAffectPlayer thirdCardToAffectPlayer |
 	playerRaidenHistory := OrderedCollection new.
 	playerRaidenHistory add: (PlayerPosition at: 1 withLaps: 0).
-	squares := (1 to: 10) collect: [ :n | SquareWithoutEffect initialize].
-	squares at: 4 put: (SquareSpeedUp initialize).
+	squares := (1 to: 10) collect: [ :n | SquareWithoutEffect initialized].
+	squares at: 4 put: (SquareSpeedUp initialized).
 	board := Board definedSquares: squares.
 	diceOneFace := Dice faces: 1 obtainingValuesFrom: (FixedNumberSource providing: #(4)).
 	collectionOfDices := OrderedCollection new.

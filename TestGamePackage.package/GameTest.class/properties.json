@@ -2,10 +2,7 @@
 	"commentStamp" : "<historical>",
 	"super" : "TestCase",
 	"category" : "TestGamePackage",
-	"classinstvars" : [
-		"player",
-		"dice"
-	],
+	"classinstvars" : [ ],
 	"pools" : [ ],
 	"classvars" : [ ],
 	"instvars" : [ ],

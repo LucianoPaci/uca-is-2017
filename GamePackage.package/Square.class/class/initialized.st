@@ -1,3 +1,3 @@
 instance creation
-initialize
+initialized
 	^self new initialized

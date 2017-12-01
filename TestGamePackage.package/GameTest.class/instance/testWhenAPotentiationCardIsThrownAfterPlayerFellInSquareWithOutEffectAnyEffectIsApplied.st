@@ -3,7 +3,7 @@ testWhenAPotentiationCardIsThrownAfterPlayerFellInSquareWithOutEffectAnyEffectIs
 	| playerLuchoHistory squares board diceOneFace collectionOfDices collectionOfPlayers playerLuchoDeck cardToAffectPlayer playerLucho laps gameDeck game |
 	playerLuchoHistory := OrderedCollection new.
 	playerLuchoHistory add: (PlayerPosition at: 1 withLaps: 0).
-	squares := (1 to: 16) collect: [ :n | SquareWithoutEffect initialize].
+	squares := (1 to: 16) collect: [ :n | SquareWithoutEffect initialized].
 	board := Board definedSquares: squares.
 	diceOneFace := Dice faces: 1 obtainingValuesFrom: (FixedNumberSource providing: #(1)).
 	collectionOfDices := OrderedCollection new.
