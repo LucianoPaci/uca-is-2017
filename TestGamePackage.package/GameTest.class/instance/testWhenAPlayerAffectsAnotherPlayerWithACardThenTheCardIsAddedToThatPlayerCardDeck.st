@@ -1,4 +1,4 @@
-tests
+cards tests
 testWhenAPlayerAffectsAnotherPlayerWithACardThenTheCardIsAddedToThatPlayerCardDeck
 	| squares board diceEightFaces diceSixFaces collectionOfDices collectionOfPlayers playerScorpion playerRaiden laps game cardToAffectPlayer playerScorpionDeck playerRaidenDeck gameDeck playerScorpionHistory playerRaidenHistory |
 	playerScorpionHistory := OrderedCollection new.
