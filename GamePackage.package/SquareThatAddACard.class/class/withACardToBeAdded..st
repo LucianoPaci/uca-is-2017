@@ -1,3 +1,3 @@
 instance creation
-onPosition: aPosition withACardToBeAdded: aCard
+withACardToBeAdded: aCard
 	^self new initializedWithACardToBeAdded: aCard.

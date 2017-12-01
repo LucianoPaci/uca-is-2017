@@ -1,7 +1,7 @@
 playing
 testGameIsPlayedUntilAWinnerIsDeclared
 	| playerScorpion playerRaiden game collectionOfDices board laps collectionOfPlayers squares playerScorpionHistory playerRaidenHistory |
-	squares := (1 to: 10) collect: [ :n | SquareWithoutEffect initializate ].
+	squares := (1 to: 10) collect: [ :n | SquareWithoutEffect initialize ].
 	board := Board definedSquares: squares.
 	collectionOfDices := OrderedCollection new.
 	collectionOfDices
