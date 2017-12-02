@@ -2,7 +2,7 @@
 	"instance" : {
 		"initializedWithAName:" : "juanMaDiMartino 11/23/2017 16:18",
 		"isEqualTo:" : "juanMaDiMartino 11/24/2017 16:15",
-		"duplicatesAnEffectFrom:toAPlayer:fromAGame:withPermanentCardEffects:" : "juanMaDiMartino 11/23/2017 16:34",
+		"duplicatesAnEffectOf:to:from:with:" : "LucianoPaci 12/2/2017 19:33",
 		"removePermanentCardFrom:" : "juanMaDiMartino 11/23/2017 16:23"
 	},
 	"class" : {

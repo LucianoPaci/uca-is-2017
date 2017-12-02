@@ -1,7 +1,7 @@
 {
 	"instance" : {
 		"testPlayerCreationWithNameAndStartingPositionAndStartingLapsTravelled" : "juanMaDiMartino 12/2/2017 13:02",
-		"testWhenAPlayerMovesTwoPositionsBackLapsTravelledAndCurrentPositionMustBeUpdated" : "juanMaDiMartino 12/2/2017 16:12",
+		"testWhenAPlayerMovesTwoPositionsBackwardsThenLapsTravelledAndCurrentPositionMustBeUpdated" : "LucianoPaci 12/2/2017 19:27",
 		"testWhenAPlayerIsCreatedWithAnEmptyName" : "juanMaDiMartino 12/2/2017 16:02",
 		"testWhenAPlayerIsCreatedWithACardDeckWithASizeNotEqualsTo2" : "juanMaDiMartino 12/2/2017 16:15"
 	},

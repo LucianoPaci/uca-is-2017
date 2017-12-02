@@ -1,5 +1,5 @@
 tests
-testWhenACardIsEqualsToAnotherCard
+testWhenACardIsEqualToAnotherCard
 	| cardDamping cardCancellation |
 	cardDamping := CardDamping named: 'CardDamping1'.
 	cardCancellation := CardCancellation named: 'CardCancellation1'.

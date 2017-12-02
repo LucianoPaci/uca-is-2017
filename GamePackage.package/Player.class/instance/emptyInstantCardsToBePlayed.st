@@ -1,5 +1,6 @@
 use of cards
 emptyInstantCardsToBePlayed
-| emptyCollection |
+| emptyCollection | 
 emptyCollection := OrderedCollection new.
 instantCardsToBePlayed := emptyCollection.
+

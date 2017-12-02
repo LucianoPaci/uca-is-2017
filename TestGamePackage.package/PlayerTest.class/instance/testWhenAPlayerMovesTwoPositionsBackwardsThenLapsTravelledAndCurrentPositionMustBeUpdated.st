@@ -1,5 +1,5 @@
 tests
-testWhenAPlayerMovesTwoPositionsBackLapsTravelledAndCurrentPositionMustBeUpdated
+testWhenAPlayerMovesTwoPositionsBackwardsThenLapsTravelledAndCurrentPositionMustBeUpdated
 	| playerPepeHistory playerPepeDeck playerPepe |
 	playerPepeHistory := OrderedCollection new.
 	playerPepeHistory add: (PlayerPosition at: 1 withLaps: 0 withNumberOfSquaresTravelled:0).

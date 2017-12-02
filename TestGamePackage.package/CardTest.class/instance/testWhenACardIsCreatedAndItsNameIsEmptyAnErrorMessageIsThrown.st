@@ -1,5 +1,5 @@
 tests
-testWhenACardIsCreatedAnItsNameIsEmptyAnErrorMessageIsThrown
+testWhenACardIsCreatedAndItsNameIsEmptyAnErrorMessageIsThrown
 | aCardSpeed |
 self should: [ aCardSpeed := CardSpeed named:'' ] raise: Error.
 

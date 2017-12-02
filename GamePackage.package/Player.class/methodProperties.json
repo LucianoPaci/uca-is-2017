@@ -1,10 +1,10 @@
 {
 	"instance" : {
 		"changePosition:lapsTo:andNumberOfSquaresTravelledTo:" : "juanMaDiMartino 12/2/2017 13:05",
-		"removeAPermanentCardToBePlayed:" : "LucianoPaci 11/26/2017 16:55",
+		"removeAPermanentCardToBePlayed:" : "LucianoPaci 12/2/2017 19:40",
 		"addAnInstantCardToBePlayed:" : "juanMaDiMartino 11/22/2017 09:57",
 		"initializedNamed:initializedWithACardDeck:initializedPositionHistory:" : "juanMaDiMartino 11/13/2017 17:34",
-		"emptyInstantCardsToBePlayed" : "juanMaDiMartino 11/14/2017 09:26",
+		"emptyInstantCardsToBePlayed" : "LucianoPaci 12/2/2017 19:47",
 		"name" : "juanMaDiMartino 11/28/2017 15:30",
 		"permanentCardsToBePlayed" : "juanMaDiMartino 11/28/2017 16:09",
 		"removeACardFromDeck:" : "juanMaDiMartino 11/28/2017 15:27",
