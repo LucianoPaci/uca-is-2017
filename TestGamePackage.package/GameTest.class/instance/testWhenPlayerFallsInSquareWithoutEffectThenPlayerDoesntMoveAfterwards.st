@@ -1,9 +1,11 @@
 squares tests
 testWhenPlayerFallsInSquareWithoutEffectThenPlayerDoesntMoveAfterwards
-	| playerLucho game dice board squares playerLuchoHistory |
+	| playerLucho game dice board squares playerLuchoHistory playerLuchoCards |
 	playerLuchoHistory := OrderedCollection new.
 	playerLuchoHistory add: (PlayerPosition at: 1 withLaps: 0 withNumberOfSquaresTravelled:0).
-	playerLucho := Player named: 'Lucho' withCards: self aCollectionOfGameCards removeFirst andPositionHistory: playerLuchoHistory.
+	playerLuchoCards := OrderedCollection new.
+	playerLuchoCards add: self aCollectionOfGameCards removeFirst; add:(self aCollectionOfGameCards removeAt:2).
+	playerLucho := Player named: 'Lucho' withCards: playerLuchoCards andPositionHistory: playerLuchoHistory.
 	squares := (1 to: 6) collect: [ :n | SquareWithoutEffect initialized ].
 	board := Board definedSquares: squares.
 	dice := Dice faces: 6 obtainingValuesFrom: (FixedNumberSource providing: #(1 2 3 4 5 6)).

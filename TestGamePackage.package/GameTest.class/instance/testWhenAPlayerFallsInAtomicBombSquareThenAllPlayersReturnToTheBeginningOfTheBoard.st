@@ -1,15 +1,21 @@
 squares tests
 testWhenAPlayerFallsInAtomicBombSquareThenAllPlayersReturnToTheBeginningOfTheBoard
-	| playerLannister playerStark playerSnow game dice board squares playerLannisterHistory playerStarkHistory playerSnowHistory |
+	| playerLannister playerStark playerSnow game dice board squares playerLannisterHistory playerStarkHistory playerSnowHistory playerLannisterCardsDeck playerStarkCardsDeck playerSnowCardsDeck |
 	playerLannisterHistory := OrderedCollection new.
 	playerStarkHistory := OrderedCollection new.
 	playerSnowHistory := OrderedCollection new.
 	playerLannisterHistory add: (PlayerPosition at: 1 withLaps: 0 withNumberOfSquaresTravelled:0).
 	playerStarkHistory add: (PlayerPosition at: 1 withLaps: 0 withNumberOfSquaresTravelled:0).
 	playerSnowHistory add: (PlayerPosition at: 1 withLaps: 0 withNumberOfSquaresTravelled:0).
-	playerLannister := Player named: 'Lannister' withCards: self aCollectionOfGameCards removeFirst andPositionHistory: playerLannisterHistory.
-	playerStark := Player named: 'Stark' withCards: (self aCollectionOfGameCards removeAt: 2) andPositionHistory: playerStarkHistory.
-	playerSnow := Player named: 'Snow' withCards: (self aCollectionOfGameCards removeAt: 3) andPositionHistory: playerSnowHistory.
+	playerLannisterCardsDeck := OrderedCollection new.
+	playerStarkCardsDeck := OrderedCollection new.
+	playerSnowCardsDeck := OrderedCollection new.
+	playerLannisterCardsDeck add: self aCollectionOfGameCards removeFirst ; add: (self aCollectionOfGameCards removeAt:2).
+	playerSnowCardsDeck add: (self aCollectionOfGameCards removeAt: 3); add: (self aCollectionOfGameCards removeAt:4).
+	playerStarkCardsDeck add: (self aCollectionOfGameCards removeAt: 5); add: (self aCollectionOfGameCards removeAt:6).
+	playerLannister := Player named: 'Lannister' withCards: playerLannisterCardsDeck  andPositionHistory: playerLannisterHistory.
+	playerStark := Player named: 'Stark' withCards: playerStarkCardsDeck andPositionHistory: playerStarkHistory.
+	playerSnow := Player named: 'Snow' withCards: playerSnowCardsDeck andPositionHistory: playerSnowHistory.
 	squares := (1 to: 8) collect: [ :n | SquareWithoutEffect initialized].
 	squares at: 6 put: (AtomicBombSquare initialized).
 	board := Board definedSquares: squares.

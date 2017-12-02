@@ -1,9 +1,11 @@
 squares tests
 testWhenPlayerFallsInSpeedUpEffectSquareThenPlayerMovesFourPositionsForward
-	| playerLucho game dice board squares playerLuchoHistory |
+	| playerLucho game dice board squares playerLuchoHistory playerLuchoCards |
 	playerLuchoHistory := OrderedCollection new.
 	playerLuchoHistory add: (PlayerPosition at: 1 withLaps: 0 withNumberOfSquaresTravelled:0).
-	playerLucho := Player named: 'Lucho' withCards: self aCollectionOfGameCards removeFirst andPositionHistory: playerLuchoHistory.
+	playerLuchoCards := OrderedCollection new.
+	playerLuchoCards add: (self aCollectionOfGameCards removeAt:3); add:(self aCollectionOfGameCards removeAt:4).
+	playerLucho := Player named: 'Lucho' withCards: playerLuchoCards andPositionHistory: playerLuchoHistory.
 	squares := (1 to: 9) collect: [ :n | SquareWithoutEffect initialized].
 	squares at: 2 put: (SquareSpeedUp initialized).
 	board := Board definedSquares: squares.

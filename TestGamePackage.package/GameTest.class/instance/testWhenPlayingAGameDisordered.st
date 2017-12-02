@@ -1,6 +1,6 @@
 playing
 testWhenPlayingAGameDisordered
-	| squares board diceEightFaces diceSixFaces collectionOfDices collectionOfPlayers playerScorpion playerJuanma laps game playerRaiden playerScorpionHistory playerRaidenHistory playerJuanmaHistory |
+	| squares board diceEightFaces diceSixFaces collectionOfDices collectionOfPlayers playerScorpion playerJuanma laps game playerRaiden playerScorpionHistory playerRaidenHistory playerJuanmaHistory playerRaidenCards playerScorpionCards playerJuanMaCards |
 	playerScorpionHistory := OrderedCollection new.
 	playerScorpionHistory add: (PlayerPosition at: 1 withLaps: 0 withNumberOfSquaresTravelled: 0).
 	playerRaidenHistory := OrderedCollection new.
@@ -16,9 +16,16 @@ testWhenPlayingAGameDisordered
 		add: diceSixFaces;
 		add: diceEightFaces.
 	collectionOfPlayers := OrderedCollection new.
-	playerScorpion := Player named: 'Scorpion' withCards: self aCollectionOfGameCards removeFirst andPositionHistory: playerScorpionHistory.
-	playerRaiden := Player named: 'Raiden' withCards: (self aCollectionOfGameCards removeAt: 2) andPositionHistory: playerRaidenHistory.
-	playerJuanma := Player named: 'Juanma' withCards: (self aCollectionOfGameCards removeAt: 3) andPositionHistory: playerJuanmaHistory.
+	playerRaidenCards := OrderedCollection new.
+	playerScorpionCards := OrderedCollection new.
+	playerJuanMaCards := OrderedCollection new.
+	playerJuanMaCards add: (self aCollectionOfGameCards removeAt:5 ); add:(self aCollectionOfGameCards removeAt:6).
+	playerRaidenCards add: (self aCollectionOfGameCards removeFirst ); add:(self aCollectionOfGameCards removeAt:2).
+	playerScorpionCards  add: (self aCollectionOfGameCards removeAt:3 ); add:(self aCollectionOfGameCards removeAt:4).
+	
+	playerScorpion := Player named: 'Scorpion' withCards: playerScorpionCards  andPositionHistory: playerScorpionHistory.
+	playerRaiden := Player named: 'Raiden' withCards: playerRaidenCards andPositionHistory: playerRaidenHistory.
+	playerJuanma := Player named: 'Juanma' withCards: playerJuanMaCards andPositionHistory: playerJuanmaHistory.
 	laps := 1.
 	collectionOfPlayers add: playerScorpion.
 	collectionOfPlayers add: playerRaiden.

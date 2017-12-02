@@ -1,12 +1,16 @@
 playing
 testSuccessfulGameCreationWithSeveralDicesAndPlayers
-	| playerScorpion playerRaiden board diceSixFaces diceNineFaces game laps collectionOfPlayers dices squareAtomicBomb squareWormHole squares playerScorpionHistory playerRaidenHistory | 
+	| playerScorpion playerRaiden board diceSixFaces diceNineFaces game laps collectionOfPlayers dices squareAtomicBomb squareWormHole squares playerScorpionHistory playerRaidenHistory playerScorpionCards playerRaidenCards | 
 	playerScorpionHistory := OrderedCollection new.
 	playerScorpionHistory add: (PlayerPosition at: 1 withLaps: 0 withNumberOfSquaresTravelled:0 ).
 	playerRaidenHistory := OrderedCollection new.
 	playerRaidenHistory add: (PlayerPosition at: 1 withLaps: 0 withNumberOfSquaresTravelled:0).
-	playerScorpion := Player named: 'Scorpion' withCards: self aCollectionOfGameCards removeFirst andPositionHistory: playerScorpionHistory.
-	playerRaiden := Player named: 'Raiden' withCards: (self aCollectionOfGameCards removeAt: 2) andPositionHistory: playerRaidenHistory.
+	playerScorpionCards := OrderedCollection new.
+	playerRaidenCards := OrderedCollection new.
+	playerRaidenCards add: (self aCollectionOfGameCards removeFirst ); add:(self aCollectionOfGameCards removeAt:2).
+	playerScorpionCards  add: (self aCollectionOfGameCards removeAt:3 ); add:(self aCollectionOfGameCards removeAt:4).
+	playerScorpion := Player named: 'Scorpion' withCards: playerScorpionCards andPositionHistory: playerScorpionHistory.
+	playerRaiden := Player named: 'Raiden' withCards: playerRaidenCards andPositionHistory: playerRaidenHistory.
 	squareAtomicBomb := AtomicBombSquare initialize.
 	squareWormHole := SquareWormHole initialize.
 	squares := OrderedCollection new.
