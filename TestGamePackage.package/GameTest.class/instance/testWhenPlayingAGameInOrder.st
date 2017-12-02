@@ -2,11 +2,11 @@ playing
 testWhenPlayingAGameInOrder
 	| squares board diceEightFaces diceSixFaces collectionOfDices collectionOfPlayers playerScorpion playerJuanMa laps game playerRaiden playerScorpionHistory playerRaidenHistory playerJuanMaHistory |
 	playerScorpionHistory := OrderedCollection new.
-	playerScorpionHistory add: (PlayerPosition at: 1 withLaps: 0).
+	playerScorpionHistory add: (PlayerPosition at: 1 withLaps: 0 withNumberOfSquaresTravelled:0).
 	playerRaidenHistory := OrderedCollection new.
-	playerRaidenHistory add: (PlayerPosition at: 1 withLaps: 0).
+	playerRaidenHistory add: (PlayerPosition at: 1 withLaps: 0 withNumberOfSquaresTravelled:0).
 	playerJuanMaHistory := OrderedCollection new.
-	playerJuanMaHistory add: (PlayerPosition at: 1 withLaps: 0).
+	playerJuanMaHistory add: (PlayerPosition at: 1 withLaps: 0 withNumberOfSquaresTravelled:0).
 	squares := (1 to: 8) collect: [ :n | SquareWithoutEffect initialized].
 	board := Board definedSquares: squares.
 	diceEightFaces := Dice faces: 8 obtainingValuesFrom: (FixedNumberSource providing: #(1 2 3 4 5 6 7 8)).

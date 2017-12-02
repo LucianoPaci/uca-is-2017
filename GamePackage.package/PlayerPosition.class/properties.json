@@ -7,7 +7,8 @@
 	"classvars" : [ ],
 	"instvars" : [
 		"lap",
-		"squareNumber"
+		"squareNumber",
+		"numberOfSquaresTravelled"
 	],
 	"name" : "PlayerPosition",
 	"type" : "normal"

@@ -2,10 +2,10 @@ cards tests
 testWhenAPotentiationCardIsThrownAfterPlayerFellInMoonWalkSquareEffectIsDoubled
 	| playerJuanmaHistory squares board diceOneFace collectionOfDices collectionOfPlayers playerJuanmaDeck cardToAffectPlayer playerJuanma laps gameDeck game playerLuchoHistory playerLuchoDeck playerLucho |
 	playerJuanmaHistory := OrderedCollection new.
-	playerJuanmaHistory add: (PlayerPosition at: 1 withLaps: 0).
+	playerJuanmaHistory add: (PlayerPosition at: 1 withLaps: 0 withNumberOfSquaresTravelled:0).
 	playerLuchoHistory := OrderedCollection new.
-	playerLuchoHistory add: (PlayerPosition at: 3 withLaps: 0).
-	squares := (1 to: 16) collect: [ :n | SquareWithoutEffect initialize ].
+	playerLuchoHistory add: (PlayerPosition at: 3 withLaps: 0 withNumberOfSquaresTravelled:0).
+	squares := (1 to: 10) collect: [ :n | SquareWithoutEffect initialize ].
 	board := Board definedSquares: squares.
 	squares at: 4 put: (MoonWalkSquare initializeWithEffect:  -1).
 	diceOneFace := Dice faces: 1 obtainingValuesFrom: (FixedNumberSource providing: #(3)).

@@ -1,10 +1,11 @@
 {
 	"instance" : {
-		"initializePosition:initializeLaps:" : "LucianoPaci 11/15/2017 19:43",
 		"squareNumber" : "LucianoPaci 11/15/2017 19:43",
-		"lap" : "LucianoPaci 11/15/2017 19:40"
+		"initializePosition:initializeLaps:initializeNumberOfSquaresTravelled:" : "juanMaDiMartino 12/2/2017 13:01",
+		"lap" : "LucianoPaci 11/15/2017 19:40",
+		"numberOfSquaresTravelled" : "juanMaDiMartino 12/2/2017 13:18"
 	},
 	"class" : {
-		"at:withLaps:" : "LucianoPaci 11/12/2017 12:55"
+		"at:withLaps:withNumberOfSquaresTravelled:" : "juanMaDiMartino 12/2/2017 13:01"
 	}
 }

@@ -2,7 +2,7 @@ squares tests
 testWhenPlayerFallsInTimeMachineEffectSquareThenPlayerMovesBackToPreviousPosition
 	| playerLucho game dice board squares playerHistory |
 	playerHistory := OrderedCollection new.
-	playerHistory add: (PlayerPosition at: 1 withLaps: 0).
+	playerHistory add: (PlayerPosition at: 1 withLaps: 0 withNumberOfSquaresTravelled:0).
 	playerLucho := Player named: 'Lucho' withCards: self aCollectionOfGameCards removeFirst andPositionHistory: playerHistory.
 	squares := (1 to: 10) collect: [ :n | SquareWithoutEffect initialized].
 	squares at: 7 put: (SquareTimeMachine initialized).

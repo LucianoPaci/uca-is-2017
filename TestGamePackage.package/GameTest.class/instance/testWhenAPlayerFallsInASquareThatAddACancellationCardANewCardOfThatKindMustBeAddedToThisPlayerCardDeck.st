@@ -2,7 +2,7 @@ squares tests
 testWhenAPlayerFallsInASquareThatAddACancellationCardANewCardOfThatKindMustBeAddedToThisPlayerCardDeck
 	| playerLucho game dice board squares playerLuchoDeck playerLuchoHistory |
 	playerLuchoHistory := OrderedCollection new.
-	playerLuchoHistory add: (PlayerPosition at: 1 withLaps: 0).
+	playerLuchoHistory add: (PlayerPosition at: 1 withLaps: 0 withNumberOfSquaresTravelled:0).
 	playerLuchoDeck := OrderedCollection new.
 	playerLuchoDeck
 		add: (self aCollectionOfGameCards removeAt: 5);

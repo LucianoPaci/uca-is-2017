@@ -2,9 +2,9 @@ playing
 testSuccessfulGameCreationWithSeveralDicesAndPlayers
 	| playerScorpion playerRaiden board diceSixFaces diceNineFaces game laps collectionOfPlayers dices squareAtomicBomb squareWormHole squares playerScorpionHistory playerRaidenHistory | 
 	playerScorpionHistory := OrderedCollection new.
-	playerScorpionHistory add: (PlayerPosition at: 1 withLaps: 0).
+	playerScorpionHistory add: (PlayerPosition at: 1 withLaps: 0 withNumberOfSquaresTravelled:0 ).
 	playerRaidenHistory := OrderedCollection new.
-	playerRaidenHistory add: (PlayerPosition at: 1 withLaps: 0).
+	playerRaidenHistory add: (PlayerPosition at: 1 withLaps: 0 withNumberOfSquaresTravelled:0).
 	playerScorpion := Player named: 'Scorpion' withCards: self aCollectionOfGameCards removeFirst andPositionHistory: playerScorpionHistory.
 	playerRaiden := Player named: 'Raiden' withCards: (self aCollectionOfGameCards removeAt: 2) andPositionHistory: playerRaidenHistory.
 	squareAtomicBomb := AtomicBombSquare initialize.

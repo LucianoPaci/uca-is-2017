@@ -4,9 +4,9 @@ testWhenAPlayerFallsInAtomicBombSquareThenAllPlayersReturnToTheBeginningOfTheBoa
 	playerLannisterHistory := OrderedCollection new.
 	playerStarkHistory := OrderedCollection new.
 	playerSnowHistory := OrderedCollection new.
-	playerLannisterHistory add: (PlayerPosition at: 1 withLaps: 0).
-	playerStarkHistory add: (PlayerPosition at: 1 withLaps: 0).
-	playerSnowHistory add: (PlayerPosition at: 1 withLaps: 0).
+	playerLannisterHistory add: (PlayerPosition at: 1 withLaps: 0 withNumberOfSquaresTravelled:0).
+	playerStarkHistory add: (PlayerPosition at: 1 withLaps: 0 withNumberOfSquaresTravelled:0).
+	playerSnowHistory add: (PlayerPosition at: 1 withLaps: 0 withNumberOfSquaresTravelled:0).
 	playerLannister := Player named: 'Lannister' withCards: self aCollectionOfGameCards removeFirst andPositionHistory: playerLannisterHistory.
 	playerStark := Player named: 'Stark' withCards: (self aCollectionOfGameCards removeAt: 2) andPositionHistory: playerStarkHistory.
 	playerSnow := Player named: 'Snow' withCards: (self aCollectionOfGameCards removeAt: 3) andPositionHistory: playerSnowHistory.

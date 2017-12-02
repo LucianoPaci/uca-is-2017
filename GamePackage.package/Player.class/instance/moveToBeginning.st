@@ -1,3 +1,3 @@
 adding position
 moveToBeginning
-	self changePosition: 1 andLapsTo: 0.
+	self changePosition: 1 lapsTo: 0 andNumberOfSquaresTravelledTo: 0.

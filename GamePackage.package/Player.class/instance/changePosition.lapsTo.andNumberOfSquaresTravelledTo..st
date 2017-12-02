@@ -1,0 +1,3 @@
+adding position
+changePosition: anAmountOfPositions lapsTo: anAmountOfLaps andNumberOfSquaresTravelledTo: aNumberOfSquaresTravelled
+	positions add: (PlayerPosition at: anAmountOfPositions withLaps: anAmountOfLaps withNumberOfSquaresTravelled:aNumberOfSquaresTravelled )
