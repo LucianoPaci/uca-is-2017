@@ -1,6 +1,6 @@
 playing
 testGameIsPlayedUntilAWinnerIsDeclared
-	| playerScorpion playerRaiden game collectionOfDices board laps collectionOfPlayers squares playerScorpionHistory playerRaidenHistory |
+	| playerScorpion playerRaiden game collectionOfDices board laps collectionOfPlayers squares playerScorpionHistory playerRaidenHistory playerScorpionCards playerRaidenCards |
 	squares := (1 to: 10) collect: [ :n | SquareWithoutEffect initialized ].
 	board := Board definedSquares: squares.
 	collectionOfDices := OrderedCollection new.
@@ -12,8 +12,12 @@ testGameIsPlayedUntilAWinnerIsDeclared
 	playerScorpionHistory add: (PlayerPosition at: 1 withLaps: 0 withNumberOfSquaresTravelled:0 ).
 	playerRaidenHistory := OrderedCollection new.
 	playerRaidenHistory add: (PlayerPosition at: 1 withLaps: 0 withNumberOfSquaresTravelled:0).
-	playerScorpion := Player named: 'Scorpion' withCards: self aCollectionOfGameCards removeFirst andPositionHistory: playerScorpionHistory.
-	playerRaiden := Player named: 'Raiden' withCards: self aCollectionOfGameCards removeFirst andPositionHistory: playerRaidenHistory.
+	playerScorpionCards := OrderedCollection new.
+	playerRaidenCards := OrderedCollection new.
+	playerRaidenCards add: (self aCollectionOfGameCards removeFirst ); add:(self aCollectionOfGameCards removeAt:2).
+	playerScorpionCards  add: (self aCollectionOfGameCards removeAt:3 ); add:(self aCollectionOfGameCards removeAt:4).
+	playerScorpion := Player named: 'Scorpion' withCards: playerScorpionCards andPositionHistory: playerScorpionHistory.
+	playerRaiden := Player named: 'Raiden' withCards: playerRaidenCards andPositionHistory: playerRaidenHistory.
 	laps := 1.
 	collectionOfPlayers add: playerScorpion.
 	collectionOfPlayers add: playerRaiden.

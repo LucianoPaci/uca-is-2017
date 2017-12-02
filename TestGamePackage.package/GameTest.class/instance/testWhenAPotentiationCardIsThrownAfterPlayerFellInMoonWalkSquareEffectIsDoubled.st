@@ -19,7 +19,7 @@ testWhenAPotentiationCardIsThrownAfterPlayerFellInMoonWalkSquareEffectIsDoubled
 		add: (CardOverloading named: 'CardOverloading1').
 	playerJuanma := Player named: 'Juanma' withCards: playerJuanmaDeck andPositionHistory: playerJuanmaHistory.
 	playerLuchoDeck := OrderedCollection new.
-	playerLuchoDeck add: (CardSpeed named: 'CardSpeed1').
+	playerLuchoDeck add: (CardSpeed named: 'CardSpeed1'); add:(CardSpeed named: 'CardSpeed2').
 	playerLucho := Player named: 'Lucho' withCards: playerLuchoDeck andPositionHistory: playerLuchoHistory.
 	laps := 1.
 	collectionOfPlayers

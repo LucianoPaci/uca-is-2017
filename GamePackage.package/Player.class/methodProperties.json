@@ -18,7 +18,8 @@
 		"moveToBeginning" : "juanMaDiMartino 12/2/2017 14:45"
 	},
 	"class" : {
-		"assertShouldNotBeEmpty:" : "Luciano 9/17/2017 16:12",
-		"named:withCards:andPositionHistory:" : "LucianoPaci 11/12/2017 15:19"
+		"assertMustHaveTwoCards:" : "juanMaDiMartino 12/2/2017 16:11",
+		"assertShouldNotBeEmpty:" : "juanMaDiMartino 12/2/2017 16:07",
+		"named:withCards:andPositionHistory:" : "juanMaDiMartino 12/2/2017 16:08"
 	}
 }

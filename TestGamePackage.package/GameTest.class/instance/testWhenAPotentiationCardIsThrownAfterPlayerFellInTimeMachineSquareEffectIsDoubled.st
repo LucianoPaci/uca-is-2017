@@ -19,7 +19,7 @@ testWhenAPotentiationCardIsThrownAfterPlayerFellInTimeMachineSquareEffectIsDoubl
 		add: (CardOverloading named: 'CardOverloading1').
 	playerJuanma := Player named: 'Player1' withCards: playerJuanmaDeck andPositionHistory: playerJuanmaHistory.
 	playerLuchoDeck := OrderedCollection new.
-	playerLuchoDeck add: (CardSpeed named: 'CardSpeed1').
+	playerLuchoDeck add: (CardSpeed named: 'CardSpeed1'); add:(CardSpeed named: 'CardSpeed2').
 	playerLucho := Player named: 'playerLucho' withCards: playerLuchoDeck andPositionHistory: playerLuchoHistory.
 	laps := 1.
 	collectionOfPlayers

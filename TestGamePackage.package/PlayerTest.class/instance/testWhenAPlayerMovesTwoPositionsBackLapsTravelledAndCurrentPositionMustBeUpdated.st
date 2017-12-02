@@ -4,7 +4,8 @@ testWhenAPlayerMovesTwoPositionsBackLapsTravelledAndCurrentPositionMustBeUpdated
 	playerPepeHistory := OrderedCollection new.
 	playerPepeHistory add: (PlayerPosition at: 1 withLaps: 0 withNumberOfSquaresTravelled:0).
 	playerPepeDeck := OrderedCollection new.
-	playerPepeDeck add: (CardCancellation named: 'CardCancellation1').
+	playerPepeDeck add: (CardCancellation named: 'CardCancellation1');
+						add: (CardSpeed named: 'CardSpeed1').
 	playerPepe := Player named: 'Pepe' withCards: playerPepeDeck andPositionHistory: playerPepeHistory.
 	self assert: (playerPepe getPositionAt:  1) squareNumber equals: 1.
 	self assert: (playerPepe getPositionAt: 1) lap equals: 0.
