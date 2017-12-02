@@ -2,7 +2,7 @@ cards tests
 testWhenGameCardDeckDoesntHaveACardOfAParticularKind
 	| board game playerLucho squares dice gameDeck playerLuchoDeck playerLuchoHistory cardNotInDeck |
 	playerLuchoHistory := OrderedCollection new.
-	playerLuchoHistory add: (PlayerPosition at: 1 withLaps: 0).
+	playerLuchoHistory add: (PlayerPosition at: 1 withLaps: 0 withNumberOfSquaresTravelled:0).
 	gameDeck := OrderedCollection new.
 	gameDeck
 		add: (CardSpeed named: 'CardSpeed1');

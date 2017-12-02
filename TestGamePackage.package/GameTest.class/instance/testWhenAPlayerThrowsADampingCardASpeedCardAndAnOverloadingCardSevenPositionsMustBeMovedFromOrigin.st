@@ -2,7 +2,7 @@ cards tests
 testWhenAPlayerThrowsADampingCardASpeedCardAndAnOverloadingCardSevenPositionsMustBeMovedFromOrigin
 	| squares board diceOneFace collectionOfDices collectionOfPlayers playerRaiden playerRaidenDeck playerRaidenHistory laps gameDeck game firstCardToAffectPlayer secondCardToAffectPlayer thirdCardToAffectPlayer |
 	playerRaidenHistory := OrderedCollection new.
-	playerRaidenHistory add: (PlayerPosition at: 1 withLaps: 0).
+	playerRaidenHistory add: (PlayerPosition at: 1 withLaps: 0 withNumberOfSquaresTravelled:0).
 	squares := (1 to: 10) collect: [ :n | SquareWithoutEffect initialized].
 	squares at: 4 put: (SquareSpeedUp initialized).
 	board := Board definedSquares: squares.

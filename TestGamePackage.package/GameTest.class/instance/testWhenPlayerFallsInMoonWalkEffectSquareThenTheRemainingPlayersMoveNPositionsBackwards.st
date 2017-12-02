@@ -2,9 +2,9 @@ squares tests
 testWhenPlayerFallsInMoonWalkEffectSquareThenTheRemainingPlayersMoveNPositionsBackwards
 	| playerLucho playerJuanma game dice board squares playerLuchoHistory playerJuanmaHistory |
 	playerLuchoHistory := OrderedCollection new.
-	playerLuchoHistory add: (PlayerPosition at: 1 withLaps: 0).
+	playerLuchoHistory add: (PlayerPosition at: 1 withLaps: 0 withNumberOfSquaresTravelled:0).
 	playerJuanmaHistory := OrderedCollection new.
-	playerJuanmaHistory add: (PlayerPosition at: 1 withLaps: 0).
+	playerJuanmaHistory add: (PlayerPosition at: 1 withLaps: 0 withNumberOfSquaresTravelled:0).
 	playerLucho := Player named: 'Lucho' withCards: self aCollectionOfGameCards removeFirst andPositionHistory: playerLuchoHistory.
 	playerJuanma := Player named: 'Juanma' withCards: (self aCollectionOfGameCards removeAt: 2) andPositionHistory: playerJuanmaHistory.
 	squares := (1 to: 10) collect: [ :n | SquareWithoutEffect initialized ].

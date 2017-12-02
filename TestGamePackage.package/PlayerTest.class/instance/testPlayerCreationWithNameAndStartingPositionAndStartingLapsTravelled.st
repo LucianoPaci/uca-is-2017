@@ -2,7 +2,7 @@ tests
 testPlayerCreationWithNameAndStartingPositionAndStartingLapsTravelled
 	| player playerDeck playerHistory |
 	playerHistory := OrderedCollection new.
-	playerHistory add: (PlayerPosition at: 1 withLaps: 0).
+	playerHistory add: (PlayerPosition at: 1 withLaps: 0 withNumberOfSquaresTravelled:0).
 	playerDeck := OrderedCollection new.
 	playerDeck
 		add: (CardSpeed named: 'CardSpeed1');

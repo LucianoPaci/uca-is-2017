@@ -2,9 +2,9 @@ tests
 testAPlayerCanThrowAnInstantCardNotOnHisTurn
 	| playerJuanmaHistory playerLuchoHistory squares board diceEightFaces collectionOfDices collectionOfPlayers playerJuanmaDeck playerLuchoDeck cardToAffectPlayer playerJuanma playerLucho laps gameDeck game |
 	playerJuanmaHistory := OrderedCollection new.
-	playerJuanmaHistory add: (PlayerPosition at: 1 withLaps: 0).
+	playerJuanmaHistory add: (PlayerPosition at: 1 withLaps: 0 withNumberOfSquaresTravelled:0).
 	playerLuchoHistory := OrderedCollection new.
-	playerLuchoHistory add: (PlayerPosition at: 1 withLaps: 0).
+	playerLuchoHistory add: (PlayerPosition at: 1 withLaps: 0 withNumberOfSquaresTravelled:0).
 	squares := (1 to: 8) collect: [ :n | SquareWithoutEffect initialize].
 	board := Board definedSquares: squares.
 	diceEightFaces := Dice faces: 8 obtainingValuesFrom: (FixedNumberSource providing: #(1 2 3 4 5 6 7 8)).

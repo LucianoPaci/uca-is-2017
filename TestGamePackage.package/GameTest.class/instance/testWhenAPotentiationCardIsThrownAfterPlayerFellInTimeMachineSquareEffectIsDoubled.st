@@ -2,9 +2,9 @@ cards tests
 testWhenAPotentiationCardIsThrownAfterPlayerFellInTimeMachineSquareEffectIsDoubled
 	| playerJuanmaHistory playerLuchoHistory squares board diceOneFace collectionOfDices collectionOfPlayers playerJuanmaDeck cardToAffectPlayer playerJuanma playerLuchoDeck playerLucho laps gameDeck game |
 	playerJuanmaHistory := OrderedCollection new.
-	playerJuanmaHistory add: (PlayerPosition at: 1 withLaps: 0).
+	playerJuanmaHistory add: (PlayerPosition at: 1 withLaps: 0 withNumberOfSquaresTravelled:0).
 	playerLuchoHistory := OrderedCollection new.
-	playerLuchoHistory add: (PlayerPosition at: 1 withLaps: 0).
+	playerLuchoHistory add: (PlayerPosition at: 1 withLaps: 0 withNumberOfSquaresTravelled:0).
 	squares := (1 to: 16) collect: [ :n | SquareWithoutEffect initialized].
 	board := Board definedSquares: squares.
 	squares at: 4 put: (SquareTimeMachine initialized).

@@ -1,7 +1,7 @@
 Movement
-testWhenPlayerMovesForwardWithoutDice
-	| playerLucho board dice game squares playerLuchoHistory |
-	playerLuchoHistory := OrderedCollection new.
+testWhenPlayerFallsInLastSquareOfABoardPositiontLapMustKeepTheSame
+| playerLuchoHistory playerLucho squares board dice game |
+playerLuchoHistory := OrderedCollection new.
 	playerLuchoHistory add: (PlayerPosition at: 1 withLaps: 0 withNumberOfSquaresTravelled:0).
 	playerLucho := Player named: 'Lucho' withCards: self aCollectionOfGameCards removeFirst andPositionHistory: playerLuchoHistory.
 	squares := (1 to: 8) collect: [ :n | SquareWithoutEffect initialize ].
@@ -18,3 +18,4 @@ testWhenPlayerMovesForwardWithoutDice
 	self assert: (game getPlayerAt: 1) positions last squareNumber equals: 6.
 	game move: (game getPlayerAt: 1) positions: 2.
 	self assert: (game getPlayerAt: 1) positions last squareNumber equals: 8.
+	self assert: (game getPlayerAt: 1) positions last lap equals: 0.

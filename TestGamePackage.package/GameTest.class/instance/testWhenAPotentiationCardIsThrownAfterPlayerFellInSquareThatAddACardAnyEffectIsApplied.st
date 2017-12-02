@@ -2,7 +2,7 @@ cards tests
 testWhenAPotentiationCardIsThrownAfterPlayerFellInSquareThatAddACardAnyEffectIsApplied
 	| playerLuchoHistory squares board diceOneFace collectionOfDices collectionOfPlayers playerLuchoDeck cardToAffectPlayer playerLucho laps gameDeck game cardToBeAdded |
 	playerLuchoHistory := OrderedCollection new.
-	playerLuchoHistory add: (PlayerPosition at: 1 withLaps: 0).
+	playerLuchoHistory add: (PlayerPosition at: 1 withLaps: 0 withNumberOfSquaresTravelled:0).
 	squares := (1 to: 16) collect: [ :n | SquareWithoutEffect initialized].
 	board := Board definedSquares: squares.
 	cardToBeAdded:= SquareThatAddACard
