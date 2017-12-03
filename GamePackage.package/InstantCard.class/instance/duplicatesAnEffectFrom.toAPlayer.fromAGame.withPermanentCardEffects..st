@@ -1,3 +1,0 @@
-addingEffect
-duplicatesAnEffectFrom: aPreviousSquare toAPlayer: aPlayer fromAGame: aGame withPermanentCardEffects: permanentCardEffects
-self subclassResponsibility.

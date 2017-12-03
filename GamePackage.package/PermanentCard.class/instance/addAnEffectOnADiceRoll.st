@@ -1,3 +1,0 @@
-adding
-addAnEffectOnADiceRoll
-self subclassResponsibility.

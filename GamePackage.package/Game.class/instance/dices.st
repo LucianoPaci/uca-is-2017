@@ -1,3 +1,0 @@
-accessing
-dices
-^dices copy.

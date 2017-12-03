@@ -1,3 +1,0 @@
-accessing
-permanentCardsToBePlayed
-	^permanentCardsToBePlayed copy

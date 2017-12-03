@@ -1,3 +1,0 @@
-adding
-addAnEffectOverASquare
-self subclassResponsibility.

@@ -1,3 +1,0 @@
-addingEffect
-addAnEffectOnADiceRoll
-^(-2)

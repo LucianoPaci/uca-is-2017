@@ -1,5 +1,0 @@
-initialization
-initialized
-	name:= 'SpeedUp'.
-	
-	 

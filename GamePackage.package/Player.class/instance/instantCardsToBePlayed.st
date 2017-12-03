@@ -1,3 +1,0 @@
-accessing
-instantCardsToBePlayed
-	^instantCardsToBePlayed copy

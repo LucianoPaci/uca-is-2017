@@ -1,3 +1,0 @@
-initialization
-initializedWithAName: aName
- self subclassResponsibility.
