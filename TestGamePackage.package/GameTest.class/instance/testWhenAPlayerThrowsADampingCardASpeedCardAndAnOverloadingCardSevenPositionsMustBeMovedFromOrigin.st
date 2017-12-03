@@ -1,14 +1,14 @@
 cards tests
 testWhenAPlayerThrowsADampingCardASpeedCardAndAnOverloadingCardSevenPositionsMustBeMovedFromOrigin
-	| squares board diceOneFace collectionOfDices collectionOfPlayers playerRaiden playerRaidenDeck playerRaidenHistory laps gameDeck game firstCardToAffectPlayer secondCardToAffectPlayer thirdCardToAffectPlayer squareThatAddADampingCard |
+	| squares board diceOneFace collectionOfDices collectionOfPlayers playerRaiden playerRaidenDeck playerRaidenHistory laps gameDeck game firstCardToAffectPlayer secondCardToAffectPlayer thirdCardToAffectPlayer |
 	playerRaidenHistory := OrderedCollection new.
 	playerRaidenHistory add: (PlayerPosition at: 1 withLaps: 0 withNumberOfSquaresTravelled:0).
 	squares := (1 to: 10) collect: [ :n | SquareWithoutEffect initialized].
 	thirdCardToAffectPlayer := CardDamping named: 'CardDamping1'.
-	squareThatAddADampingCard := SquareThatAddACard withACardToBeAdded: thirdCardToAffectPlayer.
 	squares at: 4 put: (SquareSpeedUp initialized).
+	squares at: 1 put:(SquareThatAddACard withACardToBeAdded: thirdCardToAffectPlayer).
 	board := Board definedSquares: squares.
-	diceOneFace := Dice faces: 1 obtainingValuesFrom: (FixedNumberSource providing: #(4)).
+	diceOneFace := Dice faces: 1 obtainingValuesFrom: (FixedNumberSource providing: #(1 4)).
 	collectionOfDices := OrderedCollection new.
 	collectionOfDices add: diceOneFace.
 	collectionOfPlayers := OrderedCollection new.
@@ -31,11 +31,11 @@ testWhenAPlayerThrowsADampingCardASpeedCardAndAnOverloadingCardSevenPositionsMus
 		throwing: collectionOfDices
 		winningWhenCompleting: laps
 		withACardDeck: gameDeck.
-	squareThatAddADampingCard provokesAnEffectInto: game with: playerRaiden  addingEffect: ''.
 	game affect: playerRaiden withAPermanentCard: firstCardToAffectPlayer of: playerRaiden.
 	game affect: playerRaiden withAPermanentCard: secondCardToAffectPlayer of: playerRaiden.
+	self assert: playerRaiden permanentCardsToBePlayed size equals: 2.
+	game nextTurnFor: playerRaiden.
 	game affect: playerRaiden withAPermanentCard: thirdCardToAffectPlayer of: playerRaiden.
-	self assert: playerRaiden permanentCardsToBePlayed size equals: 3.
 	game nextTurnFor: playerRaiden.
 	self assert: (playerRaiden getPositionAt: playerRaiden positions size -1) squareNumber equals: 4.
 	self assert: playerRaiden positions last squareNumber equals: 6
