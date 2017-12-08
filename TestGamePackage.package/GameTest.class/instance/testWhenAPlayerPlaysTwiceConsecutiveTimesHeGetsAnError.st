@@ -29,8 +29,6 @@ testWhenAPlayerPlaysTwiceConsecutiveTimesHeGetsAnError
 		throwing: collectionOfDices
 		winningWhenCompleting: laps
 		withACardDeck: self aCollectionOfGameCards.
-	self assert: game expectedPlayer equals: playerScorpion.
 	game nextTurnFor: playerScorpion.
-	self assert: game expectedPlayer equals: playerRaiden.
 	self should: [ game nextTurnFor: playerScorpion ] raise: GameFailed.
-	self assert: game expectedPlayer equals: playerRaiden
+	
