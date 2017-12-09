@@ -1,9 +1,9 @@
 {
 	"instance" : {
 		"testWhenACardIsCreatedMustHaveAName" : "juanMaDiMartino 11/27/2017 11:57",
-		"testWhenACardIsEqualToAnotherCard" : "LucianoPaci 12/2/2017 19:23",
+		"testWhenACardIsEqualToAnotherCard" : "juanMaDiMartino 12/7/2017 14:21",
 		"testWhenACardIsCreatedAndItsNameIsEmptyAnErrorMessageIsThrown" : "LucianoPaci 12/2/2017 19:22",
-		"testWhenACardIsNotEqualToAnotherCard" : "LucianoPaci 12/2/2017 19:24"
+		"testWhenACardIsNotEqualToAnotherCard" : "juanMaDiMartino 12/7/2017 14:21"
 	},
 	"class" : { }
 }

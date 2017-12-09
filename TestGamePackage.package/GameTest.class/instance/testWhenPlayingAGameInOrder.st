@@ -35,12 +35,8 @@ testWhenPlayingAGameInOrder
 		throwing: collectionOfDices
 		winningWhenCompleting: laps
 		withACardDeck: self aCollectionOfGameCards.
-	self assert: game expectedPlayer equals: playerScorpion.
 	game nextTurnFor: playerScorpion.
-	self assert: game expectedPlayer equals: playerRaiden.
 	game nextTurnFor: playerRaiden.
-	self assert: game expectedPlayer equals: playerJuanMa.
 	game nextTurnFor: playerJuanMa.
-	self assert: game expectedPlayer equals: playerScorpion.
 	game nextTurnFor: playerScorpion.
-	self assert: game expectedPlayer equals: playerRaiden
+	
