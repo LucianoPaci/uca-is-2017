@@ -2,6 +2,7 @@
 	"instance" : {
 		"testWhenPlayerFallsInTimeMachineEffectSquareThenPlayerMovesBackToPreviousPosition" : "juanMaDiMartino 12/2/2017 16:58",
 		"testWhenAPlayerAffectsAnotherPlayerWithACardThenTheCardIsAddedToThatPlayerCardDeck" : "juanMaDiMartino 12/2/2017 14:43",
+		"testWhenAProtectionCardIsProtectingAPermanentCardThenPermanentCardIsNotRemoved" : "LP 2/12/2018 15:48",
 		"testWhenAPotentiationCardIsThrownAfterPlayerFellInSpeedUpSquareEffectIsDoubled" : "juanMaDiMartino 12/2/2017 13:32",
 		"testWhenPlayingAGameDisordered" : "juanMaDiMartino 12/8/2017 19:55",
 		"testWhenAPlayerAffectsAnotherPlayerWithACardTheCardIsRemovedFromFirstPlayerCardDeck" : "juanMaDiMartino 12/2/2017 14:42",
@@ -11,7 +12,7 @@
 		"testSuccessfulGameCreationWithSeveralDicesAndPlayers" : "juanMaDiMartino 12/2/2017 16:37",
 		"testWhenAPlayerFallsInAtomicBombSquareThenAllPlayersReturnToTheBeginningOfTheBoard" : "juanMaDiMartino 12/2/2017 16:23",
 		"testWhenAPlayerFallsInASquareThatAddAPotentiationCardANewCardOfThatKindMustBeAddedToThisPlayerCardDeck" : "juanMaDiMartino 12/2/2017 14:43",
-		"testWhenACancellationCardIsThrownAPermanentCardMustBeRemovedFromAPlayer" : "juanMaDiMartino 12/2/2017 14:42",
+		"testWhenACancellationCardIsThrownAPermanentCardMustBeRemovedFromAPlayer" : "LP 2/12/2018 15:47",
 		"testGameIsPlayedUntilAWinnerIsDeclared" : "juanMaDiMartino 12/3/2017 15:03",
 		"testWhenAPlayerPlaysTwiceConsecutiveTimesHeGetsAnError" : "juanMaDiMartino 12/8/2017 19:54",
 		"testWhenAPlayerFallsInASquareThatAddACancellationCardANewCardOfThatKindMustBeAddedToThisPlayerCardDeck" : "juanMaDiMartino 12/2/2017 14:43",

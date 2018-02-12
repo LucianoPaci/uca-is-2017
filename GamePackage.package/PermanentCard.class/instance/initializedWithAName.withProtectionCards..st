@@ -1,0 +1,3 @@
+initialization
+initializedWithAName: aName withProtectionCards: aCollectionOfProtectionCards
+self subclassResponsibility 

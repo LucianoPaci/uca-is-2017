@@ -5,9 +5,7 @@
 	"classinstvars" : [ ],
 	"pools" : [ ],
 	"classvars" : [ ],
-	"instvars" : [
-		"protectionCards"
-	],
-	"name" : "CardDamping",
+	"instvars" : [ ],
+	"name" : "CardProtection",
 	"type" : "normal"
 }
