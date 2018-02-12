@@ -1,4 +1,4 @@
-tests
+squares tests
 testWhenPlayerFallsInWormHoleEffectSquareThenPlayerMovesFourPositionsBackwards
 	| playerLucho game dice board squares playerLuchoHistory playerLuchoCards |
 	playerLuchoHistory := OrderedCollection new.

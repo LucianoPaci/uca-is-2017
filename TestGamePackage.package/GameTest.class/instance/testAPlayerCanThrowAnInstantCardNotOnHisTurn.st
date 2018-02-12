@@ -1,4 +1,4 @@
-tests
+cards tests
 testAPlayerCanThrowAnInstantCardNotOnHisTurn
 	| playerJuanmaHistory playerLuchoHistory squares board diceEightFaces collectionOfDices collectionOfPlayers playerJuanmaDeck playerLuchoDeck cardToAffectPlayer playerJuanma playerLucho laps gameDeck game |
 	playerJuanmaHistory := OrderedCollection new.
