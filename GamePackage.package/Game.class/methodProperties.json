@@ -4,7 +4,7 @@
 		"dices" : "juanMaDiMartino 11/28/2017 21:15",
 		"assertExpectedPlayer" : "juanMaDiMartino 11/28/2017 21:17",
 		"move:positions:" : "juanMaDiMartino 12/2/2017 15:07",
-		"applyAnEffect:toEveryPlayerExcept:" : "juanMaDiMartino 12/2/2017 15:20",
+		"applyAnEffect:toEveryPlayerExcept:" : "jmDM 2/8/2018 06:21",
 		"affect:withAPermanentCard:of:" : "juanMaDiMartino 12/8/2017 20:08",
 		"checkIsAWinnerOfGame:" : "juanMaDiMartino 11/28/2017 21:50",
 		"provokesAnEffect:intoEveryPlayerExcept:" : "juanMaDiMartino 11/22/2017 23:21",
@@ -28,7 +28,7 @@
 		"throwsPermamentCardsProducingAnEffectOnADiceRollTo:" : "juanMaDiMartino 11/28/2017 16:16",
 		"throwsPermanentCardsAddingAnEffectOnASquareEffectTo:" : "juanMaDiMartino 11/28/2017 16:17",
 		"changeIndexOfExpectedPlayer" : "juanMaDiMartino 11/25/2017 12:40",
-		"assert:hasANegativePositionToMove:" : "juanMaDiMartino 11/29/2017 11:57"
+		"assert:hasANegativePositionToMove:" : "jmDM 2/12/2018 08:52"
 	},
 	"class" : {
 		"playedBy:on:throwing:winningWhenCompleting:withACardDeck:" : "juanMartinDiMartino 11/4/2017 09:01"

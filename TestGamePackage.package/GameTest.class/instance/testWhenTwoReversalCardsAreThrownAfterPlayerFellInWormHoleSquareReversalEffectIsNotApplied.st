@@ -1,6 +1,6 @@
 cards tests
-testWhenAPotentiationCardIsThrownAfterPlayerFellInWormHoleSquareEffectIsDoubled
-	| playerLuchoHistory squares board diceOneFace collectionOfDices collectionOfPlayers playerLuchoDeck cardToAffectPlayer playerLucho laps gameDeck game |
+testWhenTwoReversalCardsAreThrownAfterPlayerFellInWormHoleSquareReversalEffectIsNotApplied
+	| playerLuchoHistory squares board diceOneFace collectionOfDices collectionOfPlayers playerLuchoDeck firstCardToAffectPlayer playerLucho laps gameDeck game secondCardToAffectPlayer |
 	playerLuchoHistory := OrderedCollection new.
 	playerLuchoHistory add: (PlayerPosition at: 1 withLaps: 0 withNumberOfSquaresTravelled:0).
 	squares := (1 to: 16) collect: [ :n | SquareWithoutEffect initialized].
@@ -11,10 +11,11 @@ testWhenAPotentiationCardIsThrownAfterPlayerFellInWormHoleSquareEffectIsDoubled
 	collectionOfDices add: diceOneFace.
 	collectionOfPlayers := OrderedCollection new.
 	playerLuchoDeck := OrderedCollection new.
-	cardToAffectPlayer := CardPotentiation named: 'CardPotentiation1'.
+	firstCardToAffectPlayer := ReversalCard  named: 'ReversalCard1'.
+	secondCardToAffectPlayer := ReversalCard named: 'ReversalCard2'.
 	playerLuchoDeck
-		add: cardToAffectPlayer;
-		add: (CardOverloading named: 'CardOverloading1').
+		add: firstCardToAffectPlayer;
+		add: secondCardToAffectPlayer.
 	playerLucho := Player named: 'Lucho' withCards: playerLuchoDeck andPositionHistory: playerLuchoHistory.
 	laps := 1.
 	collectionOfPlayers add: playerLucho.
@@ -29,8 +30,9 @@ testWhenAPotentiationCardIsThrownAfterPlayerFellInWormHoleSquareEffectIsDoubled
 		winningWhenCompleting: laps
 		withACardDeck: gameDeck.
 	self assert: playerLucho cards size equals: 2.
-	game affect: playerLucho withAPermanentCard: cardToAffectPlayer of: playerLucho.
-	self assert: playerLucho cards size equals: 1.
+	game affect: playerLucho withAPermanentCard: firstCardToAffectPlayer of: playerLucho.
+	game affect: playerLucho withAPermanentCard: secondCardToAffectPlayer of: playerLucho.
+	self assert: playerLucho cards size equals: 0.
 	self assert: playerLucho positions last squareNumber equals: 1.
 	game nextTurnFor: playerLucho.
-	self assert: playerLucho positions last squareNumber equals: 2
+	self assert: playerLucho positions last squareNumber equals: 6.

@@ -1,4 +1,4 @@
-tests
+cards tests
 testWhenPlayerAffectsWithACardAnotherPlayerNotOnHisTurnAnErrorMessageIsThrown
 	| squares board diceEightFaces diceSixFaces collectionOfDices collectionOfPlayers playerScorpion playerRaiden playerJuanma laps game cardToAffectPlayer playerScorpionDeck playerRaidenDeck playerJuanmaDeck playerScorpionHistory playerRaidenHistory playerJuanmaHistory |
 	playerScorpionHistory := OrderedCollection new.

@@ -1,4 +1,4 @@
-tests
+cards tests
 testWhenACancellationCardIsThrownAPermanentCardMustBeRemovedFromAPlayer
 	| playerScorpionHistory playerRaidenHistory squares board diceEightFaces diceSixFaces collectionOfDices collectionOfPlayers playerScorpionDeck playerRaidenDeck cardToAffectPlayer playerScorpion playerRaiden laps gameDeck game cancellationCard | 
 	playerScorpionHistory := OrderedCollection new.

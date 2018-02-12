@@ -1,9 +1,10 @@
 {
 	"instance" : {
-		"addAnEffectOnADiceRoll" : "juanMaDiMartino 11/23/2017 16:28",
 		"addAnEffectOverASquare" : "juanMaDiMartino 11/23/2017 16:28",
 		"initializedWithAName:" : "juanMaDiMartino 11/23/2017 16:19",
-		"addToAPlayer:fromAGame:" : "juanMaDiMartino 11/23/2017 16:29"
+		"addToAPlayer:fromAGame:" : "juanMaDiMartino 11/23/2017 16:29",
+		"addAnEffectOnADiceRoll" : "juanMaDiMartino 11/23/2017 16:28",
+		"name" : "jmDM 2/9/2018 16:35"
 	},
 	"class" : {
 		"assertShouldNotBeEmpty:" : "juanMaDiMartino 12/2/2017 17:19",

@@ -1,4 +1,4 @@
-tests
+cards tests
 testWhenThrowingADampingCardMustAffectAllPlayers
 	| squares board diceEightFaces diceSixFaces collectionOfDices collectionOfPlayers playerScorpion playerRaiden laps game cardToAffectPlayer playerScorpionDeck playerRaidenDeck gameDeck playerJuanmaDeck playerJuanma playerScorpionHistory playerRaidenHistory playerJuanmaHistory |
 	playerScorpionHistory := OrderedCollection new.
