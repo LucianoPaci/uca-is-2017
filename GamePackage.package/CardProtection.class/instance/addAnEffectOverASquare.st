@@ -1,3 +1,3 @@
-adding
+addingEffect
 addAnEffectOverASquare
 	^ 1

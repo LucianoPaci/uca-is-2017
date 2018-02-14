@@ -1,0 +1,3 @@
+protection
+protectItselfWith: aCollectionOfProtectionCards
+self subclassResponsibility 

@@ -1,4 +1,4 @@
 accessing
 selectAPermanentCardToBePlayedEqualsTo: aCard
 	permanentCardsToBePlayed indexOf: aCard ifAbsent: [GameFailed signal: 'La carta permanente no se encuentra en juego'].
-	^ permanentCardsToBePlayed  remove: aCard
+	^ permanentCardsToBePlayed  select: [ :each | aCard == each ] 

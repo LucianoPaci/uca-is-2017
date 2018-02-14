@@ -1,0 +1,2 @@
+protection
+protectItselfWith: aCollectionOfProtectionCards

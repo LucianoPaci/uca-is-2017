@@ -4,7 +4,7 @@ makePlayATurn: aPlayer
  movesToBeMade := dices sumNumbers: [ :dice | dice roll ].
 	self throwsCancellationCardsTo: aPlayer.
 	movesToBeMade := movesToBeMade
-		+ (self throwsPermamentCardsProducingAnEffectOnADiceRollTo: aPlayer).
+		+ (self throwsPermanentCardsProducingAnEffectOnADiceRollTo: aPlayer).
 	self move: aPlayer positions: movesToBeMade.
 	actualSquare := board
 		squareAtPosition: aPlayer positions last squareNumber.

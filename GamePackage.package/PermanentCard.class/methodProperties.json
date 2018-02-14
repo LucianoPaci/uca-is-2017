@@ -2,13 +2,12 @@
 	"instance" : {
 		"addAnEffectOverASquare" : "juanMaDiMartino 11/23/2017 16:28",
 		"initializedWithAName:" : "juanMaDiMartino 11/23/2017 16:19",
+		"protectItselfWith:" : "LP 2/13/2018 22:53",
 		"addToAPlayer:fromAGame:" : "juanMaDiMartino 11/23/2017 16:29",
-		"addAnEffectOnADiceRoll" : "juanMaDiMartino 11/23/2017 16:28",
-		"initializedWithAName:withProtectionCards:" : "LP 2/12/2018 12:54"
+		"addAnEffectOnADiceRoll" : "juanMaDiMartino 11/23/2017 16:28"
 	},
 	"class" : {
 		"assertShouldNotBeEmpty:" : "juanMaDiMartino 12/2/2017 17:19",
-		"named:" : "juanMaDiMartino 12/2/2017 17:20",
-		"named:protectedBy:" : "LP 2/12/2018 12:53"
+		"named:" : "juanMaDiMartino 12/2/2017 17:20"
 	}
 }

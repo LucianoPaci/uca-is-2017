@@ -1,9 +1,10 @@
 asserting
 assert: aPlayer has: aCard toBeAffectedBy: aCancellationCard of: anotherPlayer
-	| cardToBeRemoved |
+	| cardToBeRemoved protCar|
 	cardToBeRemoved := aPlayer selectAPermanentCardToBePlayedEqualsTo: aCard.
-	(cardToBeRemoved  protectionCards ) ifNotEmpty: [ cardToBeRemoved removeProtectionCard ]
+	protCar:=cardToBeRemoved first.
+	( protCar protectionCards) ifNotEmpty: [ protCar removeProtectionCard ]
 	ifEmpty:[aCancellationCard addAPermanentCardToBeRemoved: cardToBeRemoved.
-	aPlayer addAnInstantCardToBePlayed: aCancellationCard.
+	aPlayer addAnInstantCardToBePlayed: aCancellationCard. 
 	anotherPlayer removeACardFromDeck: aCancellationCard.].
-	"if aCard has protection, borrar protection. Sino, lo de abajo"
+	
