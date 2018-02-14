@@ -1,0 +1,9 @@
+{
+	"instance" : {
+		"addAnEffectOnADiceRoll" : "jmDM 2/9/2018 15:42",
+		"addAnEffectOverASquare" : "jmDM 2/9/2018 15:43",
+		"initializedWithAName:" : "jmDM 2/9/2018 15:43",
+		"addToAPlayer:fromAGame:" : "jmDM 2/9/2018 15:44"
+	},
+	"class" : { }
+}
