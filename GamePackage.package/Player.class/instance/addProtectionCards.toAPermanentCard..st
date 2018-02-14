@@ -1,0 +1,3 @@
+adding
+addProtectionCards: aCollectionOfCards toAPermanentCard: aCard
+aCard protectItselfWith: aCollectionOfCards 

@@ -1,0 +1,3 @@
+initialization
+removeProtectionCard
+protectionCards removeLast

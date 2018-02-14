@@ -1,5 +1,5 @@
-cards tests
-testWhenACancellationCardIsThrownAPermanentCardMustBeRemovedFromAPlayer
+tests
+testWhenCancellationCardIsThrownAtPermanentCardWithAProtectionCardThenProtectecionCardMustBeRemoved
 	| playerScorpionHistory playerRaidenHistory squares board diceEightFaces diceSixFaces collectionOfDices collectionOfPlayers playerScorpionDeck playerRaidenDeck cardToAffectPlayer playerScorpion playerRaiden laps gameDeck game cancellationCard protectionCards|
 	playerScorpionHistory := OrderedCollection new.
 	playerScorpionHistory add: (PlayerPosition at: 1 withLaps: 0 withNumberOfSquaresTravelled: 0).
@@ -22,45 +22,49 @@ testWhenACancellationCardIsThrownAPermanentCardMustBeRemovedFromAPlayer
 	protectionCards add: (CardProtection  named: 'CardProtection1').
 	playerScorpionDeck
 		add: (CardDamping named: 'CardDamping1');
-		add: (CardCancellation named: 'CardCancellation2').
-	cardToAffectPlayer := (CardSpeed named: 'CardSpeed1').
+		add: (CardDamping named: 'CardDamping2').
+	cardToAffectPlayer := (CardSpeed named: 'CardSpeed2').
 	playerRaidenDeck
 		add: cardToAffectPlayer;
 		add: (CardOverloading named: 'CardOverloading1 ').
 	playerScorpion := Player named: 'Scorpion' withCards: playerScorpionDeck andPositionHistory: playerScorpionHistory.
+	
+	playerScorpion addProtectionCards: protectionCards  toAPermanentCard: (playerScorpion cards first) .
+	
 	playerRaiden := Player named: 'Raiden' withCards: playerRaidenDeck andPositionHistory: playerRaidenHistory.
+	
 	laps := 1.
 	collectionOfPlayers add: playerScorpion.
 	collectionOfPlayers add: playerRaiden.
 	gameDeck := OrderedCollection new.
+	
 	gameDeck
 		add: (CardPotentiation named: 'CardPotentiation1');
-		add: (CardSpeed named: 'CardSpeed2').
+		add: (CardPotentiation named: 'CardPotentiation2').
 	game := Game
 		playedBy: collectionOfPlayers
 		on: board
 		throwing: collectionOfDices
 		winningWhenCompleting: laps
 		withACardDeck: gameDeck.
+		
 	game nextTurnFor: playerScorpion.
 	self assert: playerRaiden cards size equals: 2.
-	game affect: playerScorpion withAPermanentCard: cardToAffectPlayer of: playerRaiden.
-	self assert: playerRaiden cards size equals: 1.
+	game nextTurnFor: playerRaiden.
+	game affect: playerScorpion withAPermanentCard: (playerScorpion cards first) of: playerScorpion.
+	self assert: playerRaiden cards size equals: 2.
 	cancellationCard := CardCancellation named: 'CardCancellation1'.
 	playerRaiden addACardToDeck: cancellationCard.
-	self assert: playerRaiden cards size equals: 2.
-	self assert: playerScorpion cards size equals: 2.
+	self assert: playerRaiden cards size equals: 3.
 	self assert: playerScorpion permanentCardsToBePlayed size equals: 1.
 	game
-		affect: cardToAffectPlayer
+		affect: playerScorpion permanentCardsToBePlayed first
 		from: playerScorpion
 		using: cancellationCard
 		of: playerRaiden.
-	self assert: playerScorpion instantCardsToBePlayed size equals: 1.
-	self assert: playerRaiden cards size equals: 1.
-	self assert: playerScorpion cards size equals: 2.
-	self assert: playerScorpion permanentCardsToBePlayed size equals: 1. "Habia 0"
-	game nextTurnFor: playerRaiden.
+	self assert: playerScorpion instantCardsToBePlayed size equals: 0.
+	self assert: playerScorpion cards size equals: 1.
+	self assert: playerScorpion permanentCardsToBePlayed size equals: 1.
 	game nextTurnFor: playerScorpion.
-	self assert: playerScorpion permanentCardsToBePlayed size equals: 0.
+	self assert: playerScorpion permanentCardsToBePlayed size equals: 1.
 	self assert: playerScorpion instantCardsToBePlayed size equals: 0
